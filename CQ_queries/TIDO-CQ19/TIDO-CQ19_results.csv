@@ -1,0 +1,3 @@
+d_value,prev_action,prev_decision,prev_d_value
+Deploy an open-source investigation,http://www.example.com/TIDO_di02#resolution_1,http://www.example.com/TIDO_di02#option_2,Consult legal advisor Ton
+Deploy an open-source investigation,http://www.example.com/TIDO_di01#resolution_1,http://www.example.com/TIDO_di01#option_2,Continue with investigation
