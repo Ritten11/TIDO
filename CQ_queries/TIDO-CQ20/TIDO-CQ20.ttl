@@ -8,9 +8,10 @@ PREFIX di02: <http://www.example.com/TIDO_di02#>
 
 Select ?o_value ?poi ?i_value
 Where {
-        di01:option_2 a tido:Option ;
+    Bind(di01:option_1 as ?x)
+        ?x a tido:Option ;
                     tido:hasConsideration|tido:assumes ?consideration ;
     				rdf:value ?o_value .
         ?poi tido:providesInsightsInto* ?consideration .
     	?poi rdf:value ?i_value .
-}  
+}   
