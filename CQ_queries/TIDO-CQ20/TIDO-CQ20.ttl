@@ -1,0 +1,16 @@
+# What information would be or was used to justify action [x]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?o_value ?poi ?i_value
+Where {
+        di01:option_2 a tido:Option ;
+                    tido:hasConsideration|tido:assumes ?consideration ;
+    				rdf:value ?o_value .
+        ?poi tido:providesInsightsInto* ?consideration .
+    	?poi rdf:value ?i_value .
+}  
