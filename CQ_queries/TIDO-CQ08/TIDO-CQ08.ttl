@@ -1,0 +1,16 @@
+# Is/was the application of action [x] proportional to situation [y]?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <http://www.example.com/TIDO#>
+Select (group_concat(?o_value;separator=" | ") as ?o_values) ?consideration ?c_value
+Where {
+    Bind(di02:option_7 as ?x)
+    ?x a tido:Option ;
+    		rdf:value ?o_value ;
+    		tido:wasSelectedBy ?res_step ;
+    		tido:hasConsideration ?consideration .
+    ?consideration rdf:value ?c_value .
+}
+group by ?consideration ?c_value

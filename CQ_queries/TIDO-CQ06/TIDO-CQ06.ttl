@@ -1,0 +1,14 @@
+# Which hypotheses have been investigated?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX di_1: <http://www.example.com/TIDO_di01#>
+PREFIX di_2: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <http://www.example.com/TIDO#>
+Select ?hypothesis ?h_value  (group_concat(?poi;separator=" | ") as ?piecesOfInformation) (group_concat(?i_value;separator=" | ") as ?i_values)
+Where {
+    ?hypothesis a tido:Hypothesis ;
+    		rdf:value ?h_value .
+    ?poi tido:providesInsightsInto ?hypothesis ;
+    		rdf:value ?i_value .
+}
+group by ?hypothesis ?h_value

@@ -1,0 +1,10 @@
+# What is the source of information [b]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+Select ?prevInfo ?source
+Where {
+    Bind (di01:e_1 as ?b)
+    ?b prov:wasDerivedFrom+ ?prevInfo .
+    ?prev_info prov:wasAttributedTo ?source .
+}

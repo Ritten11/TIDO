@@ -1,0 +1,14 @@
+# What information disputes hypothesis [h]?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <http://www.example.com/TIDO#>
+Select ?h_value ?poi ?i_value
+Where {
+    Bind(di01:hypothesis_2 as ?h) #assigning an arbitrary variable to [h]
+    ?h a tido:Hypothesis ;
+    		rdf:value ?h_value .
+    ?poi tido:disputes ?h ;
+    		rdf:value ?i_value .
+}
