@@ -9,7 +9,7 @@ Ask {
     Bind(di02:goal_1 as ?goal)
     Bind(di02:option_1 as ?x)
 	?goal a tido:Goal .
-            ?option a tido:Option ;
-                    tido:hasConsideration ?goal .  
+            ?option a tido:Option .
+    ?option tido:hasConsideration ?goal .  
     FILTER( ?x != ?option )
 }

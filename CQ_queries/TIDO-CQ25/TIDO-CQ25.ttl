@@ -1,0 +1,15 @@
+# What risk is/was associated with the current situation [y]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?question ?h_value
+Where {
+    Bind(di01:rq_2 as ?rq)
+    	?rq rdf:value ?question .
+       	?hypothesis tido:answers ?rq ; # challenge: TIDO cannot represent which hypothesis is considered to be true
+    		rdf:value ?h_value .
+}

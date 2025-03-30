@@ -1,0 +1,14 @@
+# Was piece of information [poi] from an indirect source?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+
+Ask {          
+    Bind (di01:e_1 as ?poi)
+    ?poi a tido:PieceOfInformation ;
+                     prov:wasAttributedTo ?source ;
+                     prov:wasDerivedFrom+ ?original . # There is no way in SPARQL to only get the endpoint of the property chain. 
+    ?original prov:wasAttributedTo ?originalSource .
+    FILTER (?source = ?originalSource )
+}

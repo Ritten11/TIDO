@@ -1,0 +1,20 @@
+# Which pieces of information used to either support of dispute hypothesis [h] come from a direct source?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?poi ?p_value ?source ?s_value (group_concat(distinct ?prev_source;separator=" | ") as ?source_list)
+Where {
+#    Bind (di01:h_1 as ?h)
+    ?poi a tido:PieceOfInformation ;
+    	rdf:value ?p_value ;
+    	tido:supports|tido:disputes ?h ;
+        prov:wasAttributedTo ?source ;
+        prov:wasDerivedFrom+ ?prev_version . # There is no way in SPARQL to only get the endpoint of the property chain, so the original cannot be retrieved 
+	?prev_version prov:wasAttributedTo/rdf:value ?prev_source .
+    ?source rdf:value ?s_value .
+} 
+group by ?poi ?source

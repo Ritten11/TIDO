@@ -1,0 +1,16 @@
+# Which decisions depended on piece of information [poi]?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+Select ?i_value ?hypothesis ?h_value ?decision ?d_value
+Where {
+    	Bind(di01:poi_7 as ?x)
+        ?x tido:providesInsightsInto* ?hypothesis ;
+    				rdf:value ?i_value .
+    	?hypothesis rdf:value ?h_value .
+        ?decision a tido:Option ;
+    				tido:assumes ?hypothesis ;
+    				tido:wasSelectedBy ?resStep ;
+    				rdf:value ?d_value .
+}

@@ -1,0 +1,15 @@
+# How much time has passed since the decision for action [x] was selected?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+Select ?d_value ?hypothesis ?h_value
+Where {
+    Bind(di01:option_2 as ?x)
+#    Bind([time] as ?now)
+    ?x tido:wasSelectedBy ?res_step ;
+    	rdf:value ?d_value .
+    ?res_step prov:startedAtTime ?time .
+    
+}

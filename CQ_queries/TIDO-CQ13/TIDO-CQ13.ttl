@@ -1,0 +1,12 @@
+# Which hypothesis were considered by analyst [a]?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+Select ?hypothesis ?value
+Where {
+        ?hypothesis prov:wasGeneratedBy|tido:wasRecalledBy ?activity ;
+    		a tido:Hypothesis ;
+    		rdf:value ?value .
+#        ?activity prov:wasAssociatedWith [Liesbeth] .
+}

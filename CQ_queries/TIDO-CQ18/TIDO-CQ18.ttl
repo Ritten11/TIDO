@@ -1,0 +1,13 @@
+# What exeptional means were deployed in case [x]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+Select ?decision ?d_value
+Where {
+#          di01:case_1 prov:hadMember ?decision .
+          ?decision a tido:Option ;
+                    tido:wasSelectedBy ?res_step ;
+    				rdf:value ?d_value .
+}

@@ -1,0 +1,14 @@
+# What information was gained by decision [x]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX tido: <http://www.example.com/TIDO#>
+Select ?poi
+where {
+         ?option a tido:Option;
+                      tido:wasSelected "True"^^xsd:Boolean;
+                      rdf:value "deploy exceptional means [x]" ;
+                      tido:wasExecutedBy ?activity .
+         ?poi prov:wasGeneratedBy ?activity .
+}

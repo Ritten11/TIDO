@@ -1,0 +1,20 @@
+# What options are/were considered at time [t]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?poi ?i_value ?target_step ?prev_step
+Where {
+#    	?target_step a tido:Activity .
+#    	?target_step prov:startedAtTime ?start .
+#    	?target_step prov:endedAtTime ?end .
+#    FILTER( ?start > [t] && ?end < [t])
+    BIND(di02:resolution_3 as ?target_step)
+        ?target_step prov:wasInformedBy* ?prev_step .
+        ?poi prov:wasGeneratedBy|tido:wasRecalledBy ?prev_step .    
+    	?poi a tido:Option .
+    	?poi rdf:value ?i_value .
+}

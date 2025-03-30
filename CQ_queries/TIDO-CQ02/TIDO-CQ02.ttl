@@ -11,5 +11,4 @@ Where {
     		rdf:value ?h_value .
     ?poi tido:supports ?h ;
     		rdf:value ?i_value .
-    
 }

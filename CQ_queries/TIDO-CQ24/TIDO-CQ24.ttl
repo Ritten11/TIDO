@@ -1,0 +1,18 @@
+# Which steps were taken to investigate research question [rq]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?question ?h_value ?activity ?i_value
+Where {
+    Bind(di01:rq_2 as ?rq)
+    	?rq rdf:value ?question .
+       	?hypothesis tido:answers ?rq ;
+    		rdf:value ?h_value .
+        ?poi tido:providesInsightsInto+ ?hypothesis ;
+            prov:wasGeneratedBy|tido:wasRecalledBy ?activity ;
+    		rdf:value ?i_value .
+}

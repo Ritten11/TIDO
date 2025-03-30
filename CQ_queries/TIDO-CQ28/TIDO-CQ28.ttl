@@ -1,0 +1,16 @@
+# Who were involved in the decision [d]?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select distinct ?agent
+Where {
+    Bind(di01:option_1 as ?d)
+          ?d a tido:Option ;
+                     tido:wasSelectedBy ?resolution .
+          ?resolution prov:wasInformedBy* ?prevStep .
+#          ?prevStep prov:wasAssociatedWith ?agent .
+}

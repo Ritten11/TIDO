@@ -3,12 +3,13 @@
 PREFIX tido: <http://www.example.com/TIDO#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX di01: <http://www.example.com/TIDO_di01#>
-select * where {
+select ?h_2 ?h_value 
+where {
     BIND (di01:h_1 as ?h_1)
     BIND (di01:e_1 as ?poi)    
     ?rq tido:questions ?poi .
     ?h_2 a tido:Hypothesis ;
     	tido:answers ?rq ;
-        rdf:value ?h_2
+        rdf:value ?h_value
     FILTER(?h_1 != ?h_2)
-} limit 100
+}

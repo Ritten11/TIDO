@@ -1,0 +1,17 @@
+# What is/was the goal of action [x]?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <http://www.example.com/TIDO#>
+Select (group_concat(?o_value;separator=" | ") as ?o_values) ?goal ?g_value
+Where {
+    Bind(di02:option_1 as ?x)
+    ?x a tido:Option ;
+    		rdf:value ?o_value ;
+    		tido:wasSelectedBy ?res_step ;
+    		tido:hasConsideration ?goal .
+    ?goal a tido:Goal ;
+    		rdf:value ?g_value .
+}
+group by ?goal ?g_value

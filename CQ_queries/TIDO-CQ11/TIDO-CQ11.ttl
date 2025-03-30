@@ -1,0 +1,16 @@
+# Is option [x] subsidiary compared to alternative options?
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <http://www.example.com/TIDO#>
+
+select ?option ?o_value (group_concat(?costs;separator=" | ") as ?c_objects) (group_concat(?c_value;separator=" | ") as ?c_values){ 
+    Bind(di02:option_1 as ?x)
+    ?x tido:hasConsideration ?goal .
+    ?goal a tido:Goal ;
+    ^tido:hasConsideration ?option . # get all the options that have the same goal as [x]
+    ?option tido:hasConsideration ?costs ;
+    	rdf:value ?o_value .
+    ?costs a tido:Costs ;
+    	rdf:value ?c_value . 
+} group by ?option
