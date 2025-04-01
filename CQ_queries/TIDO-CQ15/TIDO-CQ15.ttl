@@ -10,6 +10,5 @@ Where {
 #    Bind([time] as ?now)
     ?x tido:wasSelectedBy ?res_step ;
     	rdf:value ?d_value .
-    ?res_step prov:startedAtTime ?time .
-    
+    ?res_step prov:startedAtTime ?time .  
 }

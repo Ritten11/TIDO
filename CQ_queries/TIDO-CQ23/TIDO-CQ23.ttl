@@ -6,9 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX tido: <http://www.example.com/TIDO#>
 Select ?poi
 where {
-         ?option a tido:Option;
-                      tido:wasSelected "True"^^xsd:Boolean;
-                      rdf:value "deploy exceptional means [x]" ;
-                      tido:wasExecutedBy ?activity .
+         Bind(di01:o_1 as ?x)
+         ?x a tido:Option;
+                tido:wasSelectedBy ?decision_step;
+                tido:wasExecutedBy ?activity .
          ?poi prov:wasGeneratedBy ?activity .
 }
