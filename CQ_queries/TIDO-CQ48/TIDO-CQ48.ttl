@@ -1,0 +1,19 @@
+# What does your colleague think?
+# - peer review
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?info_class ?i_value
+Where {
+    bind(tido:a_2 as ?colleague)
+    bind(tido:case_1 as ?case)
+    ?poi tido:generatedBy/tido:wasAssociatedWith ?colleague ;
+    		prov:wasMemberOf ?case ;
+    		a ?info_class ;
+    		rdf:value ?i_value .
+    Filter (?info_class = tido:PoI)
+} 

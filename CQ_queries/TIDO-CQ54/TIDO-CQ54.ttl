@@ -1,0 +1,16 @@
+# What blind spots do we have? And what do we need to fill these in?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?rq_value ?o_value
+Where {
+    bind (di01:case_1 as ?case)
+    ?rq tido:wasGeneratedBy/tido:contributedTo ?case ;
+    	rdf:value ?rq_value .
+    ?option tido:informs ?rq ;
+    	rdf:value ?o_value .
+} 

@@ -1,0 +1,14 @@
+# Why is the means the least damaging for privacy of the target (proportional/subsidiary)?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http:/www.example.com/TIDO_di02#>
+
+Select ?c_value 
+Where {
+    bind (di01:o_1 as ?option)
+    ?option tido:hasConsideration ?consideration ;
+    	rdf:value ?c_value .
+} 

@@ -1,0 +1,15 @@
+# How will this means help with answering the questions?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http:/www.example.com/TIDO_di02#>
+
+Select ?g_value 
+Where {
+    bind (tido:o_1 as ?option)
+    ?option tido:hasConsideration ?goal .
+    ?goal a tido:Goal ;
+    	rdf:value ?g_value .
+} 

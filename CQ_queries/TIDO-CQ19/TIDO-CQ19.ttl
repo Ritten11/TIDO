@@ -6,11 +6,11 @@ PREFIX tido: <http://www.example.com/TIDO#>
 PREFIX di01: <http://www.example.com/TIDO_di01#>
 
 Select ?d_value ?prev_action ?prev_decision ?prev_d_value
-Where { 
-         ?decision a tido:Option;
-                      tido:wasSelectedBy ?res_step ;
-                      rdf:value ?d_value .
-    FILTER(CONTAINS(?d_value,  'open-source')) 
+Where {
+    ?decision a tido:Option;
+                tido:wasSelectedBy ?res_step ;
+                rdf:value ?d_value .
+    FILTER(CONTAINS(?d_value,  '[x]')) 
     ?res_step (prov:wasInformedBy*/prov:wasStartedBy/tido:wasSelectedBy)+ ?prev_action .
     ?prev_action ^tido:wasSelectedBy ?prev_decision .
     ?prev_decision rdf:value ?prev_d_value .

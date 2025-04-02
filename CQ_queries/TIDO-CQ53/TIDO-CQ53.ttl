@@ -1,0 +1,16 @@
+# How does the information relate to the various hypotheses?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?relation ?h_value
+Where {
+    bind (di01:e_1 as ?poi) # insert the right option that is being investigated.
+    ?poi tido:providesInsightsInto ?hypothesis .
+    ?poi ?relation ?hypothesis . 
+    ?hypothesis rdf:value ?h_value
+    filter (?relation = tido:providesInsightsInto )
+} 

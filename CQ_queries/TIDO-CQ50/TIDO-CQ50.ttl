@@ -1,0 +1,17 @@
+# What is the goal of the visit to the teacher and housemate?
+# - which questions?
+# - 5wh
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?goal ?c_value
+Where {
+    bind (di01:option_1 as ?option) # insert the right option that is being investigated.
+    ?option tido:hasConsideration ?goal .
+    ?goal a tido:Goal ;
+    		rdf:value ?g_value .
+} 

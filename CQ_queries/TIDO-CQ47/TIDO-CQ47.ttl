@@ -1,0 +1,18 @@
+# What are the conclusions? (concern yes/no)
+# What information underpins this?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
+
+Select ?h_value (group_concat(distinct ?p_value;separator=" | ") as ?underpinning)
+Where {
+    ?option tido:wasSelectedBy ?res_step ;
+    		tido:assumes ?hypothesis .
+    ?hypothesis rdf:value ?h_value .
+    ?poi tido:supports ?hypothesis ;
+    	rdf:value ?p_value .
+} 
+group by ?h_value
