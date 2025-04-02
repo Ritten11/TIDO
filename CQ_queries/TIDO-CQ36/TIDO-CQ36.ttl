@@ -1,0 +1,18 @@
+# What do you (Liesbeth) know about the context (practicum etc.)?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http:/www.example.com/TIDO_di02#>
+
+Select ?i_value 
+Where {
+    
+    bind (di01:case_1 as ?case) # specify the context/case
+    bind (di01:a_1 as ?agent) # assign the value of Liebseth to an agent
+    ?activity prov:wasAssociatedWith ?agent ;
+    	tido:contributedTo ?case .
+    ?poi tido:wasRecalledBy|prov:wasGeneratedBy ?activity ;
+    	rdf:value ?i_value . # This value should somehow be filtered, 'context' is very broad.
+} 

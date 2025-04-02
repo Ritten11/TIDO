@@ -6,9 +6,12 @@ PREFIX tido: <http://www.example.com/TIDO#>
 PREFIX di01: <http://www.example.com/TIDO_di01#>
 PREFIX di02: <http:/www.example.com/TIDO_di02#>
 
-select ?rq_value
+select ?rq_value (group_concat(distinct ?e_value;separator=" | ") as ?possible_explanations)
 Where {
+    bind (di01:case_1 as ?case)
+    ?case tido:investigates ?rq .
     ?rq a tido:RQ ;
     	rdf:value ?rq_value .
-    filter not exists {?explanation tido:answers ?rq} 
-} 
+    optional {?explanation tido:answers ?rq ;
+    			rdf:value ?e_value} 
+} group by ?rq_value

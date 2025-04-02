@@ -1,4 +1,4 @@
-# [Did you] consider alternative explanations [?]
+# What has already been done?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -8,8 +8,6 @@ PREFIX di02: <http:/www.example.com/TIDO_di02#>
 
 Ask 
 Where {
-    bind (di01:h_1 as ?explanation_1)
-    ?explanation_1 tido:answers ?rq .
-    ?other_explanation tido:answers ?rq .
-    filter (?explanation_1 = ?other_explanation) 
+    bind (di01:case_1 as ?case)
+    ?activity tido:contributedTo ?case . 
 } 
