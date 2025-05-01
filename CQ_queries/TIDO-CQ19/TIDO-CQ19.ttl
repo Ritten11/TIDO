@@ -4,14 +4,15 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX tido: <http://www.example.com/TIDO#>
 PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di02: <http://www.example.com/TIDO_di02#>
 
-Select ?d_value ?prev_action ?prev_decision ?prev_d_value
-Where {
+Select (group_concat(?d_value;separator=" | ") as ?d_values) ?prev_action ?prev_decision ?prev_d_value
+Where { 
+    Bind (di02:option_1 as ?decision) # di02:option_1 is the option that mentions the option to deploy an open source investigation 
     ?decision a tido:Option;
-                tido:wasSelectedBy ?res_step ;
-                rdf:value ?d_value .
-    FILTER(CONTAINS(?d_value,  '[x]')) 
+        tido:wasSelectedBy ?res_step ;
+        rdf:value ?d_value .
     ?res_step (prov:wasInformedBy*/prov:wasStartedBy/tido:wasSelectedBy)+ ?prev_action .
     ?prev_action ^tido:wasSelectedBy ?prev_decision .
     ?prev_decision rdf:value ?prev_d_value .
-}
+} group by ?prev_action ?prev_decision ?prev_d_value

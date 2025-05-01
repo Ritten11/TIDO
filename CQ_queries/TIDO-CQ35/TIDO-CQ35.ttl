@@ -8,9 +8,8 @@ PREFIX di02: <http:/www.example.com/TIDO_di02#>
 
 Select ?i_value 
 Where {
-    
     bind (di01:case_1 as ?case) # specify the context/case
-    bind (di01:a_1 as ?agent) # assign the value of Liebseth to an agent
+    bind (di01:a_1 as ?agent) # assign the value of Liesbeth to an agent
     ?activity prov:wasAssociatedWith ?agent ;
     	tido:contributedTo ?case .
     ?poi tido:wasRecalledBy|prov:wasGeneratedBy ?activity ;
