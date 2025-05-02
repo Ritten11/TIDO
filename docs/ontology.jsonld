@@ -70,9 +70,6 @@
     "@value" : "Information"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/terms/description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -123,7 +120,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -147,7 +144,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Case",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -167,7 +164,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Consideration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A matter weighed or taken into account when formulating an opinion or plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -183,7 +180,7 @@
   } ]
 }, {
   "@id" : "https://www.w3id.org/TIDO#ContributesTo",
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Every activity should contribute to one or more cases/investigations. "
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
@@ -192,7 +189,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Cost",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The outlay or expenditure (as of effort or sacrifice) made to achieve an object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -207,7 +204,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Evaluation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -225,7 +222,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Evidence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -243,7 +240,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Goal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A clearly directed intent or purpose"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -258,7 +255,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Hypothesis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -275,7 +272,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Option",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -292,7 +289,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Orientation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A step in the decision process where available information is shared, repeated, clarified or confirmed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -310,7 +307,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#PieceOfInformation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -338,7 +335,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#RQ",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A question that arrises during an investigation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -360,7 +357,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#Resolution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A step in the decision process where a possible direction is chosen"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -378,7 +375,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#answers",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -393,7 +390,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#assumes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An option that would take an hypothesis as granted or true"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -423,7 +420,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#disputes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A piece of information that calls into question or casts doubt upon a hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -444,7 +441,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#hasConsideration",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An option can have multiple considerations that help in deciding on whether on not to select that option"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -471,7 +468,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#informs",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An option that would aid in answering a resaerch question if executed. "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -486,7 +483,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#investigates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An investigation, or case, investigates one or more research questions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -516,7 +513,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#questions",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A research question can be raised by a piece of information"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -531,7 +528,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#supports",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "to provide with substantiation / to support with evidence or authority. make more certain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -552,7 +549,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#wasExecutedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Once an option is selected, it could be excecuted by an activity. "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -567,7 +564,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#wasRecalledBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "During an orientation step, no new informatoin is generated but only pre-existing information is recalled"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -585,7 +582,7 @@
 }, {
   "@id" : "https://www.w3id.org/TIDO#wasSelectedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/description" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An option can be selected during a resolution step. This selection of an option is what constitudes a decision."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {

@@ -87,9 +87,6 @@
     "iri" : "https://www.w3id.org/TIDO#Case",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. "
-    },
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -107,6 +104,9 @@
     "label" : {
       "IRI-based" : "Case",
       "undefined" : "Case"
+    },
+    "comment" : {
+      "undefined" : "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. "
     },
     "id" : "7",
     "superClasses" : [ "8" ]
@@ -135,9 +135,6 @@
     "iri" : "https://www.w3id.org/TIDO#Hypothesis",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -150,15 +147,15 @@
       "IRI-based" : "Hypothesis",
       "undefined" : "Hypothesis"
     },
+    "comment" : {
+      "undefined" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
+    },
     "id" : "2",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Evidence",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -171,15 +168,15 @@
       "IRI-based" : "Evidence",
       "undefined" : "Evidence"
     },
+    "comment" : {
+      "undefined" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
+    },
     "id" : "17",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Cost",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "The outlay or expenditure (as of effort or sacrifice) made to achieve an object"
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -191,6 +188,9 @@
     "label" : {
       "IRI-based" : "Cost",
       "undefined" : "Cost"
+    },
+    "comment" : {
+      "undefined" : "The outlay or expenditure (as of effort or sacrifice) made to achieve an object"
     },
     "id" : "19",
     "superClasses" : [ "20" ]
@@ -209,9 +209,6 @@
     "iri" : "https://www.w3id.org/TIDO#Option",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question."
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -224,15 +221,15 @@
       "IRI-based" : "Option",
       "undefined" : "Option"
     },
+    "comment" : {
+      "undefined" : "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question."
+    },
     "id" : "10",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Evaluation",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
-    },
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -251,6 +248,9 @@
       "IRI-based" : "Evaluation",
       "undefined" : "Evaluation"
     },
+    "comment" : {
+      "undefined" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
+    },
     "id" : "35",
     "superClasses" : [ "5" ]
   }, {
@@ -268,9 +268,6 @@
     "iri" : "https://www.w3id.org/TIDO#Activity",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -284,6 +281,9 @@
       "undefined" : "Activity"
     },
     "subClasses" : [ "44", "31", "35" ],
+    "comment" : {
+      "undefined" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
+    },
     "id" : "5",
     "superClasses" : [ "4" ]
   }, {
@@ -301,9 +301,6 @@
     "iri" : "https://www.w3id.org/TIDO#Goal",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A clearly directed intent or purpose"
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -316,15 +313,15 @@
       "IRI-based" : "Goal",
       "undefined" : "Goal"
     },
+    "comment" : {
+      "undefined" : "A clearly directed intent or purpose"
+    },
     "id" : "26",
     "superClasses" : [ "20" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Resolution",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A step in the decision process where a possible direction is chosen"
-    },
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -343,15 +340,15 @@
       "IRI-based" : "Resolution",
       "undefined" : "Resolution"
     },
+    "comment" : {
+      "undefined" : "A step in the decision process where a possible direction is chosen"
+    },
     "id" : "44",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Consideration",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A matter weighed or taken into account when formulating an opinion or plan"
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -365,15 +362,15 @@
       "undefined" : "Consideration"
     },
     "subClasses" : [ "19", "26" ],
+    "comment" : {
+      "undefined" : "A matter weighed or taken into account when formulating an opinion or plan"
+    },
     "id" : "20",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#RQ",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A question that arrises during an investigation."
-    },
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -397,15 +394,15 @@
       "IRI-based" : "RQ",
       "undefined" : "R Q"
     },
+    "comment" : {
+      "undefined" : "A question that arrises during an investigation."
+    },
     "id" : "12",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Orientation",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "A step in the decision process where available information is shared, repeated, clarified or confirmed."
-    },
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -424,22 +421,17 @@
       "IRI-based" : "Orientation",
       "undefined" : "Orientation"
     },
+    "comment" : {
+      "undefined" : "A step in the decision process where available information is shared, repeated, clarified or confirmed."
+    },
     "id" : "31",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#PieceOfInformation",
     "baseIri" : "https://www.w3id.org/TIDO",
     "instances" : 0,
-    "description" : {
-      "undefined" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
-    },
     "annotations" : {
       "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "PoI",
-        "type" : "label"
-      }, {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "Piece of information",
@@ -448,6 +440,11 @@
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "Sentence",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "PoI",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -462,6 +459,9 @@
       "undefined" : "Piece Of Information"
     },
     "subClasses" : [ "17", "2", "10", "20", "12" ],
+    "comment" : {
+      "undefined" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
+    },
     "id" : "1",
     "superClasses" : [ "13", "33" ]
   } ],
@@ -575,9 +575,6 @@
     "iri" : "https://www.w3id.org/TIDO#disputes",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "2",
-    "description" : {
-      "undefined" : "A piece of information that calls into question or casts doubt upon a hypothesis"
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -592,15 +589,15 @@
     },
     "superproperty" : [ "3" ],
     "domain" : "1",
+    "comment" : {
+      "undefined" : "A piece of information that calls into question or casts doubt upon a hypothesis"
+    },
     "attributes" : [ "object" ],
     "id" : "0"
   }, {
     "iri" : "https://www.w3id.org/TIDO#supports",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "2",
-    "description" : {
-      "undefined" : "to provide with substantiation / to support with evidence or authority. make more certain"
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -615,34 +612,37 @@
     },
     "superproperty" : [ "3" ],
     "domain" : "1",
+    "comment" : {
+      "undefined" : "to provide with substantiation / to support with evidence or authority. make more certain"
+    },
     "attributes" : [ "object" ],
     "id" : "6"
   }, {
     "iri" : "https://www.w3id.org/TIDO#wasExecutedBy",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "5",
-    "description" : {
-      "undefined" : "Once an option is selected, it could be excecuted by an activity. "
-    },
     "label" : {
       "IRI-based" : "wasExecutedBy",
       "undefined" : "was executed by"
     },
     "domain" : "10",
+    "comment" : {
+      "undefined" : "Once an option is selected, it could be excecuted by an activity. "
+    },
     "attributes" : [ "object" ],
     "id" : "9"
   }, {
     "iri" : "https://www.w3id.org/TIDO#informs",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "12",
-    "description" : {
-      "undefined" : "An option that would aid in answering a resaerch question if executed. "
-    },
     "label" : {
       "IRI-based" : "informs",
       "undefined" : "informs"
     },
     "domain" : "10",
+    "comment" : {
+      "undefined" : "An option that would aid in answering a resaerch question if executed. "
+    },
     "attributes" : [ "object" ],
     "id" : "11"
   }, {
@@ -654,14 +654,14 @@
     "iri" : "https://www.w3id.org/TIDO#questions",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "1",
-    "description" : {
-      "undefined" : "A research question can be raised by a piece of information"
-    },
     "label" : {
       "IRI-based" : "questions",
       "undefined" : "questions"
     },
     "domain" : "12",
+    "comment" : {
+      "undefined" : "A research question can be raised by a piece of information"
+    },
     "attributes" : [ "object" ],
     "id" : "18"
   }, {
@@ -813,9 +813,6 @@
     "iri" : "https://www.w3id.org/TIDO#wasRecalledBy",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "31",
-    "description" : {
-      "undefined" : "During an orientation step, no new informatoin is generated but only pre-existing information is recalled"
-    },
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -829,34 +826,37 @@
       "undefined" : "was recalled by"
     },
     "domain" : "1",
+    "comment" : {
+      "undefined" : "During an orientation step, no new informatoin is generated but only pre-existing information is recalled"
+    },
     "attributes" : [ "object" ],
     "id" : "45"
   }, {
     "iri" : "https://www.w3id.org/TIDO#answers",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "12",
-    "description" : {
-      "undefined" : "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence"
-    },
     "label" : {
       "IRI-based" : "answers",
       "undefined" : "answers"
     },
     "domain" : "1",
+    "comment" : {
+      "undefined" : "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence"
+    },
     "attributes" : [ "object" ],
     "id" : "46"
   }, {
     "iri" : "https://www.w3id.org/TIDO#hasConsideration",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "20",
-    "description" : {
-      "undefined" : "An option can have multiple considerations that help in deciding on whether on not to select that option"
-    },
     "label" : {
       "IRI-based" : "hasConsideration",
       "undefined" : "has consideration"
     },
     "domain" : "10",
+    "comment" : {
+      "undefined" : "An option can have multiple considerations that help in deciding on whether on not to select that option"
+    },
     "attributes" : [ "object" ],
     "id" : "47"
   }, {
@@ -871,6 +871,21 @@
     "attributes" : [ "allValues", "object", "external" ],
     "id" : "48"
   }, {
+    "iri" : "https://www.w3id.org/TIDO#investigates",
+    "baseIri" : "https://www.w3id.org/TIDO",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "investigates",
+      "undefined" : "investigates"
+    },
+    "minCardinality" : "1",
+    "domain" : "7",
+    "comment" : {
+      "undefined" : "An investigation, or case, investigates one or more research questions"
+    },
+    "attributes" : [ "object" ],
+    "id" : "49"
+  }, {
     "iri" : "https://www.w3id.org/TIDO#contributesTo",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "7",
@@ -879,21 +894,6 @@
       "undefined" : "contributes to"
     },
     "domain" : "5",
-    "attributes" : [ "object" ],
-    "id" : "49"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#investigates",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "12",
-    "description" : {
-      "undefined" : "An investigation, or case, investigates one or more research questions"
-    },
-    "label" : {
-      "IRI-based" : "investigates",
-      "undefined" : "investigates"
-    },
-    "minCardinality" : "1",
-    "domain" : "7",
     "attributes" : [ "object" ],
     "id" : "50"
   }, {
@@ -905,23 +905,20 @@
     "iri" : "https://www.w3id.org/TIDO#wasSelectedBy",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "44",
-    "description" : {
-      "undefined" : "An option can be selected during a resolution step. This selection of an option is what constitudes a decision."
-    },
     "label" : {
       "IRI-based" : "wasSelectedBy",
       "undefined" : "was selected by"
     },
     "domain" : "10",
+    "comment" : {
+      "undefined" : "An option can be selected during a resolution step. This selection of an option is what constitudes a decision."
+    },
     "attributes" : [ "object" ],
     "id" : "52"
   }, {
     "iri" : "https://www.w3id.org/TIDO#assumes",
     "baseIri" : "https://www.w3id.org/TIDO",
     "range" : "2",
-    "description" : {
-      "undefined" : "An option that would take an hypothesis as granted or true"
-    },
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -935,6 +932,9 @@
       "undefined" : "assumes"
     },
     "domain" : "10",
+    "comment" : {
+      "undefined" : "An option that would take an hypothesis as granted or true"
+    },
     "attributes" : [ "object" ],
     "id" : "53"
   } ]
