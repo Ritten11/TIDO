@@ -13,6 +13,14 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
 ###  https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
 
@@ -35,7 +43,7 @@
 :answers rdf:type owl:ObjectProperty ;
          rdfs:domain :PieceOfInformation ;
          rdfs:range :RQ ;
-         rdfs:isDefinedBy "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence" ;
+         <http://purl.org/dc/terms/description> "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence" ;
          rdfs:label "answers" .
 
 
@@ -43,7 +51,7 @@
 :assumes rdf:type owl:ObjectProperty ;
          rdfs:domain :Option ;
          rdfs:range :Hypothesis ;
-         rdfs:isDefinedBy "An option that would take an hypothesis as granted or true" ;
+         <http://purl.org/dc/terms/description> "An option that would take an hypothesis as granted or true" ;
          rdfs:label "assumes" ;
          rdfs:seeAlso "https://www.merriam-webster.com/dictionary/assume" .
 
@@ -60,7 +68,7 @@
           rdfs:subPropertyOf :providesInsightsInto ;
           rdfs:domain :PieceOfInformation ;
           rdfs:range :Hypothesis ;
-          rdfs:isDefinedBy "A piece of information that calls into question or casts doubt upon a hypothesis" ;
+          <http://purl.org/dc/terms/description> "A piece of information that calls into question or casts doubt upon a hypothesis" ;
           rdfs:label "disputes" ;
           rdfs:seeAlso "https://www.merriam-webster.com/dictionary/dispute" .
 
@@ -69,7 +77,7 @@
 :hasConsideration rdf:type owl:ObjectProperty ;
                   rdfs:domain :Option ;
                   rdfs:range :Consideration ;
-                  rdfs:isDefinedBy "An option can have multiple considerations that help in deciding on whether on not to select that option" ;
+                  <http://purl.org/dc/terms/description> "An option can have multiple considerations that help in deciding on whether on not to select that option" ;
                   rdfs:label "has consideration" .
 
 
@@ -84,7 +92,7 @@
 :informs rdf:type owl:ObjectProperty ;
          rdfs:domain :Option ;
          rdfs:range :RQ ;
-         rdfs:isDefinedBy "An option that would aid in answering a resaerch question if executed. " ;
+         <http://purl.org/dc/terms/description> "An option that would aid in answering a resaerch question if executed. " ;
          rdfs:label "informs" .
 
 
@@ -92,7 +100,7 @@
 :investigates rdf:type owl:ObjectProperty ;
               rdfs:domain :Case ;
               rdfs:range :RQ ;
-              rdfs:isDefinedBy "An investigation, or case, investigates one or more research questions" ;
+              <http://purl.org/dc/terms/description> "An investigation, or case, investigates one or more research questions" ;
               rdfs:label "investigates" .
 
 
@@ -100,15 +108,15 @@
 :providesInsightsInto rdf:type owl:ObjectProperty ;
                       rdfs:domain :PieceOfInformation ;
                       rdfs:range :Hypothesis ;
-                      rdfs:label "provides insight into" ,
-                                 "provides insights into" .
+                      rdfs:label "provides insights into" ;
+                      <http://www.w3.org/2004/02/skos/core#altLabel> "provides insight into" .
 
 
 ###  https://www.w3id.org/TIDO#questions
 :questions rdf:type owl:ObjectProperty ;
            rdfs:domain :RQ ;
            rdfs:range :PieceOfInformation ;
-           rdfs:isDefinedBy "A research question can be raised by a piece of information" ;
+           <http://purl.org/dc/terms/description> "A research question can be raised by a piece of information" ;
            rdfs:label "questions" .
 
 
@@ -117,7 +125,7 @@
           rdfs:subPropertyOf :providesInsightsInto ;
           rdfs:domain :PieceOfInformation ;
           rdfs:range :Hypothesis ;
-          rdfs:isDefinedBy "to provide with substantiation / to support with evidence or authority. make more certain" ;
+          <http://purl.org/dc/terms/description> "to provide with substantiation / to support with evidence or authority. make more certain" ;
           rdfs:label "supports" ;
           rdfs:seeAlso "https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate" .
 
@@ -126,7 +134,7 @@
 :wasExecutedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Option ;
                rdfs:range :Activity ;
-               rdfs:isDefinedBy "Once an option is selected, it could be excecuted by an activity. " ;
+               <http://purl.org/dc/terms/description> "Once an option is selected, it could be excecuted by an activity. " ;
                rdfs:label "was executed by" .
 
 
@@ -134,16 +142,16 @@
 :wasRecalledBy rdf:type owl:ObjectProperty ;
                rdfs:domain :PieceOfInformation ;
                rdfs:range :Orientation ;
-               rdfs:isDefinedBy "During an orientation step, no new informatoin is generated but only pre-existing information is recalled" ;
-               rdfs:label "was recalled by" ,
-                          "was recelled by" .
+               <http://purl.org/dc/terms/description> "During an orientation step, no new informatoin is generated but only pre-existing information is recalled" ;
+               rdfs:label "was recalled by" ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "was recelled by" .
 
 
 ###  https://www.w3id.org/TIDO#wasSelectedBy
 :wasSelectedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Option ;
                rdfs:range :Resolution ;
-               rdfs:isDefinedBy "An option can be selected during a resolution step. This selection of an option is what constitudes a decision." ;
+               <http://purl.org/dc/terms/description> "An option can be selected during a resolution step. This selection of an option is what constitudes a decision." ;
                rdfs:label "was selected by" .
 
 
@@ -179,7 +187,7 @@
 ###  https://www.w3id.org/TIDO#Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
-          rdfs:isDefinedBy "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." ;
+          <http://purl.org/dc/terms/description> "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." ;
           rdfs:label "Activity" ;
           rdfs:seeAlso "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" .
 
@@ -197,10 +205,10 @@
                         owl:onProperty :investigates ;
                         owl:minCardinality "1"^^xsd:nonNegativeInteger
                       ] ;
-      rdfs:isDefinedBy "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. " ;
-      rdfs:label "Case" ,
-                 "Investigation" ;
-      rdfs:seeAlso "-" .
+      <http://purl.org/dc/terms/description> "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. " ;
+      rdfs:label "Case" ;
+      rdfs:seeAlso "-" ;
+      <http://www.w3.org/2004/02/skos/core#altLabel> "Investigation" .
 
 
 ###  https://www.w3id.org/TIDO#Consideration
@@ -210,7 +218,7 @@
                                  owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
                                  owl:allValuesFrom :Evaluation
                                ] ;
-               rdfs:isDefinedBy "A matter weighed or taken into account when formulating an opinion or plan" ;
+               <http://purl.org/dc/terms/description> "A matter weighed or taken into account when formulating an opinion or plan" ;
                rdfs:label "Consideration" ;
                rdfs:seeAlso "https://www.merriam-webster.com/dictionary/consideration" .
 
@@ -218,7 +226,7 @@
 ###  https://www.w3id.org/TIDO#Cost
 :Cost rdf:type owl:Class ;
       rdfs:subClassOf :Consideration ;
-      rdfs:isDefinedBy "The outlay or expenditure (as of effort or sacrifice) made to achieve an object" ;
+      <http://purl.org/dc/terms/description> "The outlay or expenditure (as of effort or sacrifice) made to achieve an object" ;
       rdfs:label "Cost" ;
       rdfs:seeAlso "https://www.merriam-webster.com/dictionary/cost" .
 
@@ -226,17 +234,17 @@
 ###  https://www.w3id.org/TIDO#Evaluation
 :Evaluation rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
-            rdfs:isDefinedBy "A step in the decision process where opinions, evaluations and analysis are expressed. " ;
-            rdfs:label "Evaluation" ,
-                       "Evaluation step" ;
-            rdfs:seeAlso "Bales' 2nd phase of group-decision making" .
+            <http://purl.org/dc/terms/description> "A step in the decision process where opinions, evaluations and analysis are expressed. " ;
+            rdfs:label "Evaluation" ;
+            rdfs:seeAlso "Bales' 2nd phase of group-decision making" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Evaluation step" .
 
 
 ###  https://www.w3id.org/TIDO#Evidence
 :Evidence rdf:type owl:Class ;
           rdfs:subClassOf :PieceOfInformation ;
           owl:disjointWith :Hypothesis ;
-          rdfs:isDefinedBy "A piece of information that is either a testamony, an observation, or a sensory measurement." ;
+          <http://purl.org/dc/terms/description> "A piece of information that is either a testamony, an observation, or a sensory measurement." ;
           rdfs:label "Evidence" ;
           rdfs:seeAlso "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence" .
 
@@ -244,7 +252,7 @@
 ###  https://www.w3id.org/TIDO#Goal
 :Goal rdf:type owl:Class ;
       rdfs:subClassOf :Consideration ;
-      rdfs:isDefinedBy "A clearly directed intent or purpose" ;
+      <http://purl.org/dc/terms/description> "A clearly directed intent or purpose" ;
       rdfs:label "Goal" ;
       rdfs:seeAlso "https://www.merriam-webster.com/dictionary/aim" .
 
@@ -256,7 +264,7 @@
                               owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
                               owl:allValuesFrom :Evaluation
                             ] ;
-            rdfs:isDefinedBy "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis." ;
+            <http://purl.org/dc/terms/description> "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis." ;
             rdfs:label "Hypothesis" ;
             rdfs:seeAlso "https://www.merriam-webster.com/dictionary/hypothesis" .
 
@@ -268,7 +276,7 @@
                           owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
                           owl:allValuesFrom :Evaluation
                         ] ;
-        rdfs:isDefinedBy "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question." ;
+        <http://purl.org/dc/terms/description> "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question." ;
         rdfs:label "Option" ;
         rdfs:seeAlso "https://www.merriam-webster.com/dictionary/option" .
 
@@ -276,10 +284,10 @@
 ###  https://www.w3id.org/TIDO#Orientation
 :Orientation rdf:type owl:Class ;
              rdfs:subClassOf :Activity ;
-             rdfs:isDefinedBy "A step in the decision process where available information is shared, repeated, clarified or confirmed." ;
-             rdfs:label "Orientation" ,
-                        "Orientation step" ;
-             rdfs:seeAlso "Bales' 1st phase of group-decision making" .
+             <http://purl.org/dc/terms/description> "A step in the decision process where available information is shared, repeated, clarified or confirmed." ;
+             rdfs:label "Orientation" ;
+             rdfs:seeAlso "Bales' 1st phase of group-decision making" ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Orientation step" .
 
 
 ###  https://www.w3id.org/TIDO#PieceOfInformation
@@ -294,12 +302,12 @@
                                       owl:onProperty <http://www.w3.org/ns/prov#wasMemberOf> ;
                                       owl:minCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
-                    rdfs:isDefinedBy "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language" ;
-                    rdfs:label "Piece Of Information" ,
-                               "Piece of information" ,
-                               "PoI" ,
-                               "Sentence" ;
-                    rdfs:seeAlso "URREF (Costa et al. 2018)" .
+                    <http://purl.org/dc/terms/description> "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language" ;
+                    rdfs:label "Piece Of Information" ;
+                    rdfs:seeAlso "URREF (Costa et al. 2018)" ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "Piece of information" ,
+                                                                   "PoI" ,
+                                                                   "Sentence" .
 
 
 ###  https://www.w3id.org/TIDO#RQ
@@ -309,28 +317,28 @@
                       owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
                       owl:allValuesFrom :Evaluation
                     ] ;
-    rdfs:isDefinedBy "A question that arrises during an investigation." ;
-    rdfs:label "R Q" ,
-               "RQ" ,
-               "Research question" ;
-    rdfs:seeAlso "-" .
+    <http://purl.org/dc/terms/description> "A question that arrises during an investigation." ;
+    rdfs:label "R Q" ;
+    rdfs:seeAlso "-" ;
+    <http://www.w3.org/2004/02/skos/core#altLabel> "RQ" ,
+                                                   "Research question" .
 
 
 ###  https://www.w3id.org/TIDO#Resolution
 :Resolution rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
-            rdfs:isDefinedBy "A step in the decision process where a possible direction is chosen" ;
-            rdfs:label "Resolution" ,
-                       "Resolution step" ;
-            rdfs:seeAlso "Bales' 3rd phase of group decision making" .
+            <http://purl.org/dc/terms/description> "A step in the decision process where a possible direction is chosen" ;
+            rdfs:label "Resolution" ;
+            rdfs:seeAlso "Bales' 3rd phase of group decision making" ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Resolution step" .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-:ContributesTo rdfs:isDefinedBy "Every activity should contribute to one or more cases/investigations. " ;
-               rdfs:label "contributes to" .
+:ContributesTo <http://purl.org/dc/terms/description> "Every activity should contribute to one or more cases/investigations. " ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "contributes to" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

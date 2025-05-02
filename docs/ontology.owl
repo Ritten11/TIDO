@@ -6,7 +6,9 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://www.w3id.org/TIDO#">
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
@@ -22,6 +24,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
     
 
 
@@ -68,7 +84,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#answers">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#RQ"/>
-        <rdfs:isDefinedBy>A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence</rdfs:isDefinedBy>
+        <terms:description>A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence</terms:description>
         <rdfs:label>answers</rdfs:label>
     </owl:ObjectProperty>
     
@@ -80,7 +96,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#assumes">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
-        <rdfs:isDefinedBy>An option that would take an hypothesis as granted or true</rdfs:isDefinedBy>
+        <terms:description>An option that would take an hypothesis as granted or true</terms:description>
         <rdfs:label>assumes</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/assume</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -105,7 +121,7 @@
         <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/TIDO#providesInsightsInto"/>
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
-        <rdfs:isDefinedBy>A piece of information that calls into question or casts doubt upon a hypothesis</rdfs:isDefinedBy>
+        <terms:description>A piece of information that calls into question or casts doubt upon a hypothesis</terms:description>
         <rdfs:label>disputes</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/dispute</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -118,7 +134,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#hasConsideration">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Consideration"/>
-        <rdfs:isDefinedBy>An option can have multiple considerations that help in deciding on whether on not to select that option</rdfs:isDefinedBy>
+        <terms:description>An option can have multiple considerations that help in deciding on whether on not to select that option</terms:description>
         <rdfs:label>has consideration</rdfs:label>
     </owl:ObjectProperty>
     
@@ -141,7 +157,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#informs">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#RQ"/>
-        <rdfs:isDefinedBy>An option that would aid in answering a resaerch question if executed. </rdfs:isDefinedBy>
+        <terms:description>An option that would aid in answering a resaerch question if executed. </terms:description>
         <rdfs:label>informs</rdfs:label>
     </owl:ObjectProperty>
     
@@ -153,7 +169,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#investigates">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Case"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#RQ"/>
-        <rdfs:isDefinedBy>An investigation, or case, investigates one or more research questions</rdfs:isDefinedBy>
+        <terms:description>An investigation, or case, investigates one or more research questions</terms:description>
         <rdfs:label>investigates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -165,8 +181,8 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#providesInsightsInto">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
-        <rdfs:label>provides insight into</rdfs:label>
         <rdfs:label>provides insights into</rdfs:label>
+        <skos:altLabel>provides insight into</skos:altLabel>
     </owl:ObjectProperty>
     
 
@@ -177,7 +193,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#questions">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#RQ"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:isDefinedBy>A research question can be raised by a piece of information</rdfs:isDefinedBy>
+        <terms:description>A research question can be raised by a piece of information</terms:description>
         <rdfs:label>questions</rdfs:label>
     </owl:ObjectProperty>
     
@@ -190,7 +206,7 @@
         <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/TIDO#providesInsightsInto"/>
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
-        <rdfs:isDefinedBy>to provide with substantiation / to support with evidence or authority. make more certain</rdfs:isDefinedBy>
+        <terms:description>to provide with substantiation / to support with evidence or authority. make more certain</terms:description>
         <rdfs:label>supports</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -203,7 +219,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#wasExecutedBy">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Activity"/>
-        <rdfs:isDefinedBy>Once an option is selected, it could be excecuted by an activity. </rdfs:isDefinedBy>
+        <terms:description>Once an option is selected, it could be excecuted by an activity. </terms:description>
         <rdfs:label>was executed by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -215,9 +231,9 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#wasRecalledBy">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Orientation"/>
-        <rdfs:isDefinedBy>During an orientation step, no new informatoin is generated but only pre-existing information is recalled</rdfs:isDefinedBy>
+        <terms:description>During an orientation step, no new informatoin is generated but only pre-existing information is recalled</terms:description>
         <rdfs:label>was recalled by</rdfs:label>
-        <rdfs:label>was recelled by</rdfs:label>
+        <skos:altLabel>was recelled by</skos:altLabel>
     </owl:ObjectProperty>
     
 
@@ -228,7 +244,7 @@
     <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#wasSelectedBy">
         <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
         <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Resolution"/>
-        <rdfs:isDefinedBy>An option can be selected during a resolution step. This selection of an option is what constitudes a decision.</rdfs:isDefinedBy>
+        <terms:description>An option can be selected during a resolution step. This selection of an option is what constitudes a decision.</terms:description>
         <rdfs:label>was selected by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -296,7 +312,7 @@
 
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Activity">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <rdfs:isDefinedBy>An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information.</rdfs:isDefinedBy>
+        <terms:description>An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information.</terms:description>
         <rdfs:label>Activity</rdfs:label>
         <rdfs:seeAlso>https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action</rdfs:seeAlso>
     </owl:Class>
@@ -324,10 +340,10 @@
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. </rdfs:isDefinedBy>
+        <terms:description>A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. </terms:description>
         <rdfs:label>Case</rdfs:label>
-        <rdfs:label>Investigation</rdfs:label>
         <rdfs:seeAlso>-</rdfs:seeAlso>
+        <skos:altLabel>Investigation</skos:altLabel>
     </owl:Class>
     
 
@@ -343,7 +359,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>A matter weighed or taken into account when formulating an opinion or plan</rdfs:isDefinedBy>
+        <terms:description>A matter weighed or taken into account when formulating an opinion or plan</terms:description>
         <rdfs:label>Consideration</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/consideration</rdfs:seeAlso>
     </owl:Class>
@@ -355,7 +371,7 @@
 
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Cost">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Consideration"/>
-        <rdfs:isDefinedBy>The outlay or expenditure (as of effort or sacrifice) made to achieve an object</rdfs:isDefinedBy>
+        <terms:description>The outlay or expenditure (as of effort or sacrifice) made to achieve an object</terms:description>
         <rdfs:label>Cost</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/cost</rdfs:seeAlso>
     </owl:Class>
@@ -367,10 +383,10 @@
 
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Evaluation">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Activity"/>
-        <rdfs:isDefinedBy>A step in the decision process where opinions, evaluations and analysis are expressed. </rdfs:isDefinedBy>
+        <terms:description>A step in the decision process where opinions, evaluations and analysis are expressed. </terms:description>
         <rdfs:label>Evaluation</rdfs:label>
-        <rdfs:label>Evaluation step</rdfs:label>
         <rdfs:seeAlso>Bales&apos; 2nd phase of group-decision making</rdfs:seeAlso>
+        <skos:altLabel>Evaluation step</skos:altLabel>
     </owl:Class>
     
 
@@ -381,7 +397,7 @@
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Evidence">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
         <owl:disjointWith rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
-        <rdfs:isDefinedBy>A piece of information that is either a testamony, an observation, or a sensory measurement.</rdfs:isDefinedBy>
+        <terms:description>A piece of information that is either a testamony, an observation, or a sensory measurement.</terms:description>
         <rdfs:label>Evidence</rdfs:label>
         <rdfs:seeAlso>http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence</rdfs:seeAlso>
     </owl:Class>
@@ -393,7 +409,7 @@
 
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Goal">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Consideration"/>
-        <rdfs:isDefinedBy>A clearly directed intent or purpose</rdfs:isDefinedBy>
+        <terms:description>A clearly directed intent or purpose</terms:description>
         <rdfs:label>Goal</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/aim</rdfs:seeAlso>
     </owl:Class>
@@ -411,7 +427,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis.</rdfs:isDefinedBy>
+        <terms:description>A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis.</terms:description>
         <rdfs:label>Hypothesis</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/hypothesis</rdfs:seeAlso>
     </owl:Class>
@@ -429,7 +445,7 @@
                 <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question.</rdfs:isDefinedBy>
+        <terms:description>Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question.</terms:description>
         <rdfs:label>Option</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/option</rdfs:seeAlso>
     </owl:Class>
@@ -441,10 +457,10 @@
 
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Orientation">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Activity"/>
-        <rdfs:isDefinedBy>A step in the decision process where available information is shared, repeated, clarified or confirmed.</rdfs:isDefinedBy>
+        <terms:description>A step in the decision process where available information is shared, repeated, clarified or confirmed.</terms:description>
         <rdfs:label>Orientation</rdfs:label>
-        <rdfs:label>Orientation step</rdfs:label>
         <rdfs:seeAlso>Bales&apos; 1st phase of group-decision making</rdfs:seeAlso>
+        <skos:altLabel>Orientation step</skos:altLabel>
     </owl:Class>
     
 
@@ -467,12 +483,12 @@
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language</rdfs:isDefinedBy>
+        <terms:description>The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language</terms:description>
         <rdfs:label>Piece Of Information</rdfs:label>
-        <rdfs:label>Piece of information</rdfs:label>
-        <rdfs:label>PoI</rdfs:label>
-        <rdfs:label>Sentence</rdfs:label>
         <rdfs:seeAlso>URREF (Costa et al. 2018)</rdfs:seeAlso>
+        <skos:altLabel>Piece of information</skos:altLabel>
+        <skos:altLabel>PoI</skos:altLabel>
+        <skos:altLabel>Sentence</skos:altLabel>
     </owl:Class>
     
 
@@ -488,11 +504,11 @@
                 <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy>A question that arrises during an investigation.</rdfs:isDefinedBy>
+        <terms:description>A question that arrises during an investigation.</terms:description>
         <rdfs:label>R Q</rdfs:label>
-        <rdfs:label>RQ</rdfs:label>
-        <rdfs:label>Research question</rdfs:label>
         <rdfs:seeAlso>-</rdfs:seeAlso>
+        <skos:altLabel>RQ</skos:altLabel>
+        <skos:altLabel>Research question</skos:altLabel>
     </owl:Class>
     
 
@@ -502,10 +518,10 @@
 
     <owl:Class rdf:about="https://www.w3id.org/TIDO#Resolution">
         <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Activity"/>
-        <rdfs:isDefinedBy>A step in the decision process where a possible direction is chosen</rdfs:isDefinedBy>
+        <terms:description>A step in the decision process where a possible direction is chosen</terms:description>
         <rdfs:label>Resolution</rdfs:label>
-        <rdfs:label>Resolution step</rdfs:label>
         <rdfs:seeAlso>Bales&apos; 3rd phase of group decision making</rdfs:seeAlso>
+        <skos:altLabel>Resolution step</skos:altLabel>
     </owl:Class>
     
 
@@ -520,8 +536,8 @@
 
 
     <rdf:Description rdf:about="https://www.w3id.org/TIDO#ContributesTo">
-        <rdfs:isDefinedBy>Every activity should contribute to one or more cases/investigations. </rdfs:isDefinedBy>
-        <rdfs:label>contributes to</rdfs:label>
+        <terms:description>Every activity should contribute to one or more cases/investigations. </terms:description>
+        <skos:altLabel>contributes to</skos:altLabel>
     </rdf:Description>
 </rdf:RDF>
 
