@@ -15,19 +15,19 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "4",
+    "id" : "0",
     "type" : "owl:Class"
   }, {
     "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -48,7 +48,7 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "33",
@@ -63,13 +63,13 @@
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "3",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -80,9 +80,9 @@
       "IRI-based" : "Activity",
       "undefined" : "Activity"
     },
-    "subClasses" : [ "5" ],
+    "subClasses" : [ "1" ],
     "attributes" : [ "external" ],
-    "id" : "4"
+    "id" : "0"
   }, {
     "iri" : "https://www.w3id.org/TIDO#Case",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -118,9 +118,9 @@
       "IRI-based" : "Entity",
       "undefined" : "Entity"
     },
-    "subClasses" : [ "1" ],
+    "subClasses" : [ "3" ],
     "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "11"
   }, {
     "iri" : "https://www.w3id.org/TIDO#Agent",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -150,8 +150,8 @@
     "comment" : {
       "undefined" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
     },
-    "id" : "2",
-    "superClasses" : [ "1" ]
+    "id" : "4",
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Evidence",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -172,7 +172,7 @@
       "undefined" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
     },
     "id" : "17",
-    "superClasses" : [ "1" ]
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Cost",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -225,7 +225,7 @@
       "undefined" : "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question."
     },
     "id" : "10",
-    "superClasses" : [ "1" ]
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Evaluation",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -252,7 +252,7 @@
       "undefined" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
     },
     "id" : "35",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Collection",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -284,8 +284,8 @@
     "comment" : {
       "undefined" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
     },
-    "id" : "5",
-    "superClasses" : [ "4" ]
+    "id" : "1",
+    "superClasses" : [ "0" ]
   }, {
     "iri" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information",
     "baseIri" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl",
@@ -294,7 +294,7 @@
       "IRI-based" : "Information",
       "undefined" : "Information"
     },
-    "subClasses" : [ "1" ],
+    "subClasses" : [ "3" ],
     "attributes" : [ "external" ],
     "id" : "33"
   }, {
@@ -344,7 +344,7 @@
       "undefined" : "A step in the decision process where a possible direction is chosen"
     },
     "id" : "44",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Consideration",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -366,7 +366,7 @@
       "undefined" : "A matter weighed or taken into account when formulating an opinion or plan"
     },
     "id" : "20",
-    "superClasses" : [ "1" ]
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#RQ",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -397,8 +397,8 @@
     "comment" : {
       "undefined" : "A question that arrises during an investigation."
     },
-    "id" : "12",
-    "superClasses" : [ "1" ]
+    "id" : "13",
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#Orientation",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -425,7 +425,7 @@
       "undefined" : "A step in the decision process where available information is shared, repeated, clarified or confirmed."
     },
     "id" : "31",
-    "superClasses" : [ "5" ]
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://www.w3id.org/TIDO#PieceOfInformation",
     "baseIri" : "https://www.w3id.org/TIDO",
@@ -434,7 +434,7 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
-        "value" : "Piece of information",
+        "value" : "PoI",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -444,7 +444,7 @@
       }, {
         "identifier" : "altLabel",
         "language" : "undefined",
-        "value" : "PoI",
+        "value" : "Piece of information",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -458,15 +458,15 @@
       "IRI-based" : "PieceOfInformation",
       "undefined" : "Piece Of Information"
     },
-    "subClasses" : [ "17", "2", "10", "20", "12" ],
+    "subClasses" : [ "17", "4", "10", "20", "13" ],
     "comment" : {
       "undefined" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
     },
-    "id" : "1",
-    "superClasses" : [ "13", "33" ]
+    "id" : "3",
+    "superClasses" : [ "11", "33" ]
   } ],
   "property" : [ {
-    "id" : "0",
+    "id" : "2",
     "type" : "owl:objectProperty"
   }, {
     "id" : "6",
@@ -475,7 +475,7 @@
     "id" : "9",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "11",
+    "id" : "12",
     "type" : "owl:objectProperty"
   }, {
     "id" : "16",
@@ -484,7 +484,7 @@
     "id" : "18",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "3",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "21",
@@ -574,7 +574,7 @@
   "propertyAttribute" : [ {
     "iri" : "https://www.w3id.org/TIDO#disputes",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "2",
+    "range" : "4",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -587,17 +587,17 @@
       "IRI-based" : "disputes",
       "undefined" : "disputes"
     },
-    "superproperty" : [ "3" ],
-    "domain" : "1",
+    "superproperty" : [ "5" ],
+    "domain" : "3",
     "comment" : {
       "undefined" : "A piece of information that calls into question or casts doubt upon a hypothesis"
     },
     "attributes" : [ "object" ],
-    "id" : "0"
+    "id" : "2"
   }, {
     "iri" : "https://www.w3id.org/TIDO#supports",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "2",
+    "range" : "4",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -610,8 +610,8 @@
       "IRI-based" : "supports",
       "undefined" : "supports"
     },
-    "superproperty" : [ "3" ],
-    "domain" : "1",
+    "superproperty" : [ "5" ],
+    "domain" : "3",
     "comment" : {
       "undefined" : "to provide with substantiation / to support with evidence or authority. make more certain"
     },
@@ -620,7 +620,7 @@
   }, {
     "iri" : "https://www.w3id.org/TIDO#wasExecutedBy",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "5",
+    "range" : "1",
     "label" : {
       "IRI-based" : "wasExecutedBy",
       "undefined" : "was executed by"
@@ -634,7 +634,7 @@
   }, {
     "iri" : "https://www.w3id.org/TIDO#informs",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "12",
+    "range" : "13",
     "label" : {
       "IRI-based" : "informs",
       "undefined" : "informs"
@@ -644,21 +644,21 @@
       "undefined" : "An option that would aid in answering a resaerch question if executed. "
     },
     "attributes" : [ "object" ],
-    "id" : "11"
+    "id" : "12"
   }, {
-    "range" : "1",
-    "domain" : "12",
+    "range" : "3",
+    "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "16"
   }, {
     "iri" : "https://www.w3id.org/TIDO#questions",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "1",
+    "range" : "3",
     "label" : {
       "IRI-based" : "questions",
       "undefined" : "questions"
     },
-    "domain" : "12",
+    "domain" : "13",
     "comment" : {
       "undefined" : "A research question can be raised by a piece of information"
     },
@@ -667,7 +667,7 @@
   }, {
     "iri" : "https://www.w3id.org/TIDO#providesInsightsInto",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "2",
+    "range" : "4",
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -680,33 +680,33 @@
       "IRI-based" : "providesInsightsInto",
       "undefined" : "provides insights into"
     },
-    "domain" : "1",
-    "subproperty" : [ "0", "6" ],
+    "domain" : "3",
+    "subproperty" : [ "2", "6" ],
     "attributes" : [ "object" ],
-    "id" : "3"
+    "id" : "5"
   }, {
-    "range" : "1",
+    "range" : "3",
     "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
     "id" : "21"
   }, {
-    "range" : "1",
-    "domain" : "2",
+    "range" : "3",
+    "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
     "id" : "22"
   }, {
     "iri" : "https://www.w3id.org/TIDO#hasContext",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "1",
+    "range" : "3",
     "label" : {
       "IRI-based" : "hasContext",
       "undefined" : "has context"
     },
-    "domain" : "1",
+    "domain" : "3",
     "attributes" : [ "object" ],
     "id" : "23"
   }, {
-    "range" : "1",
+    "range" : "3",
     "domain" : "20",
     "attributes" : [ "object", "anonymous" ],
     "id" : "24"
@@ -721,7 +721,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
-    "range" : "1",
+    "range" : "3",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
     "id" : "28"
@@ -731,17 +731,17 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "29"
   }, {
-    "range" : "5",
+    "range" : "1",
     "domain" : "31",
     "attributes" : [ "object", "anonymous" ],
     "id" : "30"
   }, {
     "range" : "33",
-    "domain" : "1",
+    "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
-    "range" : "5",
+    "range" : "1",
     "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
     "id" : "34"
@@ -753,8 +753,8 @@
       "IRI-based" : "wasGeneratedBy",
       "undefined" : "was generated by"
     },
-    "domain" : "2",
-    "attributes" : [ "allValues", "object", "external" ],
+    "domain" : "4",
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "36"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
@@ -765,7 +765,7 @@
       "undefined" : "was generated by"
     },
     "domain" : "10",
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "37"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasMemberOf",
@@ -775,8 +775,8 @@
       "IRI-based" : "wasMemberOf",
       "undefined" : "was member of"
     },
-    "domain" : "1",
-    "attributes" : [ "someValues", "object", "external" ],
+    "domain" : "3",
+    "attributes" : [ "external", "object", "someValues" ],
     "id" : "38"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
@@ -786,17 +786,17 @@
       "IRI-based" : "wasGeneratedBy",
       "undefined" : "was generated by"
     },
-    "domain" : "12",
-    "attributes" : [ "allValues", "object", "external" ],
+    "domain" : "13",
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "39"
   }, {
-    "range" : "4",
-    "domain" : "5",
+    "range" : "0",
+    "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
-    "range" : "13",
-    "domain" : "1",
+    "range" : "11",
+    "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
@@ -805,7 +805,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
-    "range" : "5",
+    "range" : "1",
     "domain" : "44",
     "attributes" : [ "object", "anonymous" ],
     "id" : "43"
@@ -825,7 +825,7 @@
       "IRI-based" : "wasRecalledBy",
       "undefined" : "was recalled by"
     },
-    "domain" : "1",
+    "domain" : "3",
     "comment" : {
       "undefined" : "During an orientation step, no new informatoin is generated but only pre-existing information is recalled"
     },
@@ -834,12 +834,12 @@
   }, {
     "iri" : "https://www.w3id.org/TIDO#answers",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "12",
+    "range" : "13",
     "label" : {
       "IRI-based" : "answers",
       "undefined" : "answers"
     },
-    "domain" : "1",
+    "domain" : "3",
     "comment" : {
       "undefined" : "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence"
     },
@@ -868,12 +868,12 @@
       "undefined" : "was generated by"
     },
     "domain" : "20",
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "48"
   }, {
     "iri" : "https://www.w3id.org/TIDO#investigates",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "12",
+    "range" : "13",
     "label" : {
       "IRI-based" : "investigates",
       "undefined" : "investigates"
@@ -893,11 +893,11 @@
       "IRI-based" : "contributesTo",
       "undefined" : "contributes to"
     },
-    "domain" : "5",
+    "domain" : "1",
     "attributes" : [ "object" ],
     "id" : "50"
   }, {
-    "range" : "2",
+    "range" : "4",
     "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
     "id" : "51"
@@ -918,7 +918,7 @@
   }, {
     "iri" : "https://www.w3id.org/TIDO#assumes",
     "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "2",
+    "range" : "4",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
