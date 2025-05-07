@@ -1,17 +1,57 @@
-@prefix : <https://www.w3id.org/TIDO#> .
+@prefix : <https://w3id.org/tido#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://www.w3id.org/TIDO#> .
+@base <https://w3id.org/tido#> .
 
-<https://www.w3id.org/TIDO#> rdf:type owl:Ontology ;
-                              <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://w3id.org/tido#> rdf:type owl:Ontology ;
+                          owl:versionIRI <https://w3id.org/tido/1.0.0> ;
+                          <http://purl.org/dc/terms/created> "2025-05-07"^^xsd:date ;
+                          <http://purl.org/dc/terms/description> "The TIDO ontology can be used to describe the decision processes within the threat intelligence domain"@en ;
+                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                          <http://purl.org/dc/terms/title> "The Threat Intelligence Decision Ontology"@en ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "tido" ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/tido#> ;
+                          owl:versionInfo "1.0.0" ;
+                          <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionIRI
+owl:versionIRI rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
@@ -19,6 +59,14 @@
 
 ###  https://w3id.org/mod#createdWith
 <https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -35,7 +83,7 @@
                                         rdfs:label "was member of" .
 
 
-###  https://www.w3id.org/TIDO#answers
+###  https://w3id.org/tido#answers
 :answers rdf:type owl:ObjectProperty ;
          rdfs:domain :PieceOfInformation ;
          rdfs:range :RQ ;
@@ -43,7 +91,7 @@
          rdfs:label "answers" .
 
 
-###  https://www.w3id.org/TIDO#assumes
+###  https://w3id.org/tido#assumes
 :assumes rdf:type owl:ObjectProperty ;
          rdfs:domain :Option ;
          rdfs:range :Hypothesis ;
@@ -52,14 +100,14 @@
          rdfs:seeAlso "https://www.merriam-webster.com/dictionary/assume" .
 
 
-###  https://www.w3id.org/TIDO#contributesTo
+###  https://w3id.org/tido#contributesTo
 :contributesTo rdf:type owl:ObjectProperty ;
                rdfs:domain :Activity ;
                rdfs:range :Case ;
                rdfs:label "contributes to" .
 
 
-###  https://www.w3id.org/TIDO#disputes
+###  https://w3id.org/tido#disputes
 :disputes rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :providesInsightsInto ;
           rdfs:domain :PieceOfInformation ;
@@ -69,7 +117,7 @@
           rdfs:seeAlso "https://www.merriam-webster.com/dictionary/dispute" .
 
 
-###  https://www.w3id.org/TIDO#hasConsideration
+###  https://w3id.org/tido#hasConsideration
 :hasConsideration rdf:type owl:ObjectProperty ;
                   rdfs:domain :Option ;
                   rdfs:range :Consideration ;
@@ -77,14 +125,14 @@
                   rdfs:label "has consideration" .
 
 
-###  https://www.w3id.org/TIDO#hasContext
+###  https://w3id.org/tido#hasContext
 :hasContext rdf:type owl:ObjectProperty ;
             rdfs:domain :PieceOfInformation ;
             rdfs:range :PieceOfInformation ;
             rdfs:label "has context" .
 
 
-###  https://www.w3id.org/TIDO#informs
+###  https://w3id.org/tido#informs
 :informs rdf:type owl:ObjectProperty ;
          rdfs:domain :Option ;
          rdfs:range :RQ ;
@@ -92,7 +140,7 @@
          rdfs:label "informs" .
 
 
-###  https://www.w3id.org/TIDO#investigates
+###  https://w3id.org/tido#investigates
 :investigates rdf:type owl:ObjectProperty ;
               rdfs:domain :Case ;
               rdfs:range :RQ ;
@@ -100,7 +148,7 @@
               rdfs:label "investigates" .
 
 
-###  https://www.w3id.org/TIDO#providesInsightsInto
+###  https://w3id.org/tido#providesInsightsInto
 :providesInsightsInto rdf:type owl:ObjectProperty ;
                       rdfs:domain :PieceOfInformation ;
                       rdfs:range :Hypothesis ;
@@ -108,7 +156,7 @@
                       <http://www.w3.org/2004/02/skos/core#altLabel> "provides insight into" .
 
 
-###  https://www.w3id.org/TIDO#questions
+###  https://w3id.org/tido#questions
 :questions rdf:type owl:ObjectProperty ;
            rdfs:domain :RQ ;
            rdfs:range :PieceOfInformation ;
@@ -116,7 +164,7 @@
            rdfs:label "questions" .
 
 
-###  https://www.w3id.org/TIDO#supports
+###  https://w3id.org/tido#supports
 :supports rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :providesInsightsInto ;
           rdfs:domain :PieceOfInformation ;
@@ -126,7 +174,7 @@
           rdfs:seeAlso "https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate" .
 
 
-###  https://www.w3id.org/TIDO#wasExecutedBy
+###  https://w3id.org/tido#wasExecutedBy
 :wasExecutedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Option ;
                rdfs:range :Activity ;
@@ -134,7 +182,7 @@
                rdfs:label "was executed by" .
 
 
-###  https://www.w3id.org/TIDO#wasRecalledBy
+###  https://w3id.org/tido#wasRecalledBy
 :wasRecalledBy rdf:type owl:ObjectProperty ;
                rdfs:domain :PieceOfInformation ;
                rdfs:range :Orientation ;
@@ -143,7 +191,7 @@
                <http://www.w3.org/2004/02/skos/core#altLabel> "was recelled by" .
 
 
-###  https://www.w3id.org/TIDO#wasSelectedBy
+###  https://w3id.org/tido#wasSelectedBy
 :wasSelectedBy rdf:type owl:ObjectProperty ;
                rdfs:domain :Option ;
                rdfs:range :Resolution ;
@@ -180,7 +228,7 @@
                                    rdfs:label "Entity" .
 
 
-###  https://www.w3id.org/TIDO#Activity
+###  https://w3id.org/tido#Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
           rdfs:comment "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." ;
@@ -188,13 +236,13 @@
           rdfs:seeAlso "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" .
 
 
-###  https://www.w3id.org/TIDO#Agent
+###  https://w3id.org/tido#Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
        rdfs:label "Agent" .
 
 
-###  https://www.w3id.org/TIDO#Case
+###  https://w3id.org/tido#Case
 :Case rdf:type owl:Class ;
       rdfs:subClassOf <http://www.w3.org/ns/prov#Collection> ,
                       [ rdf:type owl:Restriction ;
@@ -207,7 +255,7 @@
       <http://www.w3.org/2004/02/skos/core#altLabel> "Investigation" .
 
 
-###  https://www.w3id.org/TIDO#Consideration
+###  https://w3id.org/tido#Consideration
 :Consideration rdf:type owl:Class ;
                rdfs:subClassOf :PieceOfInformation ,
                                [ rdf:type owl:Restriction ;
@@ -219,7 +267,7 @@
                rdfs:seeAlso "https://www.merriam-webster.com/dictionary/consideration" .
 
 
-###  https://www.w3id.org/TIDO#Cost
+###  https://w3id.org/tido#Cost
 :Cost rdf:type owl:Class ;
       rdfs:subClassOf :Consideration ;
       rdfs:comment "The outlay or expenditure (as of effort or sacrifice) made to achieve an object" ;
@@ -227,7 +275,7 @@
       rdfs:seeAlso "https://www.merriam-webster.com/dictionary/cost" .
 
 
-###  https://www.w3id.org/TIDO#Evaluation
+###  https://w3id.org/tido#Evaluation
 :Evaluation rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:comment "A step in the decision process where opinions, evaluations and analysis are expressed. " ;
@@ -236,7 +284,7 @@
             <http://www.w3.org/2004/02/skos/core#altLabel> "Evaluation step" .
 
 
-###  https://www.w3id.org/TIDO#Evidence
+###  https://w3id.org/tido#Evidence
 :Evidence rdf:type owl:Class ;
           rdfs:subClassOf :PieceOfInformation ;
           owl:disjointWith :Hypothesis ;
@@ -245,7 +293,7 @@
           rdfs:seeAlso "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence" .
 
 
-###  https://www.w3id.org/TIDO#Goal
+###  https://w3id.org/tido#Goal
 :Goal rdf:type owl:Class ;
       rdfs:subClassOf :Consideration ;
       rdfs:comment "A clearly directed intent or purpose" ;
@@ -253,7 +301,7 @@
       rdfs:seeAlso "https://www.merriam-webster.com/dictionary/aim" .
 
 
-###  https://www.w3id.org/TIDO#Hypothesis
+###  https://w3id.org/tido#Hypothesis
 :Hypothesis rdf:type owl:Class ;
             rdfs:subClassOf :PieceOfInformation ,
                             [ rdf:type owl:Restriction ;
@@ -265,7 +313,7 @@
             rdfs:seeAlso "https://www.merriam-webster.com/dictionary/hypothesis" .
 
 
-###  https://www.w3id.org/TIDO#Option
+###  https://w3id.org/tido#Option
 :Option rdf:type owl:Class ;
         rdfs:subClassOf :PieceOfInformation ,
                         [ rdf:type owl:Restriction ;
@@ -277,7 +325,7 @@
         rdfs:seeAlso "https://www.merriam-webster.com/dictionary/option" .
 
 
-###  https://www.w3id.org/TIDO#Orientation
+###  https://w3id.org/tido#Orientation
 :Orientation rdf:type owl:Class ;
              rdfs:subClassOf :Activity ;
              rdfs:comment "A step in the decision process where available information is shared, repeated, clarified or confirmed." ;
@@ -286,7 +334,7 @@
              <http://www.w3.org/2004/02/skos/core#altLabel> "Orientation step" .
 
 
-###  https://www.w3id.org/TIDO#PieceOfInformation
+###  https://w3id.org/tido#PieceOfInformation
 :PieceOfInformation rdf:type owl:Class ;
                     rdfs:subClassOf <http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information> ,
                                     <http://www.w3.org/ns/prov#Entity> ,
@@ -306,7 +354,7 @@
                                                                    "Sentence" .
 
 
-###  https://www.w3id.org/TIDO#RQ
+###  https://w3id.org/tido#RQ
 :RQ rdf:type owl:Class ;
     rdfs:subClassOf :PieceOfInformation ,
                     [ rdf:type owl:Restriction ;
@@ -320,7 +368,7 @@
                                                    "Research question" .
 
 
-###  https://www.w3id.org/TIDO#Resolution
+###  https://w3id.org/tido#Resolution
 :Resolution rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:comment "A step in the decision process where a possible direction is chosen" ;

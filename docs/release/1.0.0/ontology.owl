@@ -1,14 +1,24 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://www.w3id.org/TIDO#"
-     xml:base="https://www.w3id.org/TIDO"
+<rdf:RDF xmlns="https://w3id.org/tido#"
+     xml:base="https://w3id.org/tido"
      xmlns:mod="https://w3id.org/mod#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-    <owl:Ontology rdf:about="https://www.w3id.org/TIDO#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/tido#">
+        <owl:versionIRI rdf:resource="https://w3id.org/tido/1.0.0"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-07</terms:created>
+        <terms:description xml:lang="en">The TIDO ontology can be used to describe the decision processes within the threat intelligence domain</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">The Threat Intelligence Decision Ontology</terms:title>
+        <vann:preferredNamespacePrefix>tido</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/tido#"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     
@@ -26,6 +36,62 @@
     
 
 
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionIRI -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionIRI"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
 
@@ -37,6 +103,25 @@
 
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
     
 
 
@@ -70,24 +155,24 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#answers -->
+    <!-- https://w3id.org/tido#answers -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#answers">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#RQ"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#answers">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#RQ"/>
         <rdfs:comment>A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence</rdfs:comment>
         <rdfs:label>answers</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#assumes -->
+    <!-- https://w3id.org/tido#assumes -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#assumes">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#assumes">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Option"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Hypothesis"/>
         <rdfs:comment>An option that would take an hypothesis as granted or true</rdfs:comment>
         <rdfs:label>assumes</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/assume</rdfs:seeAlso>
@@ -95,24 +180,24 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#contributesTo -->
+    <!-- https://w3id.org/tido#contributesTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#contributesTo">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Activity"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Case"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#contributesTo">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Case"/>
         <rdfs:label>contributes to</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#disputes -->
+    <!-- https://w3id.org/tido#disputes -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#disputes">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/TIDO#providesInsightsInto"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#disputes">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tido#providesInsightsInto"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Hypothesis"/>
         <rdfs:comment>A piece of information that calls into question or casts doubt upon a hypothesis</rdfs:comment>
         <rdfs:label>disputes</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/dispute</rdfs:seeAlso>
@@ -120,84 +205,84 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#hasConsideration -->
+    <!-- https://w3id.org/tido#hasConsideration -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#hasConsideration">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Consideration"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#hasConsideration">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Option"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Consideration"/>
         <rdfs:comment>An option can have multiple considerations that help in deciding on whether on not to select that option</rdfs:comment>
         <rdfs:label>has consideration</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#hasContext -->
+    <!-- https://w3id.org/tido#hasContext -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#hasContext">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#hasContext">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
         <rdfs:label>has context</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#informs -->
+    <!-- https://w3id.org/tido#informs -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#informs">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#RQ"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#informs">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Option"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#RQ"/>
         <rdfs:comment>An option that would aid in answering a resaerch question if executed. </rdfs:comment>
         <rdfs:label>informs</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#investigates -->
+    <!-- https://w3id.org/tido#investigates -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#investigates">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Case"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#RQ"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#investigates">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Case"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#RQ"/>
         <rdfs:comment>An investigation, or case, investigates one or more research questions</rdfs:comment>
         <rdfs:label>investigates</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#providesInsightsInto -->
+    <!-- https://w3id.org/tido#providesInsightsInto -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#providesInsightsInto">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#providesInsightsInto">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Hypothesis"/>
         <rdfs:label>provides insights into</rdfs:label>
         <skos:altLabel>provides insight into</skos:altLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#questions -->
+    <!-- https://w3id.org/tido#questions -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#questions">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#RQ"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#questions">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#RQ"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
         <rdfs:comment>A research question can be raised by a piece of information</rdfs:comment>
         <rdfs:label>questions</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#supports -->
+    <!-- https://w3id.org/tido#supports -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#supports">
-        <rdfs:subPropertyOf rdf:resource="https://www.w3id.org/TIDO#providesInsightsInto"/>
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#supports">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tido#providesInsightsInto"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Hypothesis"/>
         <rdfs:comment>to provide with substantiation / to support with evidence or authority. make more certain</rdfs:comment>
         <rdfs:label>supports</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate</rdfs:seeAlso>
@@ -205,24 +290,24 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#wasExecutedBy -->
+    <!-- https://w3id.org/tido#wasExecutedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#wasExecutedBy">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Activity"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#wasExecutedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Option"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Activity"/>
         <rdfs:comment>Once an option is selected, it could be excecuted by an activity. </rdfs:comment>
         <rdfs:label>was executed by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://www.w3id.org/TIDO#wasRecalledBy -->
+    <!-- https://w3id.org/tido#wasRecalledBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#wasRecalledBy">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Orientation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#wasRecalledBy">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Orientation"/>
         <rdfs:comment>During an orientation step, no new informatoin is generated but only pre-existing information is recalled</rdfs:comment>
         <rdfs:label>was recalled by</rdfs:label>
         <skos:altLabel>was recelled by</skos:altLabel>
@@ -230,12 +315,12 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#wasSelectedBy -->
+    <!-- https://w3id.org/tido#wasSelectedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://www.w3id.org/TIDO#wasSelectedBy">
-        <rdfs:domain rdf:resource="https://www.w3id.org/TIDO#Option"/>
-        <rdfs:range rdf:resource="https://www.w3id.org/TIDO#Resolution"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/tido#wasSelectedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/tido#Option"/>
+        <rdfs:range rdf:resource="https://w3id.org/tido#Resolution"/>
         <rdfs:comment>An option can be selected during a resolution step. This selection of an option is what constitudes a decision.</rdfs:comment>
         <rdfs:label>was selected by</rdfs:label>
     </owl:ObjectProperty>
@@ -299,10 +384,10 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Activity -->
+    <!-- https://w3id.org/tido#Activity -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Activity">
+    <owl:Class rdf:about="https://w3id.org/tido#Activity">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <rdfs:comment>An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information.</rdfs:comment>
         <rdfs:label>Activity</rdfs:label>
@@ -311,24 +396,24 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Agent -->
+    <!-- https://w3id.org/tido#Agent -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Agent">
+    <owl:Class rdf:about="https://w3id.org/tido#Agent">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:label>Agent</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://www.w3id.org/TIDO#Case -->
+    <!-- https://w3id.org/tido#Case -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Case">
+    <owl:Class rdf:about="https://w3id.org/tido#Case">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://www.w3id.org/TIDO#investigates"/>
+                <owl:onProperty rdf:resource="https://w3id.org/tido#investigates"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -340,15 +425,15 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Consideration -->
+    <!-- https://w3id.org/tido#Consideration -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Consideration">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Consideration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A matter weighed or taken into account when formulating an opinion or plan</rdfs:comment>
@@ -358,11 +443,11 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Cost -->
+    <!-- https://w3id.org/tido#Cost -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Cost">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Consideration"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Cost">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#Consideration"/>
         <rdfs:comment>The outlay or expenditure (as of effort or sacrifice) made to achieve an object</rdfs:comment>
         <rdfs:label>Cost</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/cost</rdfs:seeAlso>
@@ -370,11 +455,11 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Evaluation -->
+    <!-- https://w3id.org/tido#Evaluation -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Evaluation">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Activity"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Evaluation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#Activity"/>
         <rdfs:comment>A step in the decision process where opinions, evaluations and analysis are expressed. </rdfs:comment>
         <rdfs:label>Evaluation</rdfs:label>
         <rdfs:seeAlso>Bales&apos; 2nd phase of group-decision making</rdfs:seeAlso>
@@ -383,12 +468,12 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Evidence -->
+    <!-- https://w3id.org/tido#Evidence -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Evidence">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
-        <owl:disjointWith rdf:resource="https://www.w3id.org/TIDO#Hypothesis"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Evidence">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tido#Hypothesis"/>
         <rdfs:comment>A piece of information that is either a testamony, an observation, or a sensory measurement.</rdfs:comment>
         <rdfs:label>Evidence</rdfs:label>
         <rdfs:seeAlso>http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence</rdfs:seeAlso>
@@ -396,11 +481,11 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Goal -->
+    <!-- https://w3id.org/tido#Goal -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Goal">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Consideration"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Goal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#Consideration"/>
         <rdfs:comment>A clearly directed intent or purpose</rdfs:comment>
         <rdfs:label>Goal</rdfs:label>
         <rdfs:seeAlso>https://www.merriam-webster.com/dictionary/aim</rdfs:seeAlso>
@@ -408,15 +493,15 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Hypothesis -->
+    <!-- https://w3id.org/tido#Hypothesis -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Hypothesis">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Hypothesis">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis.</rdfs:comment>
@@ -426,15 +511,15 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Option -->
+    <!-- https://w3id.org/tido#Option -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Option">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Option">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question.</rdfs:comment>
@@ -444,11 +529,11 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Orientation -->
+    <!-- https://w3id.org/tido#Orientation -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Orientation">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Activity"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Orientation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#Activity"/>
         <rdfs:comment>A step in the decision process where available information is shared, repeated, clarified or confirmed.</rdfs:comment>
         <rdfs:label>Orientation</rdfs:label>
         <rdfs:seeAlso>Bales&apos; 1st phase of group-decision making</rdfs:seeAlso>
@@ -457,16 +542,16 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#PieceOfInformation -->
+    <!-- https://w3id.org/tido#PieceOfInformation -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#PieceOfInformation">
+    <owl:Class rdf:about="https://w3id.org/tido#PieceOfInformation">
         <rdfs:subClassOf rdf:resource="http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasMemberOf"/>
-                <owl:someValuesFrom rdf:resource="https://www.w3id.org/TIDO#Case"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/tido#Case"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -485,15 +570,15 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#RQ -->
+    <!-- https://w3id.org/tido#RQ -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#RQ">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#PieceOfInformation"/>
+    <owl:Class rdf:about="https://w3id.org/tido#RQ">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#PieceOfInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://www.w3id.org/TIDO#Evaluation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A question that arrises during an investigation.</rdfs:comment>
@@ -505,11 +590,11 @@
     
 
 
-    <!-- https://www.w3id.org/TIDO#Resolution -->
+    <!-- https://w3id.org/tido#Resolution -->
 
 
-    <owl:Class rdf:about="https://www.w3id.org/TIDO#Resolution">
-        <rdfs:subClassOf rdf:resource="https://www.w3id.org/TIDO#Activity"/>
+    <owl:Class rdf:about="https://w3id.org/tido#Resolution">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tido#Activity"/>
         <rdfs:comment>A step in the decision process where a possible direction is chosen</rdfs:comment>
         <rdfs:label>Resolution</rdfs:label>
         <rdfs:seeAlso>Bales&apos; 3rd phase of group decision making</rdfs:seeAlso>
@@ -527,7 +612,7 @@
      -->
 
 
-    <rdf:Description rdf:about="https://www.w3id.org/TIDO#ContributesTo">
+    <rdf:Description rdf:about="https://w3id.org/tido#ContributesTo">
         <rdfs:comment>Every activity should contribute to one or more cases/investigations. </rdfs:comment>
         <skos:altLabel>contributes to</skos:altLabel>
     </rdf:Description>

@@ -1,27 +1,67 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "undefined" ],
-    "baseIris" : [ "https://www.w3id.org/TIDO", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl", "http://www.w3.org/2001/XMLSchema" ],
-    "iri" : "https://www.w3id.org/TIDO#",
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/tido" ],
+    "title" : {
+      "en" : "The Threat Intelligence Decision Ontology"
+    },
+    "iri" : "https://w3id.org/tido#",
+    "version" : "1.0.0",
+    "description" : {
+      "en" : "The TIDO ontology can be used to describe the decision processes within the threat intelligence domain"
+    },
     "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
       "createdWith" : [ {
         "identifier" : "createdWith",
         "language" : "undefined",
         "value" : "https://chowlk.linkeddata.es/",
         "type" : "iri"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-05-07",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "tido",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/tido#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Threat Intelligence Decision Ontology",
+        "type" : "label"
       } ]
     }
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "0",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -30,46 +70,49 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "44",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -80,36 +123,31 @@
       "IRI-based" : "Activity",
       "undefined" : "Activity"
     },
-    "subClasses" : [ "1" ],
+    "subClasses" : [ "7" ],
     "attributes" : [ "external" ],
-    "id" : "0"
+    "id" : "6"
   }, {
-    "iri" : "https://www.w3id.org/TIDO#Case",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#Activity",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "Investigation",
-        "type" : "label"
-      } ],
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "-",
+        "value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "Case",
-      "undefined" : "Case"
+      "IRI-based" : "Activity",
+      "undefined" : "Activity"
     },
+    "subClasses" : [ "9", "10", "5" ],
     "comment" : {
-      "undefined" : "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. "
+      "undefined" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
     },
     "id" : "7",
-    "superClasses" : [ "8" ]
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -118,96 +156,50 @@
       "IRI-based" : "Entity",
       "undefined" : "Entity"
     },
-    "subClasses" : [ "3" ],
+    "subClasses" : [ "4" ],
     "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "14"
   }, {
-    "iri" : "https://www.w3id.org/TIDO#Agent",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Agent",
-      "undefined" : "Agent"
-    },
-    "id" : "14",
-    "superClasses" : [ "15" ]
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#Hypothesis",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#PieceOfInformation",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "Sentence",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "Piece of information",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "PoI",
+        "type" : "label"
+      } ],
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://www.merriam-webster.com/dictionary/hypothesis",
+        "value" : "URREF (Costa et al. 2018)",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "Hypothesis",
-      "undefined" : "Hypothesis"
+      "IRI-based" : "PieceOfInformation",
+      "undefined" : "Piece Of Information"
     },
+    "subClasses" : [ "16", "2", "17", "18", "13" ],
     "comment" : {
-      "undefined" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
+      "undefined" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
     },
     "id" : "4",
-    "superClasses" : [ "3" ]
+    "superClasses" : [ "14", "15" ]
   }, {
-    "iri" : "https://www.w3id.org/TIDO#Evidence",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Evidence",
-      "undefined" : "Evidence"
-    },
-    "comment" : {
-      "undefined" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
-    },
-    "id" : "17",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#Cost",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://www.merriam-webster.com/dictionary/cost",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Cost",
-      "undefined" : "Cost"
-    },
-    "comment" : {
-      "undefined" : "The outlay or expenditure (as of effort or sacrifice) made to achieve an object"
-    },
-    "id" : "19",
-    "superClasses" : [ "20" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Agent",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Agent",
-      "undefined" : "Agent"
-    },
-    "subClasses" : [ "14" ],
-    "attributes" : [ "external" ],
-    "id" : "15"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#Option",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#Option",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
       "seeAlso" : [ {
@@ -224,103 +216,11 @@
     "comment" : {
       "undefined" : "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question."
     },
-    "id" : "10",
-    "superClasses" : [ "3" ]
+    "id" : "13",
+    "superClasses" : [ "4" ]
   }, {
-    "iri" : "https://www.w3id.org/TIDO#Evaluation",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "instances" : 0,
-    "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "Evaluation step",
-        "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "Bales' 2nd phase of group-decision making",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Evaluation",
-      "undefined" : "Evaluation"
-    },
-    "comment" : {
-      "undefined" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
-    },
-    "id" : "35",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#Collection",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Collection",
-      "undefined" : "Collection"
-    },
-    "subClasses" : [ "7" ],
-    "attributes" : [ "external" ],
-    "id" : "8"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#Activity",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Activity",
-      "undefined" : "Activity"
-    },
-    "subClasses" : [ "44", "31", "35" ],
-    "comment" : {
-      "undefined" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
-    },
-    "id" : "1",
-    "superClasses" : [ "0" ]
-  }, {
-    "iri" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information",
-    "baseIri" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Information",
-      "undefined" : "Information"
-    },
-    "subClasses" : [ "3" ],
-    "attributes" : [ "external" ],
-    "id" : "33"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#Goal",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://www.merriam-webster.com/dictionary/aim",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Goal",
-      "undefined" : "Goal"
-    },
-    "comment" : {
-      "undefined" : "A clearly directed intent or purpose"
-    },
-    "id" : "26",
-    "superClasses" : [ "20" ]
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#Resolution",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#Resolution",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
       "altLabel" : [ {
@@ -343,44 +243,64 @@
     "comment" : {
       "undefined" : "A step in the decision process where a possible direction is chosen"
     },
-    "id" : "44",
-    "superClasses" : [ "1" ]
+    "id" : "9",
+    "superClasses" : [ "7" ]
   }, {
-    "iri" : "https://www.w3id.org/TIDO#Consideration",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#Agent",
+    "baseIri" : "https://w3id.org/tido",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "id" : "20",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Agent",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Agent",
+      "undefined" : "Agent"
+    },
+    "subClasses" : [ "20" ],
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/tido#Evidence",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://www.merriam-webster.com/dictionary/consideration",
+        "value" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "Consideration",
-      "undefined" : "Consideration"
+      "IRI-based" : "Evidence",
+      "undefined" : "Evidence"
     },
-    "subClasses" : [ "19", "26" ],
     "comment" : {
-      "undefined" : "A matter weighed or taken into account when formulating an opinion or plan"
+      "undefined" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
     },
-    "id" : "20",
-    "superClasses" : [ "3" ]
+    "id" : "18",
+    "superClasses" : [ "4" ]
   }, {
-    "iri" : "https://www.w3id.org/TIDO#RQ",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#RQ",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
-        "value" : "RQ",
+        "value" : "Research question",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "undefined",
-        "value" : "Research question",
+        "value" : "RQ",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -397,11 +317,130 @@
     "comment" : {
       "undefined" : "A question that arrises during an investigation."
     },
-    "id" : "13",
-    "superClasses" : [ "3" ]
+    "id" : "2",
+    "superClasses" : [ "4" ]
   }, {
-    "iri" : "https://www.w3id.org/TIDO#Orientation",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#Case",
+    "baseIri" : "https://w3id.org/tido",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "Investigation",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "-",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Case",
+      "undefined" : "Case"
+    },
+    "comment" : {
+      "undefined" : "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. "
+    },
+    "id" : "1",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/tido#Cost",
+    "baseIri" : "https://w3id.org/tido",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.merriam-webster.com/dictionary/cost",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Cost",
+      "undefined" : "Cost"
+    },
+    "comment" : {
+      "undefined" : "The outlay or expenditure (as of effort or sacrifice) made to achieve an object"
+    },
+    "id" : "29",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#Collection",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Collection",
+      "undefined" : "Collection"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/tido#Consideration",
+    "baseIri" : "https://w3id.org/tido",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.merriam-webster.com/dictionary/consideration",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Consideration",
+      "undefined" : "Consideration"
+    },
+    "subClasses" : [ "29", "27" ],
+    "comment" : {
+      "undefined" : "A matter weighed or taken into account when formulating an opinion or plan"
+    },
+    "id" : "17",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/tido#Evaluation",
+    "baseIri" : "https://w3id.org/tido",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "Evaluation step",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "Bales' 2nd phase of group-decision making",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Evaluation",
+      "undefined" : "Evaluation"
+    },
+    "comment" : {
+      "undefined" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
+    },
+    "id" : "10",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information",
+    "baseIri" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Information",
+      "undefined" : "Information"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/tido#Orientation",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
       "altLabel" : [ {
@@ -424,143 +463,144 @@
     "comment" : {
       "undefined" : "A step in the decision process where available information is shared, repeated, clarified or confirmed."
     },
-    "id" : "31",
-    "superClasses" : [ "1" ]
+    "id" : "5",
+    "superClasses" : [ "7" ]
   }, {
-    "iri" : "https://www.w3id.org/TIDO#PieceOfInformation",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "iri" : "https://w3id.org/tido#Goal",
+    "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "PoI",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "Sentence",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "Piece of information",
-        "type" : "label"
-      } ],
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "URREF (Costa et al. 2018)",
+        "value" : "https://www.merriam-webster.com/dictionary/aim",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "PieceOfInformation",
-      "undefined" : "Piece Of Information"
+      "IRI-based" : "Goal",
+      "undefined" : "Goal"
     },
-    "subClasses" : [ "17", "4", "10", "20", "13" ],
     "comment" : {
-      "undefined" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
+      "undefined" : "A clearly directed intent or purpose"
     },
-    "id" : "3",
-    "superClasses" : [ "11", "33" ]
+    "id" : "27",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "https://w3id.org/tido#Hypothesis",
+    "baseIri" : "https://w3id.org/tido",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.merriam-webster.com/dictionary/hypothesis",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hypothesis",
+      "undefined" : "Hypothesis"
+    },
+    "comment" : {
+      "undefined" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
+    },
+    "id" : "16",
+    "superClasses" : [ "4" ]
   } ],
   "property" : [ {
-    "id" : "2",
+    "id" : "0",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "6",
+    "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "9",
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
     "type" : "owl:objectProperty"
   }, {
     "id" : "12",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "16",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "18",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "5",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "21",
+    "id" : "19",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "22",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "23",
     "type" : "owl:objectProperty"
   }, {
     "id" : "24",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "25",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "27",
+    "id" : "26",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "28",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "29",
+    "id" : "30",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "30",
+    "id" : "31",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "32",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "34",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "36",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "37",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "38",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "39",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "40",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "41",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "42",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "43",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "44",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "45",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "46",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "47",
+    "id" : "25",
     "type" : "owl:objectProperty"
   }, {
     "id" : "48",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "49",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "50",
-    "type" : "owl:objectProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "51",
     "type" : "owl:disjointWith"
@@ -570,249 +610,29 @@
   }, {
     "id" : "53",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://www.w3id.org/TIDO#disputes",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "4",
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://www.merriam-webster.com/dictionary/dispute",
-        "type" : "label"
-      } ]
-    },
+    "iri" : "https://w3id.org/tido#investigates",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "2",
     "label" : {
-      "IRI-based" : "disputes",
-      "undefined" : "disputes"
+      "IRI-based" : "investigates",
+      "undefined" : "investigates"
     },
-    "superproperty" : [ "5" ],
-    "domain" : "3",
-    "comment" : {
-      "undefined" : "A piece of information that calls into question or casts doubt upon a hypothesis"
-    },
-    "attributes" : [ "object" ],
-    "id" : "2"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#supports",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "4",
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "supports",
-      "undefined" : "supports"
-    },
-    "superproperty" : [ "5" ],
-    "domain" : "3",
-    "comment" : {
-      "undefined" : "to provide with substantiation / to support with evidence or authority. make more certain"
-    },
-    "attributes" : [ "object" ],
-    "id" : "6"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#wasExecutedBy",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "wasExecutedBy",
-      "undefined" : "was executed by"
-    },
-    "domain" : "10",
-    "comment" : {
-      "undefined" : "Once an option is selected, it could be excecuted by an activity. "
-    },
-    "attributes" : [ "object" ],
-    "id" : "9"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#informs",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "informs",
-      "undefined" : "informs"
-    },
-    "domain" : "10",
-    "comment" : {
-      "undefined" : "An option that would aid in answering a resaerch question if executed. "
-    },
-    "attributes" : [ "object" ],
-    "id" : "12"
-  }, {
-    "range" : "3",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "16"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#questions",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "questions",
-      "undefined" : "questions"
-    },
-    "domain" : "13",
-    "comment" : {
-      "undefined" : "A research question can be raised by a piece of information"
-    },
-    "attributes" : [ "object" ],
-    "id" : "18"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#providesInsightsInto",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "4",
-    "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "provides insight into",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "providesInsightsInto",
-      "undefined" : "provides insights into"
-    },
-    "domain" : "3",
-    "subproperty" : [ "2", "6" ],
-    "attributes" : [ "object" ],
-    "id" : "5"
-  }, {
-    "range" : "3",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "21"
-  }, {
-    "range" : "3",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "22"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#hasContext",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "hasContext",
-      "undefined" : "has context"
-    },
-    "domain" : "3",
-    "attributes" : [ "object" ],
-    "id" : "23"
-  }, {
-    "range" : "3",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "24"
-  }, {
-    "range" : "20",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "25"
-  }, {
-    "range" : "20",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "27"
-  }, {
-    "range" : "3",
-    "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
-  }, {
-    "range" : "15",
-    "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "29"
-  }, {
-    "range" : "1",
-    "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "30"
-  }, {
-    "range" : "33",
-    "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "32"
-  }, {
-    "range" : "1",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "34"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "35",
-    "label" : {
-      "IRI-based" : "wasGeneratedBy",
-      "undefined" : "was generated by"
-    },
-    "domain" : "4",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "36"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "35",
-    "label" : {
-      "IRI-based" : "wasGeneratedBy",
-      "undefined" : "was generated by"
-    },
-    "domain" : "10",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "37"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasMemberOf",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "7",
-    "label" : {
-      "IRI-based" : "wasMemberOf",
-      "undefined" : "was member of"
-    },
-    "domain" : "3",
-    "attributes" : [ "external", "object", "someValues" ],
-    "id" : "38"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "35",
-    "label" : {
-      "IRI-based" : "wasGeneratedBy",
-      "undefined" : "was generated by"
-    },
-    "domain" : "13",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "39"
-  }, {
-    "range" : "0",
+    "minCardinality" : "1",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
+    "comment" : {
+      "undefined" : "An investigation, or case, investigates one or more research questions"
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
   }, {
-    "range" : "11",
-    "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "41"
-  }, {
-    "range" : "8",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "42"
-  }, {
-    "range" : "1",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "43"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#wasRecalledBy",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "31",
+    "iri" : "https://w3id.org/tido#wasRecalledBy",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "5",
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
@@ -825,100 +645,172 @@
       "IRI-based" : "wasRecalledBy",
       "undefined" : "was recalled by"
     },
-    "domain" : "3",
+    "domain" : "4",
     "comment" : {
       "undefined" : "During an orientation step, no new informatoin is generated but only pre-existing information is recalled"
     },
     "attributes" : [ "object" ],
-    "id" : "45"
+    "id" : "3"
   }, {
-    "iri" : "https://www.w3id.org/TIDO#answers",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "13",
+    "iri" : "https://w3id.org/tido#answers",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "2",
     "label" : {
       "IRI-based" : "answers",
       "undefined" : "answers"
     },
-    "domain" : "3",
+    "domain" : "4",
     "comment" : {
       "undefined" : "A piece of information can be used to answer a research question. This piece of information can be anything, as long as it can be expressed in a sentence"
     },
     "attributes" : [ "object" ],
-    "id" : "46"
+    "id" : "8"
   }, {
-    "iri" : "https://www.w3id.org/TIDO#hasConsideration",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "20",
-    "label" : {
-      "IRI-based" : "hasConsideration",
-      "undefined" : "has consideration"
-    },
-    "domain" : "10",
-    "comment" : {
-      "undefined" : "An option can have multiple considerations that help in deciding on whether on not to select that option"
-    },
-    "attributes" : [ "object" ],
-    "id" : "47"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "35",
-    "label" : {
-      "IRI-based" : "wasGeneratedBy",
-      "undefined" : "was generated by"
-    },
-    "domain" : "20",
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "48"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#investigates",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "investigates",
-      "undefined" : "investigates"
-    },
-    "minCardinality" : "1",
-    "domain" : "7",
-    "comment" : {
-      "undefined" : "An investigation, or case, investigates one or more research questions"
-    },
-    "attributes" : [ "object" ],
-    "id" : "49"
-  }, {
-    "iri" : "https://www.w3id.org/TIDO#contributesTo",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "7",
-    "label" : {
-      "IRI-based" : "contributesTo",
-      "undefined" : "contributes to"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "50"
-  }, {
+    "iri" : "https://w3id.org/tido#questions",
+    "baseIri" : "https://w3id.org/tido",
     "range" : "4",
-    "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "51"
+    "label" : {
+      "IRI-based" : "questions",
+      "undefined" : "questions"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "A research question can be raised by a piece of information"
+    },
+    "attributes" : [ "object" ],
+    "id" : "11"
   }, {
-    "iri" : "https://www.w3id.org/TIDO#wasSelectedBy",
-    "baseIri" : "https://www.w3id.org/TIDO",
-    "range" : "44",
+    "iri" : "https://w3id.org/tido#wasSelectedBy",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "9",
     "label" : {
       "IRI-based" : "wasSelectedBy",
       "undefined" : "was selected by"
     },
-    "domain" : "10",
+    "domain" : "13",
     "comment" : {
       "undefined" : "An option can be selected during a resolution step. This selection of an option is what constitudes a decision."
     },
     "attributes" : [ "object" ],
-    "id" : "52"
+    "id" : "12"
   }, {
-    "iri" : "https://www.w3id.org/TIDO#assumes",
-    "baseIri" : "https://www.w3id.org/TIDO",
+    "range" : "21",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/tido#hasContext",
+    "baseIri" : "https://w3id.org/tido",
     "range" : "4",
+    "label" : {
+      "IRI-based" : "hasContext",
+      "undefined" : "has context"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/tido#contributesTo",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "contributesTo",
+      "undefined" : "contributes to"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/tido#disputes",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "16",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.merriam-webster.com/dictionary/dispute",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "disputes",
+      "undefined" : "disputes"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "A piece of information that calls into question or casts doubt upon a hypothesis"
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "range" : "17",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "17",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "15",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "4",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "4",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/tido#informs",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "informs",
+      "undefined" : "informs"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "An option that would aid in answering a resaerch question if executed. "
+    },
+    "attributes" : [ "object" ],
+    "id" : "33"
+  }, {
+    "range" : "4",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "4",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "14",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "4",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "39",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/tido#assumes",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "16",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -931,11 +823,162 @@
       "IRI-based" : "assumes",
       "undefined" : "assumes"
     },
-    "domain" : "10",
+    "domain" : "13",
     "comment" : {
       "undefined" : "An option that would take an hypothesis as granted or true"
     },
     "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "wasGeneratedBy",
+      "undefined" : "was generated by"
+    },
+    "domain" : "16",
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "wasGeneratedBy",
+      "undefined" : "was generated by"
+    },
+    "domain" : "13",
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasMemberOf",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "wasMemberOf",
+      "undefined" : "was member of"
+    },
+    "domain" : "4",
+    "attributes" : [ "external", "someValues", "object" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "wasGeneratedBy",
+      "undefined" : "was generated by"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/tido#providesInsightsInto",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "16",
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "provides insight into",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "providesInsightsInto",
+      "undefined" : "provides insights into"
+    },
+    "domain" : "4",
+    "subproperty" : [ "24", "47" ],
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
+    "range" : "7",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "7",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "wasGeneratedBy",
+      "undefined" : "was generated by"
+    },
+    "domain" : "17",
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "16",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/tido#wasExecutedBy",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "wasExecutedBy",
+      "undefined" : "was executed by"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "Once an option is selected, it could be excecuted by an activity. "
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/tido#hasConsideration",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasConsideration",
+      "undefined" : "has consideration"
+    },
+    "domain" : "13",
+    "comment" : {
+      "undefined" : "An option can have multiple considerations that help in deciding on whether on not to select that option"
+    },
+    "attributes" : [ "object" ],
     "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/tido#supports",
+    "baseIri" : "https://w3id.org/tido",
+    "range" : "16",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "supports",
+      "undefined" : "supports"
+    },
+    "superproperty" : [ "25" ],
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "to provide with substantiation / to support with evidence or authority. make more certain"
+    },
+    "attributes" : [ "object" ],
+    "id" : "47"
   } ]
 }
