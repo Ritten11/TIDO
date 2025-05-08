@@ -95,7 +95,7 @@ xsd:date rdf:type rdfs:Datatype .
 :assumes rdf:type owl:ObjectProperty ;
          rdfs:domain :Option ;
          rdfs:range :Hypothesis ;
-         rdfs:comment "An option that would take an hypothesis as granted or true" ;
+         rdfs:comment "A relationship indicating how an option would take an hypothesis as granted or true" ;
          rdfs:label "assumes" ;
          rdfs:seeAlso "https://www.merriam-webster.com/dictionary/assume" .
 
@@ -112,7 +112,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:subPropertyOf :providesInsightsInto ;
           rdfs:domain :PieceOfInformation ;
           rdfs:range :Hypothesis ;
-          rdfs:comment "A piece of information that calls into question or casts doubt upon a hypothesis" ;
+          rdfs:comment "A relationship indicating how a piece of information calls into question or casts doubt upon a hypothesis" ;
           rdfs:label "disputes" ;
           rdfs:seeAlso "https://www.merriam-webster.com/dictionary/dispute" .
 
@@ -129,6 +129,7 @@ xsd:date rdf:type rdfs:Datatype .
 :hasContext rdf:type owl:ObjectProperty ;
             rdfs:domain :PieceOfInformation ;
             rdfs:range :PieceOfInformation ;
+            rdfs:comment "A relationship indicating how one piece of information provides relevant context to another piece of information." ;
             rdfs:label "has context" .
 
 
@@ -136,7 +137,7 @@ xsd:date rdf:type rdfs:Datatype .
 :informs rdf:type owl:ObjectProperty ;
          rdfs:domain :Option ;
          rdfs:range :RQ ;
-         rdfs:comment "An option that would aid in answering a resaerch question if executed. " ;
+         rdfs:comment "A relationship that indicates which options would aid answering a research question. " ;
          rdfs:label "informs" .
 
 
@@ -152,6 +153,7 @@ xsd:date rdf:type rdfs:Datatype .
 :providesInsightsInto rdf:type owl:ObjectProperty ;
                       rdfs:domain :PieceOfInformation ;
                       rdfs:range :Hypothesis ;
+                      rdfs:comment "The super-property of tido:supports and tido:disputes" ;
                       rdfs:label "provides insights into" ;
                       <http://www.w3.org/2004/02/skos/core#altLabel> "provides insight into" .
 
@@ -169,7 +171,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:subPropertyOf :providesInsightsInto ;
           rdfs:domain :PieceOfInformation ;
           rdfs:range :Hypothesis ;
-          rdfs:comment "to provide with substantiation / to support with evidence or authority. make more certain" ;
+          rdfs:comment "A relationship indicating how a piece of information provides a hypothesis with substantiation/to support with evidence or authority, making it more certain" ;
           rdfs:label "supports" ;
           rdfs:seeAlso "https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate" .
 
@@ -187,8 +189,7 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:domain :PieceOfInformation ;
                rdfs:range :Orientation ;
                rdfs:comment "During an orientation step, no new informatoin is generated but only pre-existing information is recalled" ;
-               rdfs:label "was recalled by" ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "was recelled by" .
+               rdfs:label "was recalled by" .
 
 
 ###  https://w3id.org/tido#wasSelectedBy
@@ -231,14 +232,16 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/tido#Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
-          rdfs:comment "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." ;
-          rdfs:label "Activity" ;
-          rdfs:seeAlso "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" .
+          rdfs:comment "The tido:Activity class is directly inherited from PROV-O. Here, an activity is defined as something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." ;
+          rdfs:isDefinedBy "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" ;
+          rdfs:label "Activity" .
 
 
 ###  https://w3id.org/tido#Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+       rdfs:comment "The tido:Agent class is directly inherited from PROV-O. Here, an agent is defined as something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity" ;
+       rdfs:isDefinedBy "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent" ;
        rdfs:label "Agent" .
 
 
@@ -251,7 +254,6 @@ xsd:date rdf:type rdfs:Datatype .
                       ] ;
       rdfs:comment "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. " ;
       rdfs:label "Case" ;
-      rdfs:seeAlso "-" ;
       <http://www.w3.org/2004/02/skos/core#altLabel> "Investigation" .
 
 
@@ -263,24 +265,24 @@ xsd:date rdf:type rdfs:Datatype .
                                  owl:allValuesFrom :Evaluation
                                ] ;
                rdfs:comment "A matter weighed or taken into account when formulating an opinion or plan" ;
-               rdfs:label "Consideration" ;
-               rdfs:seeAlso "https://www.merriam-webster.com/dictionary/consideration" .
+               rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/consideration" ;
+               rdfs:label "Consideration" .
 
 
 ###  https://w3id.org/tido#Cost
 :Cost rdf:type owl:Class ;
       rdfs:subClassOf :Consideration ;
       rdfs:comment "The outlay or expenditure (as of effort or sacrifice) made to achieve an object" ;
-      rdfs:label "Cost" ;
-      rdfs:seeAlso "https://www.merriam-webster.com/dictionary/cost" .
+      rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/cost" ;
+      rdfs:label "Cost" .
 
 
 ###  https://w3id.org/tido#Evaluation
 :Evaluation rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:comment "A step in the decision process where opinions, evaluations and analysis are expressed. " ;
+            rdfs:isDefinedBy "Bales' 2nd phase of group-decision making" ;
             rdfs:label "Evaluation" ;
-            rdfs:seeAlso "Bales' 2nd phase of group-decision making" ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "Evaluation step" .
 
 
@@ -289,16 +291,16 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:subClassOf :PieceOfInformation ;
           owl:disjointWith :Hypothesis ;
           rdfs:comment "A piece of information that is either a testamony, an observation, or a sensory measurement." ;
-          rdfs:label "Evidence" ;
-          rdfs:seeAlso "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence" .
+          rdfs:isDefinedBy "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence" ;
+          rdfs:label "Evidence" .
 
 
 ###  https://w3id.org/tido#Goal
 :Goal rdf:type owl:Class ;
       rdfs:subClassOf :Consideration ;
       rdfs:comment "A clearly directed intent or purpose" ;
-      rdfs:label "Goal" ;
-      rdfs:seeAlso "https://www.merriam-webster.com/dictionary/aim" .
+      rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/aim" ;
+      rdfs:label "Goal" .
 
 
 ###  https://w3id.org/tido#Hypothesis
@@ -309,8 +311,8 @@ xsd:date rdf:type rdfs:Datatype .
                               owl:allValuesFrom :Evaluation
                             ] ;
             rdfs:comment "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis." ;
-            rdfs:label "Hypothesis" ;
-            rdfs:seeAlso "https://www.merriam-webster.com/dictionary/hypothesis" .
+            rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/hypothesis" ;
+            rdfs:label "Hypothesis" .
 
 
 ###  https://w3id.org/tido#Option
@@ -321,16 +323,16 @@ xsd:date rdf:type rdfs:Datatype .
                           owl:allValuesFrom :Evaluation
                         ] ;
         rdfs:comment "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question." ;
-        rdfs:label "Option" ;
-        rdfs:seeAlso "https://www.merriam-webster.com/dictionary/option" .
+        rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/option" ;
+        rdfs:label "Option" .
 
 
 ###  https://w3id.org/tido#Orientation
 :Orientation rdf:type owl:Class ;
              rdfs:subClassOf :Activity ;
              rdfs:comment "A step in the decision process where available information is shared, repeated, clarified or confirmed." ;
+             rdfs:isDefinedBy "Bales' 1st phase of group-decision making" ;
              rdfs:label "Orientation" ;
-             rdfs:seeAlso "Bales' 1st phase of group-decision making" ;
              <http://www.w3.org/2004/02/skos/core#altLabel> "Orientation step" .
 
 
@@ -347,8 +349,8 @@ xsd:date rdf:type rdfs:Datatype .
                                       owl:minCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
                     rdfs:comment "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language" ;
+                    rdfs:isDefinedBy "URREF (Costa et al. 2018)" ;
                     rdfs:label "Piece Of Information" ;
-                    rdfs:seeAlso "URREF (Costa et al. 2018)" ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "Piece of information" ,
                                                                    "PoI" ,
                                                                    "Sentence" .
@@ -363,7 +365,6 @@ xsd:date rdf:type rdfs:Datatype .
                     ] ;
     rdfs:comment "A question that arrises during an investigation." ;
     rdfs:label "R Q" ;
-    rdfs:seeAlso "-" ;
     <http://www.w3.org/2004/02/skos/core#altLabel> "RQ" ,
                                                    "Research question" .
 
@@ -372,8 +373,8 @@ xsd:date rdf:type rdfs:Datatype .
 :Resolution rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:comment "A step in the decision process where a possible direction is chosen" ;
+            rdfs:isDefinedBy "Bales' 3rd phase of group decision making" ;
             rdfs:label "Resolution" ;
-            rdfs:seeAlso "Bales' 3rd phase of group decision making" ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "Resolution step" .
 
 

@@ -87,7 +87,7 @@
 <https://w3id.org/tido#assumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tido#assumes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tido#Option> .
 <https://w3id.org/tido#assumes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#Hypothesis> .
-<https://w3id.org/tido#assumes> <http://www.w3.org/2000/01/rdf-schema#comment> "An option that would take an hypothesis as granted or true" .
+<https://w3id.org/tido#assumes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating how an option would take an hypothesis as granted or true" .
 <https://w3id.org/tido#assumes> <http://www.w3.org/2000/01/rdf-schema#label> "assumes" .
 <https://w3id.org/tido#assumes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/assume" .
 # 
@@ -102,7 +102,7 @@
 <https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/tido#providesInsightsInto> .
 <https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tido#PieceOfInformation> .
 <https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#Hypothesis> .
-<https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information that calls into question or casts doubt upon a hypothesis" .
+<https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating how a piece of information calls into question or casts doubt upon a hypothesis" .
 <https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#label> "disputes" .
 <https://w3id.org/tido#disputes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/dispute" .
 # 
@@ -117,13 +117,14 @@
 <https://w3id.org/tido#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tido#hasContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tido#PieceOfInformation> .
 <https://w3id.org/tido#hasContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#PieceOfInformation> .
+<https://w3id.org/tido#hasContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating how one piece of information provides relevant context to another piece of information." .
 <https://w3id.org/tido#hasContext> <http://www.w3.org/2000/01/rdf-schema#label> "has context" .
 # 
 # https://w3id.org/tido#informs
 <https://w3id.org/tido#informs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tido#informs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tido#Option> .
 <https://w3id.org/tido#informs> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#RQ> .
-<https://w3id.org/tido#informs> <http://www.w3.org/2000/01/rdf-schema#comment> "An option that would aid in answering a resaerch question if executed. " .
+<https://w3id.org/tido#informs> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship that indicates which options would aid answering a research question. " .
 <https://w3id.org/tido#informs> <http://www.w3.org/2000/01/rdf-schema#label> "informs" .
 # 
 # https://w3id.org/tido#investigates
@@ -137,6 +138,7 @@
 <https://w3id.org/tido#providesInsightsInto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/tido#providesInsightsInto> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tido#PieceOfInformation> .
 <https://w3id.org/tido#providesInsightsInto> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#Hypothesis> .
+<https://w3id.org/tido#providesInsightsInto> <http://www.w3.org/2000/01/rdf-schema#comment> "The super-property of tido:supports and tido:disputes" .
 <https://w3id.org/tido#providesInsightsInto> <http://www.w3.org/2000/01/rdf-schema#label> "provides insights into" .
 <https://w3id.org/tido#providesInsightsInto> <http://www.w3.org/2004/02/skos/core#altLabel> "provides insight into" .
 # 
@@ -152,7 +154,7 @@
 <https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/tido#providesInsightsInto> .
 <https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/tido#PieceOfInformation> .
 <https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#Hypothesis> .
-<https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "to provide with substantiation / to support with evidence or authority. make more certain" .
+<https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating how a piece of information provides a hypothesis with substantiation/to support with evidence or authority, making it more certain" .
 <https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports" .
 <https://w3id.org/tido#supports> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/supports and https://www.merriam-webster.com/dictionary/corroborate" .
 # 
@@ -169,7 +171,6 @@
 <https://w3id.org/tido#wasRecalledBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/tido#Orientation> .
 <https://w3id.org/tido#wasRecalledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "During an orientation step, no new informatoin is generated but only pre-existing information is recalled" .
 <https://w3id.org/tido#wasRecalledBy> <http://www.w3.org/2000/01/rdf-schema#label> "was recalled by" .
-<https://w3id.org/tido#wasRecalledBy> <http://www.w3.org/2004/02/skos/core#altLabel> "was recelled by" .
 # 
 # https://w3id.org/tido#wasSelectedBy
 <https://w3id.org/tido#wasSelectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -210,13 +211,15 @@
 # https://w3id.org/tido#Activity
 <https://w3id.org/tido#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
-<https://w3id.org/tido#Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." .
+<https://w3id.org/tido#Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "The tido:Activity class is directly inherited from PROV-O. Here, an activity is defined as something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." .
+<https://w3id.org/tido#Activity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" .
 <https://w3id.org/tido#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity" .
-<https://w3id.org/tido#Activity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" .
 # 
 # https://w3id.org/tido#Agent
 <https://w3id.org/tido#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<https://w3id.org/tido#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "The tido:Agent class is directly inherited from PROV-O. Here, an agent is defined as something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity" .
+<https://w3id.org/tido#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent" .
 <https://w3id.org/tido#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
 # 
 # https://w3id.org/tido#Case
@@ -228,7 +231,6 @@ _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/tido#inves
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/tido#Case> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. " .
 <https://w3id.org/tido#Case> <http://www.w3.org/2000/01/rdf-schema#label> "Case" .
-<https://w3id.org/tido#Case> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "-" .
 <https://w3id.org/tido#Case> <http://www.w3.org/2004/02/skos/core#altLabel> "Investigation" .
 # 
 # https://w3id.org/tido#Consideration
@@ -239,22 +241,22 @@ _:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tido#Ev
 _:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasGeneratedBy> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/tido#Consideration> <http://www.w3.org/2000/01/rdf-schema#comment> "A matter weighed or taken into account when formulating an opinion or plan" .
+<https://w3id.org/tido#Consideration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.merriam-webster.com/dictionary/consideration" .
 <https://w3id.org/tido#Consideration> <http://www.w3.org/2000/01/rdf-schema#label> "Consideration" .
-<https://w3id.org/tido#Consideration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/consideration" .
 # 
 # https://w3id.org/tido#Cost
 <https://w3id.org/tido#Cost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tido#Consideration> .
 <https://w3id.org/tido#Cost> <http://www.w3.org/2000/01/rdf-schema#comment> "The outlay or expenditure (as of effort or sacrifice) made to achieve an object" .
+<https://w3id.org/tido#Cost> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.merriam-webster.com/dictionary/cost" .
 <https://w3id.org/tido#Cost> <http://www.w3.org/2000/01/rdf-schema#label> "Cost" .
-<https://w3id.org/tido#Cost> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/cost" .
 # 
 # https://w3id.org/tido#Evaluation
 <https://w3id.org/tido#Evaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Evaluation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tido#Activity> .
 <https://w3id.org/tido#Evaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "A step in the decision process where opinions, evaluations and analysis are expressed. " .
+<https://w3id.org/tido#Evaluation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Bales' 2nd phase of group-decision making" .
 <https://w3id.org/tido#Evaluation> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation" .
-<https://w3id.org/tido#Evaluation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Bales' 2nd phase of group-decision making" .
 <https://w3id.org/tido#Evaluation> <http://www.w3.org/2004/02/skos/core#altLabel> "Evaluation step" .
 # 
 # https://w3id.org/tido#Evidence
@@ -262,15 +264,15 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/tido#Evidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tido#PieceOfInformation> .
 <https://w3id.org/tido#Evidence> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/tido#Hypothesis> .
 <https://w3id.org/tido#Evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information that is either a testamony, an observation, or a sensory measurement." .
+<https://w3id.org/tido#Evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence" .
 <https://w3id.org/tido#Evidence> <http://www.w3.org/2000/01/rdf-schema#label> "Evidence" .
-<https://w3id.org/tido#Evidence> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence" .
 # 
 # https://w3id.org/tido#Goal
 <https://w3id.org/tido#Goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Goal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tido#Consideration> .
 <https://w3id.org/tido#Goal> <http://www.w3.org/2000/01/rdf-schema#comment> "A clearly directed intent or purpose" .
+<https://w3id.org/tido#Goal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.merriam-webster.com/dictionary/aim" .
 <https://w3id.org/tido#Goal> <http://www.w3.org/2000/01/rdf-schema#label> "Goal" .
-<https://w3id.org/tido#Goal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/aim" .
 # 
 # https://w3id.org/tido#Hypothesis
 <https://w3id.org/tido#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -280,8 +282,8 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tido#Ev
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasGeneratedBy> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/tido#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis." .
+<https://w3id.org/tido#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.merriam-webster.com/dictionary/hypothesis" .
 <https://w3id.org/tido#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Hypothesis" .
-<https://w3id.org/tido#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/hypothesis" .
 # 
 # https://w3id.org/tido#Option
 <https://w3id.org/tido#Option> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -291,15 +293,15 @@ _:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tido#Ev
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasGeneratedBy> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/tido#Option> <http://www.w3.org/2000/01/rdf-schema#comment> "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question." .
+<https://w3id.org/tido#Option> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.merriam-webster.com/dictionary/option" .
 <https://w3id.org/tido#Option> <http://www.w3.org/2000/01/rdf-schema#label> "Option" .
-<https://w3id.org/tido#Option> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.merriam-webster.com/dictionary/option" .
 # 
 # https://w3id.org/tido#Orientation
 <https://w3id.org/tido#Orientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Orientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tido#Activity> .
 <https://w3id.org/tido#Orientation> <http://www.w3.org/2000/01/rdf-schema#comment> "A step in the decision process where available information is shared, repeated, clarified or confirmed." .
+<https://w3id.org/tido#Orientation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Bales' 1st phase of group-decision making" .
 <https://w3id.org/tido#Orientation> <http://www.w3.org/2000/01/rdf-schema#label> "Orientation" .
-<https://w3id.org/tido#Orientation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Bales' 1st phase of group-decision making" .
 <https://w3id.org/tido#Orientation> <http://www.w3.org/2004/02/skos/core#altLabel> "Orientation step" .
 # 
 # https://w3id.org/tido#PieceOfInformation
@@ -315,8 +317,8 @@ _:genid6 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasMemberOf> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language" .
+<https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "URREF (Costa et al. 2018)" .
 <https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Piece Of Information" .
-<https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "URREF (Costa et al. 2018)" .
 <https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2004/02/skos/core#altLabel> "Piece of information" .
 <https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2004/02/skos/core#altLabel> "PoI" .
 <https://w3id.org/tido#PieceOfInformation> <http://www.w3.org/2004/02/skos/core#altLabel> "Sentence" .
@@ -330,7 +332,6 @@ _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#w
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/tido#RQ> <http://www.w3.org/2000/01/rdf-schema#comment> "A question that arrises during an investigation." .
 <https://w3id.org/tido#RQ> <http://www.w3.org/2000/01/rdf-schema#label> "R Q" .
-<https://w3id.org/tido#RQ> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "-" .
 <https://w3id.org/tido#RQ> <http://www.w3.org/2004/02/skos/core#altLabel> "RQ" .
 <https://w3id.org/tido#RQ> <http://www.w3.org/2004/02/skos/core#altLabel> "Research question" .
 # 
@@ -338,8 +339,8 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/tido#Resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/tido#Resolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/tido#Activity> .
 <https://w3id.org/tido#Resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "A step in the decision process where a possible direction is chosen" .
+<https://w3id.org/tido#Resolution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Bales' 3rd phase of group decision making" .
 <https://w3id.org/tido#Resolution> <http://www.w3.org/2000/01/rdf-schema#label> "Resolution" .
-<https://w3id.org/tido#Resolution> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Bales' 3rd phase of group decision making" .
 <https://w3id.org/tido#Resolution> <http://www.w3.org/2004/02/skos/core#altLabel> "Resolution step" .
 # 
 # 

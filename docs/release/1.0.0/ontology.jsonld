@@ -175,13 +175,13 @@
   "@id" : "https://w3id.org/tido#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
+    "@value" : "The tido:Activity class is directly inherited from PROV-O. Here, an activity is defined as something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Activity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Activity"
@@ -189,6 +189,12 @@
 }, {
   "@id" : "https://w3id.org/tido#Agent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The tido:Agent class is directly inherited from PROV-O. Here, an agent is defined as something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Agent"
   } ],
@@ -204,9 +210,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Case"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "-"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Collection"
   }, {
@@ -221,11 +224,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A matter weighed or taken into account when formulating an opinion or plan"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.merriam-webster.com/dictionary/consideration"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Consideration"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "https://www.merriam-webster.com/dictionary/consideration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
@@ -246,11 +249,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The outlay or expenditure (as of effort or sacrifice) made to achieve an object"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.merriam-webster.com/dictionary/cost"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Cost"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "https://www.merriam-webster.com/dictionary/cost"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#Consideration"
@@ -261,11 +264,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A step in the decision process where opinions, evaluations and analysis are expressed. "
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Bales' 2nd phase of group-decision making"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Evaluation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "Bales' 2nd phase of group-decision making"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#Activity"
@@ -279,11 +282,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A piece of information that is either a testamony, an observation, or a sensory measurement."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Evidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
@@ -297,11 +300,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A clearly directed intent or purpose"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.merriam-webster.com/dictionary/aim"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Goal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "https://www.merriam-webster.com/dictionary/aim"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#Consideration"
@@ -312,11 +315,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.merriam-webster.com/dictionary/hypothesis"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Hypothesis"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "https://www.merriam-webster.com/dictionary/hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
@@ -329,11 +332,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://www.merriam-webster.com/dictionary/option"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Option"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "https://www.merriam-webster.com/dictionary/option"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
@@ -346,11 +349,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A step in the decision process where available information is shared, repeated, clarified or confirmed."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Bales' 1st phase of group-decision making"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Orientation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "Bales' 1st phase of group-decision making"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#Activity"
@@ -364,11 +367,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "URREF (Costa et al. 2018)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Piece Of Information"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "URREF (Costa et al. 2018)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information"
@@ -395,9 +398,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "R Q"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "-"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
   }, {
@@ -414,11 +414,11 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A step in the decision process where a possible direction is chosen"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Bales' 3rd phase of group decision making"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Resolution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "Bales' 3rd phase of group decision making"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#Activity"
@@ -445,7 +445,7 @@
   "@id" : "https://w3id.org/tido#assumes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An option that would take an hypothesis as granted or true"
+    "@value" : "A relationship indicating how an option would take an hypothesis as granted or true"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#Option"
@@ -475,7 +475,7 @@
   "@id" : "https://w3id.org/tido#disputes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A piece of information that calls into question or casts doubt upon a hypothesis"
+    "@value" : "A relationship indicating how a piece of information calls into question or casts doubt upon a hypothesis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
@@ -510,6 +510,9 @@
 }, {
   "@id" : "https://w3id.org/tido#hasContext",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship indicating how one piece of information provides relevant context to another piece of information."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
   } ],
@@ -523,7 +526,7 @@
   "@id" : "https://w3id.org/tido#informs",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An option that would aid in answering a resaerch question if executed. "
+    "@value" : "A relationship that indicates which options would aid answering a research question. "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#Option"
@@ -552,6 +555,9 @@
 }, {
   "@id" : "https://w3id.org/tido#providesInsightsInto",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The super-property of tido:supports and tido:disputes"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
   } ],
@@ -583,7 +589,7 @@
   "@id" : "https://w3id.org/tido#supports",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "to provide with substantiation / to support with evidence or authority. make more certain"
+    "@value" : "A relationship indicating how a piece of information provides a hypothesis with substantiation/to support with evidence or authority, making it more certain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
@@ -629,9 +635,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/tido#Orientation"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@value" : "was recelled by"
   } ]
 }, {
   "@id" : "https://w3id.org/tido#wasSelectedBy",

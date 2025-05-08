@@ -36,17 +36,17 @@
         "value" : "tido",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/tido#",
-        "type" : "iri"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "1.0.0",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/tido#",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -131,8 +131,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action",
         "type" : "label"
@@ -144,7 +144,7 @@
     },
     "subClasses" : [ "9", "10", "5" ],
     "comment" : {
-      "undefined" : "An activity is something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
+      "undefined" : "The tido:Activity class is directly inherited from PROV-O. Here, an activity is defined as something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information."
     },
     "id" : "7",
     "superClasses" : [ "6" ]
@@ -164,10 +164,16 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "URREF (Costa et al. 2018)",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
-        "value" : "Sentence",
+        "value" : "PoI",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -177,13 +183,7 @@
       }, {
         "identifier" : "altLabel",
         "language" : "undefined",
-        "value" : "PoI",
-        "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "URREF (Costa et al. 2018)",
+        "value" : "Sentence",
         "type" : "label"
       } ]
     },
@@ -202,8 +202,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.merriam-webster.com/dictionary/option",
         "type" : "label"
@@ -223,16 +223,16 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "Bales' 3rd phase of group decision making",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "Resolution step",
-        "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "Bales' 3rd phase of group decision making",
         "type" : "label"
       } ]
     },
@@ -249,9 +249,20 @@
     "iri" : "https://w3id.org/tido#Agent",
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent",
+        "type" : "label"
+      } ]
+    },
     "label" : {
       "IRI-based" : "Agent",
       "undefined" : "Agent"
+    },
+    "comment" : {
+      "undefined" : "The tido:Agent class is directly inherited from PROV-O. Here, an agent is defined as something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity"
     },
     "id" : "20",
     "superClasses" : [ "21" ]
@@ -271,8 +282,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF#SingularEvidence",
         "type" : "label"
@@ -302,12 +313,6 @@
         "language" : "undefined",
         "value" : "RQ",
         "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "-",
-        "type" : "label"
       } ]
     },
     "label" : {
@@ -329,12 +334,6 @@
         "language" : "undefined",
         "value" : "Investigation",
         "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "-",
-        "type" : "label"
       } ]
     },
     "label" : {
@@ -351,8 +350,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.merriam-webster.com/dictionary/cost",
         "type" : "label"
@@ -383,8 +382,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.merriam-webster.com/dictionary/consideration",
         "type" : "label"
@@ -405,16 +404,16 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "Bales' 2nd phase of group-decision making",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "Evaluation step",
-        "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "Bales' 2nd phase of group-decision making",
         "type" : "label"
       } ]
     },
@@ -443,16 +442,16 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "Bales' 1st phase of group-decision making",
+        "type" : "label"
+      } ],
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "undefined",
         "value" : "Orientation step",
-        "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "Bales' 1st phase of group-decision making",
         "type" : "label"
       } ]
     },
@@ -470,8 +469,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.merriam-webster.com/dictionary/aim",
         "type" : "label"
@@ -491,8 +490,8 @@
     "baseIri" : "https://w3id.org/tido",
     "instances" : 0,
     "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://www.merriam-webster.com/dictionary/hypothesis",
         "type" : "label"
@@ -633,14 +632,6 @@
     "iri" : "https://w3id.org/tido#wasRecalledBy",
     "baseIri" : "https://w3id.org/tido",
     "range" : "5",
-    "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "undefined",
-        "value" : "was recelled by",
-        "type" : "label"
-      } ]
-    },
     "label" : {
       "IRI-based" : "wasRecalledBy",
       "undefined" : "was recalled by"
@@ -696,7 +687,7 @@
   }, {
     "range" : "21",
     "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "19"
   }, {
     "iri" : "https://w3id.org/tido#hasContext",
@@ -707,6 +698,9 @@
       "undefined" : "has context"
     },
     "domain" : "4",
+    "comment" : {
+      "undefined" : "A relationship indicating how one piece of information provides relevant context to another piece of information."
+    },
     "attributes" : [ "object" ],
     "id" : "22"
   }, {
@@ -739,34 +733,34 @@
     "superproperty" : [ "25" ],
     "domain" : "4",
     "comment" : {
-      "undefined" : "A piece of information that calls into question or casts doubt upon a hypothesis"
+      "undefined" : "A relationship indicating how a piece of information calls into question or casts doubt upon a hypothesis"
     },
     "attributes" : [ "object" ],
     "id" : "24"
   }, {
     "range" : "17",
     "domain" : "27",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
     "range" : "17",
     "domain" : "29",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "15",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "30"
   }, {
     "range" : "4",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
     "range" : "4",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "32"
   }, {
     "iri" : "https://w3id.org/tido#informs",
@@ -778,34 +772,34 @@
     },
     "domain" : "13",
     "comment" : {
-      "undefined" : "An option that would aid in answering a resaerch question if executed. "
+      "undefined" : "A relationship that indicates which options would aid answering a research question. "
     },
     "attributes" : [ "object" ],
     "id" : "33"
   }, {
     "range" : "4",
     "domain" : "13",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "34"
   }, {
     "range" : "4",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
     "range" : "14",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
     "range" : "4",
     "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "37"
   }, {
     "range" : "39",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/tido#assumes",
@@ -825,7 +819,7 @@
     },
     "domain" : "13",
     "comment" : {
-      "undefined" : "An option that would take an hypothesis as granted or true"
+      "undefined" : "A relationship indicating how an option would take an hypothesis as granted or true"
     },
     "attributes" : [ "object" ],
     "id" : "40"
@@ -838,7 +832,7 @@
       "undefined" : "was generated by"
     },
     "domain" : "16",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "41"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
@@ -849,7 +843,7 @@
       "undefined" : "was generated by"
     },
     "domain" : "13",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "42"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasMemberOf",
@@ -860,7 +854,7 @@
       "undefined" : "was member of"
     },
     "domain" : "4",
-    "attributes" : [ "external", "someValues", "object" ],
+    "attributes" : [ "object", "external", "someValues" ],
     "id" : "43"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
@@ -871,17 +865,17 @@
       "undefined" : "was generated by"
     },
     "domain" : "2",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "44"
   }, {
     "range" : "6",
     "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "range" : "7",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/tido#providesInsightsInto",
@@ -901,17 +895,20 @@
     },
     "domain" : "4",
     "subproperty" : [ "24", "47" ],
+    "comment" : {
+      "undefined" : "The super-property of tido:supports and tido:disputes"
+    },
     "attributes" : [ "object" ],
     "id" : "25"
   }, {
     "range" : "7",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
     "range" : "7",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
@@ -922,12 +919,12 @@
       "undefined" : "was generated by"
     },
     "domain" : "17",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "50"
   }, {
     "range" : "16",
     "domain" : "18",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
     "iri" : "https://w3id.org/tido#wasExecutedBy",
@@ -976,7 +973,7 @@
     "superproperty" : [ "25" ],
     "domain" : "4",
     "comment" : {
-      "undefined" : "to provide with substantiation / to support with evidence or authority. make more certain"
+      "undefined" : "A relationship indicating how a piece of information provides a hypothesis with substantiation/to support with evidence or authority, making it more certain"
     },
     "attributes" : [ "object" ],
     "id" : "47"
