@@ -1,8 +1,8 @@
-# Which hypotheses other than [h] provide an explanation for piece of information [poi]?
+# Which hypotheses other than H provide an explanation for piece of information PoI?
 
-PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX tido: <http://w3id.org/tido#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di01: <http://w3id.org/tido_di01#>
 select ?h_2 ?h_value 
 where {
     BIND (di01:h_1 as ?h_1)

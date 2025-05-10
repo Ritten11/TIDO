@@ -1,3 +1,26 @@
-# How trustworthy is/was information [b]?
+# What is the relevant context of the piece of information B? 
+# What is the source? 
+# And which hypotheses that were selected during a resolution step does it support of dispute?
 
-# Cannot be answered using TIDO. Needs a more expressive model
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
+PREFIX tido: <https://w3id.org/tido#>
+
+Select ?b_value (group_concat(?context;separator=" | ") as ?direct_context) (group_concat(?source;separator=" | ") as ?sources) ?relation ?h_value
+Where {
+    Bind(di01:e_3 as ?b)
+    ?b a tido:PieceOfInformation ;
+        rdf:value ?b_value .
+    Optional {?b tido:hasContext/rdf:value ?context .}
+    Optional {?b prov:wasDerivedFrom*/prov:wasAttributedTo/rdfs:label ?source .}
+    Optional {
+        ?b tido:providesInsightsInto ?hypotheses .
+        ?b ?relation ?hypotheses .
+    	filter (?relation != tido:providesInsightsInto)
+    	?hypotheses rdf:value ?h_value .
+    }
+}
+group by ?b ?b_value ?relation ?h_value

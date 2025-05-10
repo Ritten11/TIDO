@@ -1,16 +1,21 @@
-# Is/was the application of action [x] proportional to situation [y]?
+# What are the costs and goals of action X at time Y?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
-PREFIX tido: <http://www.example.com/TIDO#>
-Select (group_concat(?o_value;separator=" | ") as ?o_values) ?consideration ?c_value
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
+PREFIX tido: <https://w3id.org/tido#>
+Select (group_concat(distinct ?o_value;separator=" | ") as ?o_values) ?consideration ?c_type ?c_value
 Where {
-    Bind(di02:option_7 as ?x)
+    Bind(di02:o_1 as ?x)
     ?x a tido:Option ;
     		rdf:value ?o_value ;
     		tido:wasSelectedBy ?res_step ;
     		tido:hasConsideration ?consideration .
     ?consideration rdf:value ?c_value .
+    Optional {
+        ?consideration a ?c_type .
+    	?c_type rdfs:subClassOf tido:Consideration .
+    }
 }
-group by ?consideration ?c_value
+group by ?consideration ?c_value ?c_type

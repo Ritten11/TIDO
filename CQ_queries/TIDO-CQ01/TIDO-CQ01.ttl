@@ -1,13 +1,14 @@
-# What information is/was available regarding the current case [c]?
+# What information was recalled or generated during steps that contributed to the investigation of case C?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX tido: <https://w3id.org/tido#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 Select ?poi ?i_value
 Where {
-	Bind(di01:case_1 as ?c)    
+	Bind(tido_case:case_1 as ?c)    
     ?poi a tido:PoI ;
     		rdf:value ?i_value ;
-    		(tido:wasRecalledBy|prov:wasGeneratedBy)|tido:contributesTo ?c .
+    		(tido:wasRecalledBy|prov:wasGeneratedBy)/tido:contributesTo ?c .
 }

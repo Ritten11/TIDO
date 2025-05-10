@@ -1,10 +1,11 @@
-# What is the source of information [b]?
+# What is the source of information B?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX di01: <http://w3id.org/tido_di01#>
 Select ?prevInfo ?source
 Where {
     Bind (di01:e_1 as ?b)
-    ?b prov:wasDerivedFrom+ ?prevInfo .
-    ?prev_info prov:wasAttributedTo ?source .
+    ?b prov:wasDerivedFrom* ?prevInfo .
+    ?prev_info prov:wasAttributedTo/rdfs:label ?source .
 }

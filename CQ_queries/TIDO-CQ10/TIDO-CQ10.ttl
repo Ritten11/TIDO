@@ -1,15 +1,16 @@
-# Is/was action [x] necessary to achieve goal [z]??
+# Is/was action X necessary to achieve goal Z?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
-PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
+PREFIX tido: <https://w3id.org/tido#>
 
-# Here, necessary is interpreted as there being only a single option to achieve a goal. Therefore, if no other action exists with goal [z], action [x] is necesarry
-Ask { 
-    Bind(di02:goal_1 as ?goal)
-    Bind(di02:option_1 as ?x)
+Select ?goal ?alternative_option ?o_value{ 
+    Bind(di02:g_1 as ?goal)
+    Bind(di02:o_1 as ?x)
 	?goal a tido:Goal .
-            ?option a tido:Option .
-    ?option tido:hasConsideration ?goal .  
-    FILTER( ?x != ?option )
+    ?alternative_option a tido:Option .
+    ?alternative_option tido:hasConsideration ?goal ;
+    rdf:value ?o_value .
+    FILTER( ?x != ?alternative_option )
 }
