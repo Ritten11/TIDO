@@ -1,10 +1,10 @@
-# What is the answer to the research question?
+# What is the answer to the research question RQ?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
 Select ?i_value
 Where {

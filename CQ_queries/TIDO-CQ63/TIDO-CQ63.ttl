@@ -1,0 +1,17 @@
+# Which pieces of information used within this case are also used in other cases?
+
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
+
+Select (group_concat(distinct ?i_value;separator=" | ") as ?information) ?other_case
+Where {
+    Bind (tido_case:team_1 as ?x) # bind the 'current' team
+    Bind (tido_case:case_1 as ?current_case) # bind the 'current' case
+    ?poi (tido:wasRecalledBy|prov:wasGeneratedBy)/tido:contributesTo ?other_case ;
+        rdf:value ?p_value .
+    Filter (?current_case != ?other_case)
+} Group by ?poi ?other_case

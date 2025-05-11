@@ -2,15 +2,14 @@
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select ?relation ?h_value
+Select (group_concat(distinct ?relation;separator=" | ") as ?rel_to_hypothesis) ?h_value
 Where {
-    bind (di01:e_1 as ?poi) # insert the right option that is being investigated.
+    bind (di01:e_7 as ?poi) # insert the information that is to be related to the hypotheses
     ?poi tido:providesInsightsInto ?hypothesis .
     ?poi ?relation ?hypothesis . 
-    ?hypothesis rdf:value ?h_value
-    filter (?relation = tido:providesInsightsInto )
-} 
+    ?hypothesis rdf:value ?h_value.
+} Group by ?h_value
