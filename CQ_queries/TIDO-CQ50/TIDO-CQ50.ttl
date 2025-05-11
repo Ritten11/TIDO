@@ -1,17 +1,21 @@
-# What is the goal of the visit to the teacher and housemate?
-# - which questions?
-# - 5wh
+# What is the goal of the option? 
+# Which research questions would be informed by this option?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select ?goal ?c_value
+Select ?o_value (group_concat(distinct ?g_value;separator=" | ") as ?goals) (group_concat(distinct ?rq_value;separator=" | ") as ?informed_rqs)
 Where {
-    bind (di01:option_1 as ?option) # insert the right option that is being investigated.
-    ?option tido:hasConsideration ?goal .
+    bind (di02:o_1 as ?option) # insert the right option that is being investigated.
+    ?option tido:hasConsideration ?goal ;
+        rdf:value ?o_value .
     ?goal a tido:Goal ;
     		rdf:value ?g_value .
-} 
+    Optional {
+        ?option tido:informs ?rq .
+        ?rq rdf:value ?rq_value .
+    }
+} Group by ?o_value

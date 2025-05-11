@@ -1,19 +1,22 @@
-# What information did Liesbeth use to come to her conclusions regarding decision [x]?
+# What information did Liesbeth use to come to her conclusions regarding decision X?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX tido: <https://w3id.org/tido#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-Select (group_concat(?d_value;separator=" | ") as ?d_values) ?consideration ?c_value ?poi ?i_value
+Select (group_concat(distinct ?d_value;separator=" | ") as ?d_values) ?consideration ?c_value ?poi ?i_value
 Where {
-    Bind(di02:option_1 as ?x)
+    Bind(di02:o_1 as ?x)
     ?x tido:wasSelectedBy ?resStep ;
             tido:hasConsideration ?consideration ;
     		rdf:value ?d_value .
     ?consideration rdf:value ?c_value .
     Optional {?poi tido:providesInsightsInto+ ?consideration ;
+        			a tido:PieceOfInformation ;
     				rdf:value ?i_value .}
-#        ?evalStep prov:wasAssociatedWith [Liesbeth] .
+    ?evalStep prov:wasAssociatedWith tido_case:liesbeth .
 }
 group by ?consideration ?c_value ?poi ?i_value

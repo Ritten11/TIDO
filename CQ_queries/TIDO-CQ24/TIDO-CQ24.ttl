@@ -1,18 +1,21 @@
-# Which steps were taken to investigate research question [rq]?
+# Which steps were taken to investigate hypothesis that would answer research question RQ?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select ?question ?h_value ?activity ?i_value
+Select ?h_value ?activity ?text (group_concat(distinct ?i_value;separator=" | ") as ?extracted_PoIs) 
 Where {
     Bind(di01:rq_2 as ?rq)
-    	?rq rdf:value ?question .
-       	?hypothesis tido:answers ?rq ;
-    		rdf:value ?h_value .
-        ?poi tido:providesInsightsInto+ ?hypothesis ;
-            prov:wasGeneratedBy|tido:wasRecalledBy ?activity ;
-    		rdf:value ?i_value .
-}
+    ?hypothesis tido:answers ?rq ;
+    	rdf:value ?h_value .
+    ?poi tido:providesInsightsInto+ ?hypothesis ;
+    	prov:wasGeneratedBy|tido:wasRecalledBy ?activity ;
+    	rdf:value ?i_value .
+    ?activity rdf:value ?text ;
+    	prov:startedAtTime ?t .
+    Filter(langMatches(lang(?text),'en'))
+} Group by ?h_value ?activity ?text ?t
+Order by asc(?t)

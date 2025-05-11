@@ -1,12 +1,14 @@
-# Which hypothesis were considered by analyst [a]?
+# Which hypothesis were considered by analyst A?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX tido: <https://w3id.org/tido#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 Select ?hypothesis ?value
-Where {
-        ?hypothesis prov:wasGeneratedBy|tido:wasRecalledBy ?activity ;
-    		a tido:Hypothesis ;
-    		rdf:value ?value .
-#        ?activity prov:wasAssociatedWith [Liesbeth] .
+Where {	
+    Bind (tido_case:liesbeth as ?a)
+    ?hypothesis prov:wasGeneratedBy|tido:wasRecalledBy ?activity ;
+        a tido:Hypothesis ;
+        rdf:value ?value .
+    ?activity prov:wasAssociatedWith ?a .
 }

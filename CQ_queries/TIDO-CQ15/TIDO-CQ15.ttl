@@ -1,14 +1,16 @@
-# How much time has passed since the decision for action [x] was selected?
+# How much time has passed since the decision for action X was selected?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX tido: <https://w3id.org/tido#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-Select ?d_value ?hypothesis ?h_value
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+Select ?d_value ?res_step (?time - ?now as ?delta_time)
 Where {
-    Bind(di01:option_2 as ?x)
-#    Bind([time] as ?now)
+    Bind(di01:h_2 as ?x)
+    Bind("2025-02-01T00:00:00"^^xsd:dateTime as ?now)
     ?x tido:wasSelectedBy ?res_step ;
     	rdf:value ?d_value .
-    ?res_step prov:startedAtTime ?time .  
+    ?res_step prov:startedAtTime ?time .    
 }

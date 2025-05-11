@@ -1,5 +1,5 @@
-# What are the conclusions? (concern yes/no)
-# What information underpins this?
+# Of the options that were chosen, what were their assumptions?
+# What information underpins these assumptions?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -10,7 +10,7 @@ PREFIX di02: <http://www.example.com/TIDO_di02#>
 Select ?h_value (group_concat(distinct ?p_value;separator=" | ") as ?underpinning)
 Where {
     ?option tido:wasSelectedBy ?res_step ;
-    		tido:assumes ?hypothesis .
+    		tido:assumes* ?hypothesis .
     ?hypothesis rdf:value ?h_value .
     ?poi tido:supports ?hypothesis ;
     	rdf:value ?p_value .

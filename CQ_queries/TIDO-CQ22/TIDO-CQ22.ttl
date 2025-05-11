@@ -1,20 +1,21 @@
-# What options are/were considered at time [t]?
+# What options are/were made or recalled during activities that started at time T?
 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select ?poi ?i_value ?target_step ?prev_step
+
+Select ?option (group_concat(distinct ?o_value;separator=" | ") as ?o_values)
 Where {
-#    	?target_step a tido:Activity .
-#    	?target_step prov:startedAtTime ?start .
-#    	?target_step prov:endedAtTime ?end .
-#    FILTER( ?start > [t] && ?end < [t])
-    BIND(di02:resolution_3 as ?target_step)
-        ?target_step prov:wasInformedBy* ?prev_step .
-        ?poi prov:wasGeneratedBy|tido:wasRecalledBy ?prev_step .    
-    	?poi a tido:Option .
-    	?poi rdf:value ?i_value .
-}
+    Bind("2025-01-01T12:00:00"^^xsd:dateTime as ?t)
+	?step a tido:Activity ;
+		prov:startedAtTime ?start .
+    Filter( ?start < ?t )
+#	?target_step prov:wasInformedBy* ?prev_step .
+	?option prov:wasGeneratedBy|tido:wasRecalledBy ?step ;    
+		a tido:Option ;
+		rdf:value ?o_value .
+} group by ?option

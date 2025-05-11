@@ -1,16 +1,16 @@
-# Which decisions depended on piece of information [poi]?
+# Which decisions depended on piece of information PoI?
 
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-Select ?i_value ?hypothesis ?h_value ?decision ?d_value
+PREFIX di02: <https://w3id.org/tido/di02#>
+PREFIX tido: <https://w3id.org/tido#>
+Select ?dependent_hypothesis ?h_value ?decision (group_concat(distinct ?d_value;separator=" | ") as ?d_values)
 Where {
-    	Bind(di01:poi_7 as ?x)
-        ?x tido:providesInsightsInto* ?hypothesis ;
-    				rdf:value ?i_value .
-    	?hypothesis rdf:value ?h_value .
+    	Bind(di02:e_1 as ?x)
+        ?x tido:providesInsightsInto+ ?dependent_hypothesis ;
+    		rdf:value ?i_value .
+    	?dependent_hypothesis rdf:value ?h_value .
         ?decision a tido:Option ;
-    				tido:assumes ?hypothesis ;
-    				tido:wasSelectedBy ?resStep ;
-    				rdf:value ?d_value .
-}
+    		(tido:assumes|tido:hasConsideration)* ?dependent_hypothesis ;
+    		tido:wasSelectedBy ?resStep ;
+    		rdf:value ?d_value .
+} group by ?dependent_hypothesis ?h_value ?decisions

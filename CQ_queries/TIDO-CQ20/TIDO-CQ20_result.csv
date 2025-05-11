@@ -1,4 +1,11 @@
-o_value,poi,i_value
-Continue with investigation,http://www.example.com/TIDO_di01#hypothesis_1,This situation could eventually lead to a cause of concern
-Continue with investigation,http://www.example.com/TIDO_di01#consideration_3,It is also weird that someone is orienting himself to build a bomb
-Continue with investigation,http://www.example.com/TIDO_di01#poi_7,"During a practical, the concerned citizen noticed that one of his students was asking many questions about substances that could be used to create an explosive"
+o_values,poi,i_value
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#c_17,Liesbeth should find an a means that is appropriate for the current threat
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#c_13,"For every means you would like to deploy, it is important to put your thoughts on paper as not only Ton, but also the minister and everyone else involved in the safeguard ladder to know what is going on in your head"
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#c_14,"You must always ask yourself whether if that what you want to do is necessary, whether it is proportional (i.e. how does the impact of the means relate to the threat of the situation), and whether it is subsidiary (i.e. could you achieve the same with a lighter means)."
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#cost_1,"For the lightest means, you only need approval from your team leader"
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#cost_2,"For the heaviest means, you will need approval from entire safeguard ladder"
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#c_3,"If you find nothing about someone online, you should be worried"
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#c_4,Most people leave traces behind online because they have been a member of a club or went to a party
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#c_2,We should be able to find out where he lives and studies through something like Facebook or LinkedIn
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#e_1,We know Sander's name
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#g_1,We would like to know who Sander is

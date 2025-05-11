@@ -1,16 +1,18 @@
-# Who were involved in the decision [d]?
+# Which agents were involed in the process of making decision D?
+# And which agents were involved with generating the data upon which decision D was based?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select distinct ?agent
+Select (group_concat(distinct ?inf_agent;separator=" | ") as ?inf_related_agents) (group_concat(distinct ?process_agent;separator=" | ") as ?process_related_agents)
 Where {
-    Bind(di01:option_1 as ?d)
-          ?d a tido:Option ;
-                     tido:wasSelectedBy ?resolution .
-          ?resolution prov:wasInformedBy* ?prevStep .
-#          ?prevStep prov:wasAssociatedWith ?agent .
-}
+    Bind(di01:h_2 as ?d)
+    ?d a tido:Option ;
+    	tido:wasSelectedBy ?resolution ;
+    	(tido:hasConsideration|tido:assumes|^tido:providesInsightsInto)* ?extra_information .
+    ?extra_information (prov:wasGeneratedBy|tido:wasRecalledBy)/prov:wasAssociatedWith ?inf_agent . 
+    ?resolution prov:wasInformedBy*/prov:wasAssociatedWith ?process_agent .
+} group by ?d

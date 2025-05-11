@@ -1,14 +1,21 @@
-# What information was gained by decision [x]?
+# What information was gained by decision X? (and is its class?)
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX tido: <http://www.example.com/TIDO#>
-Select ?poi
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
+
+Select ?poi ?p_value (group_concat(distinct ?i_class;separator=" | ") as ?i_classes)
 where {
-         Bind(di01:o_1 as ?x)
-         ?x a tido:Option;
-                tido:wasSelectedBy ?decision_step;
-                tido:wasExecutedBy ?activity .
-         ?poi prov:wasGeneratedBy ?activity .
-}
+    Bind(di01:h_2 as ?x)
+    ?x a tido:Option;
+    	tido:wasSelectedBy ?decision_step;
+    	(tido:wasExecutedBy|^prov:wasStartedBy)/^prov:wasInformedBy* ?activity .
+    ?poi prov:wasGeneratedBy ?activity ;
+		a tido:PieceOfInformation ;
+    	a ?i_class ;
+    	rdf:value ?p_value .
+   	?i_class rdfs:subClassOf tido:PieceOfInformation .
+} group by ?poi ?p_value

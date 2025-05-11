@@ -1,3 +1,3 @@
-d_value,prev_action,prev_decision,prev_d_value
-Deploy an open-source investigation,http://www.example.com/TIDO_di02#resolution_1,http://www.example.com/TIDO_di02#option_2,Consult legal advisor Ton
-Deploy an open-source investigation,http://www.example.com/TIDO_di01#resolution_1,http://www.example.com/TIDO_di01#option_2,Continue with investigation
+d_values,prev_action,prev_decision,prev_d_value
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di02#mixed_2,https://w3id.org/tido/di02#o_2,Consult legal advisor Ton
+Check out who Sander is through social media | Deploy an open-source investigation,https://w3id.org/tido/di01#mixed_5,https://w3id.org/tido/di01#h_2,This situation could eventually lead to a cause of concern
