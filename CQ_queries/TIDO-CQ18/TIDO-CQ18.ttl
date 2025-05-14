@@ -1,13 +1,15 @@
-# What exeptional means were deployed in case [x]?
+# What exceptional means were deployed in case X?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX di01: <https://w3id.org/tido/di01#>
 Select ?decision ?d_value
 Where {
-#          di01:case_1 prov:hadMember ?decision .
-          ?decision a tido:Option ;
-                    tido:wasSelectedBy ?res_step ;
-    				rdf:value ?d_value .
+    Bind (tido_case:case_1 as ?x)      
+    ?decision prov:wasGeneratedBy/tido:contributesTo ?x .
+    ?decision a tido:SpecialMeans ;
+    	tido:wasSelectedBy ?res_step ;
+    	rdf:value ?d_value .
 }

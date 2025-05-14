@@ -1,4 +1,4 @@
-# What options are/were made or recalled during activities that started at time T?
+# What options are/were made or recalled during activities that started before time T?
 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -14,7 +14,6 @@ Where {
 	?step a tido:Activity ;
 		prov:startedAtTime ?start .
     Filter( ?start < ?t )
-#	?target_step prov:wasInformedBy* ?prev_step .
 	?option prov:wasGeneratedBy|tido:wasRecalledBy ?step ;    
 		a tido:Option ;
 		rdf:value ?o_value .

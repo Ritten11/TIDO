@@ -1,18 +1,18 @@
-# Which unique sources were involved in the selection of option [o]?
+# Which unique sources were involved in the all the steps that informed the step where option O was selected?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX di01: <https://w3id.org/tido/di01#>
 
-Select ?poi ?i_value
+Select distinct ?source ?source_label
 Where {
-    Bind(di01:option_2 as ?o)
-        ?o a tido:Option ;
-                     tido:wasSelectedBy ?resolution .
-        ?resolution prov:wasInformedBy* ?prevStep .
-        ?poi tido:wasRecalledBy ?prevStep .    
-    	?poi rdf:value ?i_value .
-#    	?poi prov:wasDerivedFrom/prov:wasAttributedTo ?source .
+    Bind(di01:h_2 as ?o)
+    ?o a tido:Option ;
+    	tido:wasSelectedBy ?resolution .
+    ?resolution prov:wasInformedBy* ?prevStep .
+    ?poi tido:wasRecalledBy ?prevStep ;    
+    	rdf:value ?i_value ;
+    	prov:wasDerivedFrom/prov:wasAttributedTo ?source .    
 }

@@ -1,4 +1,4 @@
-# In which cases were exceptional means [x] deployed?
+# In which cases were exceptional means X deployed?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -6,9 +6,8 @@ PREFIX tido: <http://www.example.com/TIDO#>
 PREFIX di01: <http://www.example.com/TIDO_di01#>
 Select ?decision ?d_value
 Where {
-      	?decision a tido:Option ;
-			tido:wasSelectedBy ?res_step ;
-			rdf:value ?d_value .
-    FILTER(CONTAINS(?d_value, "open-source"))
-#		?case prov:hadMember ?decision .
+    ?decision a tido:X ;
+    	tido:wasSelectedBy ?res_step ;
+    	rdf:value ?d_value .
+    ?case prov:hadMember ?decision .
 }
