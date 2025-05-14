@@ -20,6 +20,21 @@
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/tido#"/>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+        <dc:contributor>
+        <foaf:Person rdf:about="https://orcid.org/0000-0002-2146-4803"/>
+        </dc:contributor>
+        <dc:contributor>
+        <foaf:Person rdf:about="https://orcid.org/0000-0002-3282-1597"/>
+        </dc:contributor>
+        <dc:contributor>
+        <foaf:Person rdf:about="https://orcid.org/0000-0002-1091-8486"/>
+        </dc:contributor>
+        <dc:creator>
+        <foaf:Person rdf:about="https://orcid.org/0009-0008-7843-6513"/>
+        </dc:creator>
+        <dc:publisher>
+        <foaf:Organization rdf:about="https://kai.cs.vu.nl"/>
+        </dc:publisher>
     </owl:Ontology>
     
 
