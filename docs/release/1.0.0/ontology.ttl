@@ -6,16 +6,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/tido#> .
 
-<https://w3id.org/tido#> rdf:type owl:Ontology ;
-                          owl:versionIRI <https://w3id.org/tido/1.0.0> ;
-                          <http://purl.org/dc/terms/created> "2025-05-07"^^xsd:date ;
-                          <http://purl.org/dc/terms/description> "The TIDO ontology can be used to describe the decision processes within the threat intelligence domain"@en ;
-                          <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                          <http://purl.org/dc/terms/title> "The Threat Intelligence Decision Ontology"@en ;
-                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "tido" ;
-                          <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/tido#> ;
-                          owl:versionInfo "1.0.0" ;
-                          <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+<https://w3id.org/tido> rdf:type owl:Ontology ;
+                         owl:versionIRI <https://w3id.org/tido/1.0.0> ;
+                         <http://purl.org/dc/terms/created> "2025-05-07"^^xsd:date ;
+                         <http://purl.org/dc/terms/description> "The TIDO ontology can be used to describe the decision processes within the threat intelligence domain"@en ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                         <http://purl.org/dc/terms/title> "The Threat Intelligence Decision Ontology"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "tido" ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                         owl:versionInfo "1.0.0" ;
+                         <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 
 #################################################################
 #    Annotation properties
@@ -104,6 +104,7 @@ xsd:date rdf:type rdfs:Datatype .
 :contributesTo rdf:type owl:ObjectProperty ;
                rdfs:domain :Activity ;
                rdfs:range :Case ;
+               rdfs:comment "Every activity should contribute to one or more cases/investigations. " ;
                rdfs:label "contributes to" .
 
 
@@ -231,7 +232,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/tido#Activity
 :Activity rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+          rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :contributesTo ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Case
+                          ] ;
           rdfs:comment "The tido:Activity class is directly inherited from PROV-O. Here, an activity is defined as something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information." ;
           rdfs:isDefinedBy "https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action" ;
           rdfs:label "Activity" .
@@ -250,7 +256,8 @@ xsd:date rdf:type rdfs:Datatype .
       rdfs:subClassOf <http://www.w3.org/ns/prov#Collection> ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :investigates ;
-                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :RQ
                       ] ;
       rdfs:comment "A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. " ;
       rdfs:label "Case" ;
@@ -262,7 +269,8 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:subClassOf :PieceOfInformation ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
-                                 owl:allValuesFrom :Evaluation
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Evaluation
                                ] ;
                rdfs:comment "A matter weighed or taken into account when formulating an opinion or plan" ;
                rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/consideration" ;
@@ -308,7 +316,8 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:subClassOf :PieceOfInformation ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
-                              owl:allValuesFrom :Evaluation
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Evaluation
                             ] ;
             rdfs:comment "A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis." ;
             rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/hypothesis" ;
@@ -320,7 +329,8 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:subClassOf :PieceOfInformation ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
-                          owl:allValuesFrom :Evaluation
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Evaluation
                         ] ;
         rdfs:comment "Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question." ;
         rdfs:isDefinedBy "https://www.merriam-webster.com/dictionary/option" ;
@@ -342,11 +352,8 @@ xsd:date rdf:type rdfs:Datatype .
                                     <http://www.w3.org/ns/prov#Entity> ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty <http://www.w3.org/ns/prov#wasMemberOf> ;
-                                      owl:someValuesFrom :Case
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty <http://www.w3.org/ns/prov#wasMemberOf> ;
-                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Case
                                     ] ;
                     rdfs:comment "The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language" ;
                     rdfs:isDefinedBy "URREF (Costa et al. 2018)" ;
@@ -361,7 +368,8 @@ xsd:date rdf:type rdfs:Datatype .
     rdfs:subClassOf :PieceOfInformation ,
                     [ rdf:type owl:Restriction ;
                       owl:onProperty <http://www.w3.org/ns/prov#wasGeneratedBy> ;
-                      owl:allValuesFrom :Evaluation
+                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                      owl:onClass :Evaluation
                     ] ;
     rdfs:comment "A question that arrises during an investigation." ;
     rdfs:label "R Q" ;
@@ -376,14 +384,6 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:isDefinedBy "Bales' 3rd phase of group decision making" ;
             rdfs:label "Resolution" ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "Resolution step" .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-:ContributesTo rdfs:comment "Every activity should contribute to one or more cases/investigations. " ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "contributes to" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

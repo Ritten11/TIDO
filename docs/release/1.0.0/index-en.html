@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/tido#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/tido#","name":"The Threat Intelligence Decision Ontology", "headline":"Document describing the ontology https://w3id.org/tido#", "dateReleased":"2025-05-07", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/Ritten11/TIDO", "author":[{"@type":"Person","name":"Ritten Roothaert"}], "contributor":[{"@type":"Person","name":"Lise Stork"},{"@type":"Person","name":"Stefan Schlobach"},{"@type":"Person","name":"Fabio Massacci"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/tido#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/tido#","name":"The Threat Intelligence Decision Ontology", "headline":"Document describing the ontology https://w3id.org/tido#", "dateReleased":"2025-05-07", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Ritten Roothaert","url":"https://orcid.org/0009-0008-7843-6513"}], "contributor":[{"@type":"Person","name":"Lise Stork","url":"https://orcid.org/0000-0002-2146-4803"},{"@type":"Person","name":"Stefan Schlobach","url":"https://orcid.org/0000-0002-3282-1597"},{"@type":"Person","name":"Fabio Massacci","url":"https://orcid.org/0000-0002-1091-8486"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -57,7 +57,7 @@ function loadTOC(){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
       $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
+      $("#introduction").load("/home/ritten/Documents/HEWSTI/de_dienst/docs/release/section_backup/introduction-en.html"); 
       $("#nstable").load("sections/ns-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
       $("#description").load("sections/description-en.html"); 
@@ -77,28 +77,26 @@ function loadTOC(){
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/tido/release/1.0.0">https://w3id.org/tido/release/1.0.0</a></dd>
+<dd><a href="https://w3id.org/tido/1.0.0">https://w3id.org/tido/1.0.0</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/tido#">https://w3id.org/tido#</a></dd>
 <dt>Revision:</dt>
 <dd>1.0.0</dd>
-<dt>Issued on:</dt>
-<dd>Date issued</dd>
 <dt>Authors:</dt>
-<dd>Ritten Roothaert<a href="mailto:h.m.roothaert@vu.nl">&#9993;</a></dd>
+<dd><a href="https://orcid.org/0009-0008-7843-6513">Ritten Roothaert</a>, Vrije Universiteit Amsterdam<a href="mailto:h.m.roothaert@vu.nl">&#9993;</a></dd>
 
 <dt>Contributors:</dt>
-<dd>Lise Stork, University of Amsterdam</dd><dd>Stefan Schlobach, Vrije Universiteit Amsterdam</dd><dd>Fabio Massacci, Vrije Universiteit Amsterdam</dd>
+<dd><a href="https://orcid.org/0000-0002-2146-4803">Lise Stork</a>, <a href="https://indelab.org/">University of Amsterdam</a><a href="mailto:l.stork@uva.nl">&#9993;</a></dd><dd><a href="https://orcid.org/0000-0002-3282-1597">Stefan Schlobach</a>, <a href="https://kai.cs.vu.nl/">Vrije Universiteit Amsterdam</a><a href="mailto:k.s.schlobach@vu.nl">&#9993;</a></dd><dd><a href="https://orcid.org/0000-0002-1091-8486">Fabio Massacci</a><a href="mailto:f.massacci@vu.nl">&#9993;</a></dd>
+
+<dt>Publisher:</dt>
+<dd><a href="https://kai.cs.vu.nl/">Knowledge in AI</a>, Vrije Universiteit Amsterdam</dd>
+<dt>Extended Ontologies:</dt>
+<dd>PROV-O</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
-<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
-<img src="null" style="border-width:0" alt="License" />
-</a>
-<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
-<dd>Roothaert, H.M., Stork, L., Schlobach, K.S. and Massacci, F. The Threat Intelligence Decision Ontology. Revision: 1.0.0. URI: <a href="https://w3id.org/tido#">https://w3id.org/tido#</a></dd>
-<dt>Vocabulary maintained at:</dt>
-<dd><a href="https://github.com/Ritten11/TIDO">https://github.com/Ritten11/TIDO</a></dd>
+<dd> The Threat Intelligence Decision Ontology. Revision: 1.0.0. Retrieved from: https://w3id.org/tido/1.0.0</dd>
 </dl>
 
 <hr/>

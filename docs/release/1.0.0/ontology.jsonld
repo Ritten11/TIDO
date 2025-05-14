@@ -1,55 +1,77 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/tido#Case"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/tido#contributesTo"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/tido#RQ"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/tido#investigates"
   } ]
 }, {
-  "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/tido#Evaluation"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
-  } ]
-}, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/tido#Evaluation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/tido#Evaluation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/prov#wasMemberOf"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/tido#Evaluation"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/tido#Case"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/tido#Case"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/prov#wasMemberOf"
@@ -57,11 +79,15 @@
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/tido#Evaluation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information",
@@ -139,7 +165,7 @@
   "@id" : "https://w3id.org/mod#createdWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/tido#",
+  "@id" : "https://w3id.org/tido",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -185,6 +211,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Activity"
+  }, {
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "https://w3id.org/tido#Agent",
@@ -213,7 +241,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Collection"
   }, {
-    "@id" : "_:genid1"
+    "@id" : "_:genid2"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@value" : "Investigation"
@@ -233,15 +261,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
   }, {
-    "@id" : "_:genid2"
-  } ]
-}, {
-  "@id" : "https://w3id.org/tido#ContributesTo",
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Every activity should contribute to one or more cases/investigations. "
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@value" : "contributes to"
+    "@id" : "_:genid3"
   } ]
 }, {
   "@id" : "https://w3id.org/tido#Cost",
@@ -324,7 +344,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
   }, {
-    "@id" : "_:genid3"
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "https://w3id.org/tido#Option",
@@ -341,7 +361,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tido#PieceOfInformation"
   }, {
-    "@id" : "_:genid4"
+    "@id" : "_:genid5"
   } ]
 }, {
   "@id" : "https://w3id.org/tido#Orientation",
@@ -377,8 +397,6 @@
     "@id" : "http://eturwg.c4i.gmu.edu/files/ontologies/URREF_v5_dev.owl#Information"
   }, {
     "@id" : "http://www.w3.org/ns/prov#Entity"
-  }, {
-    "@id" : "_:genid5"
   }, {
     "@id" : "_:genid6"
   } ],
@@ -462,6 +480,9 @@
 }, {
   "@id" : "https://w3id.org/tido#contributesTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Every activity should contribute to one or more cases/investigations. "
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/tido#Activity"
   } ],

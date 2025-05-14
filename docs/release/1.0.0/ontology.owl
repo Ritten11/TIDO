@@ -10,7 +10,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/tido#">
+    <owl:Ontology rdf:about="https://w3id.org/tido">
         <owl:versionIRI rdf:resource="https://w3id.org/tido/1.0.0"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-07</terms:created>
         <terms:description xml:lang="en">The TIDO ontology can be used to describe the decision processes within the threat intelligence domain</terms:description>
@@ -186,6 +186,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tido#contributesTo">
         <rdfs:domain rdf:resource="https://w3id.org/tido#Activity"/>
         <rdfs:range rdf:resource="https://w3id.org/tido#Case"/>
+        <rdfs:comment>Every activity should contribute to one or more cases/investigations. </rdfs:comment>
         <rdfs:label>contributes to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -390,6 +391,13 @@
 
     <owl:Class rdf:about="https://w3id.org/tido#Activity">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/tido#contributesTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#Case"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The tido:Activity class is directly inherited from PROV-O. Here, an activity is defined as something that occurs over a period of time and acts upon or with pieces of information; it may include consuming, processing, transforming, modifying, relocating, using, or generating pieces of information.</rdfs:comment>
         <rdfs:isDefinedBy>https://www.w3.org/TR/2013/REC-prov-o-20130430/#Action</rdfs:isDefinedBy>
         <rdfs:label>Activity</rdfs:label>
@@ -417,7 +425,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/tido#investigates"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#RQ"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A collection of pieces of information that were recalled, inferred, deduced or produced during an investigation. </rdfs:comment>
@@ -435,7 +444,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A matter weighed or taken into account when formulating an opinion or plan</rdfs:comment>
@@ -503,7 +513,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A possible interpretation of the availble information that forms the ground for further action. Other pieces of information could be used to either support or dispute a hypothesis.</rdfs:comment>
@@ -521,7 +532,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Something that could be chosen. In the domain of Threat Intelligence, this could mean a course of action, but also an assesment of the situation or the answer to a research question.</rdfs:comment>
@@ -553,13 +565,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasMemberOf"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/tido#Case"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasMemberOf"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#Case"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>The term “piece of information” is used in this paper in its most general meaning covering other notions such as evidence, knowledge and/or data. A piece of information can be as simple as a measurement (on the scale of real numbers) but could be a fact (i.e., an observation, known to be true), an uncertain statement already modeled into a given mathematical formalism (i.e., a probability distribution), an unstructured statement in natural language</rdfs:comment>
@@ -580,7 +587,8 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/tido#Evaluation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/tido#Evaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A question that arrises during an investigation.</rdfs:comment>
@@ -601,22 +609,6 @@
         <rdfs:label>Resolution</rdfs:label>
         <skos:altLabel>Resolution step</skos:altLabel>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://w3id.org/tido#ContributesTo">
-        <rdfs:comment>Every activity should contribute to one or more cases/investigations. </rdfs:comment>
-        <skos:altLabel>contributes to</skos:altLabel>
-    </rdf:Description>
 </rdf:RDF>
 
 
