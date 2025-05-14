@@ -1,5 +1,4 @@
-# Detriment risk [of information position]?
-# (assuming it associated with a certain option)
+# What is the detriment risk of option O?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -7,10 +6,11 @@ PREFIX tido: <https://w3id.org/tido#>
 PREFIX di01: <https://w3id.org/tido/di01#>
 PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select ?consideration ?c_value
+Select ?consideration ?r_value
 Where {
-    bind (di01:option_1 as ?option)
-    ?option tido:hasConsideration ?cost .
-    ?cost a tido:Cost ;
-    	rdf:value ?c_value .
+    bind (di02:o_1 as ?o)
+    ?o a tido:Option;
+        tido:hasConsideration ?cost .
+    ?cost a tido:DetrimentRisk ; # Note: The tido:DetrimentRisk subclass of tido:Consideration has not been implemented into TIDO yet
+    	rdf:value ?r_value .
 } 

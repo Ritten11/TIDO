@@ -1,16 +1,17 @@
-# What is the main information demand of case [c]?
+# What is the main information demand of case C?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX tido_case: <https://w3id.org/tido/case#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
 Select ?rq ?rq_value
 Where {
-#    Bind (di01:case_1 as ?case)
-    ?rq a tido:RQ ;
-#    	prov:wasMemberOf ?case ;
+    Bind (tido_case:case_1 as ?c)
+    ?rq a tido:InformationDemand ; # Note: the tido:InformationDemand has not been implemented in TIDO yet
+    	prov:wasGeneratedBy/tido:contributesTo ?c ;
 		rdf:value ?rq_value .
-    FILTER NOT EXISTS {?rq prov:wasDerivedFrom ?upper_rq}
+#    FILTER NOT EXISTS {?rq prov:wasDerivedFrom ?upper_rq}
 }

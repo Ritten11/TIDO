@@ -6,7 +6,7 @@ PREFIX tido: <http://www.example.com/TIDO#>
 PREFIX di01: <http://www.example.com/TIDO_di01#>
 Select ?decision ?d_value
 Where {
-    ?decision a tido:X ;
+    ?decision a tido:X ; #Note: a subclass would need to be introduced for every possible X
     	tido:wasSelectedBy ?res_step ;
     	rdf:value ?d_value .
     ?case prov:hadMember ?decision .

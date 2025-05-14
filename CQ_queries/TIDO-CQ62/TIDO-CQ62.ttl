@@ -1,4 +1,4 @@
-# What are the other teams working on?
+# Which cases are worked on by other teams?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -11,7 +11,7 @@ Select distinct ?team
 Where {
     bind (tido_case:team_1 as ?x) # bind the 'current' team
     ?activity prov:wasAssociatedWith ?team;
-        tido:contributesTo ?case
+        tido:contributesTo ?case .
     ?team a prov:Organization .
     Filter (?team != ?x)
 } 

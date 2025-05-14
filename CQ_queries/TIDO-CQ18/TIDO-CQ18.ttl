@@ -9,7 +9,7 @@ Select ?decision ?d_value
 Where {
     Bind (tido_case:case_1 as ?x)      
     ?decision prov:wasGeneratedBy/tido:contributesTo ?x .
-    ?decision a tido:SpecialMeans ;
+    ?decision a tido:SpecialMeans ; # Note: the tido:SpecialMeans subclass is currently not implemented in TIDO
     	tido:wasSelectedBy ?res_step ;
     	rdf:value ?d_value .
 }

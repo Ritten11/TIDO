@@ -1,0 +1,13 @@
+inf_classes,i_value
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,A report was received by the AIVD front-office
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,This report was sent to the counter terrorism team
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,The report originates from a concerned citizen
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,The concerned citizen is a teacher
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,"The concerned citizen wishes to remain anonymous, but it is possible to deduce who it is if needed"
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,The concerned citizen teaches chemical engineering
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,"During a practical, the concerned citizen noticed that one of his students was asking many questions about substances that could be used to create an explosive"
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Evidence,The name of the student is Sander van der Land
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#RQ,Should we be concerned?
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#RQ,Should we deploy anything else?
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Option,Check out who Sander is through social media
+https://w3id.org/tido#PieceOfInformation | https://w3id.org/tido#Option,Deploy an open-source investigation

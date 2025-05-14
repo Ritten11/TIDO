@@ -8,7 +8,7 @@ PREFIX di02: <https://w3id.org/tido/di02#>
 
 Select ?agent
 Where {
-    Bind(di02:option_1 as ?d)
+    Bind(di02:o_1 as ?d)
     ?d tido:wasSelectedBy ?resolution .
     ?resolution prov:wasAssociatedWith ?agent. 
 }

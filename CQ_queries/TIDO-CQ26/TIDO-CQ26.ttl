@@ -1,20 +1,22 @@
-# How many of the sources of the pieces of information used to justify decision [d] are considered trustworthy?
+# What pieces of information are used to support decision D? And what are their sources?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
-Select ?o_value ?i_value (group_concat(?source_agent;separator=" | ") as ?source_trail)
+Select ?inf_value ?i_value (group_concat(?source_agent;separator=" | ") as ?source_trail)
 Where {
-    Bind(di01:option_1 as ?x)
-    ?x a tido:Option ;
-        tido:hasConsideration|tido:assumes ?consideration ;
-        rdf:value ?o_value .
-    ?poi tido:providesInsightsInto* ?consideration .
+    Bind(di01:h_2 as ?d)
+    ?d a tido:Option ;
+        tido:wasSelectedBy ?res_step ;
+        tido:hasConsideration|tido:assumes|^tido:providesInsightsInto ?supporting_inf ;
+        rdf:value ?inf_value .
+    ?poi tido:providesInsightsInto* ?supporting_inf .
     ?poi rdf:value ?i_value ;
-    	prov:wasDerivedFrom* ?source_doc .
-    ?source_doc prov:wasAttributedTo ?source_agent .
+    	(prov:wasDerivedFrom|prov:hadPrimarySource)* ?source_doc .
+    ?source_doc prov:wasAttributedTo/rdf:label ?source_agent .
 }   
-group by ?o_value ?i_value
+group by ?inf_value ?i_value

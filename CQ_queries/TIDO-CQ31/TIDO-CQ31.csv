@@ -1,0 +1,4 @@
+poi,p_value,source,s_value
+https://w3id.org/tido/di01#e_3,The report originates from a concerned citizen,https://w3id.org/tido/case#report,report front-office
+https://w3id.org/tido/di01#e_6,The concerned citizen teaches chemical engineering,https://w3id.org/tido/case#report,report front-office
+https://w3id.org/tido/di01#e_7,"During a practical, the concerned citizen noticed that one of his students was asking many questions about substances that could be used to create an explosive",https://w3id.org/tido/case#report,report front-office

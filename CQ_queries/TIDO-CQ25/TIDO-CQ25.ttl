@@ -1,15 +1,15 @@
-# What risk is/was associated with the current situation [y]?
+# What are the answers to the risk assessment research question drafted?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX tido: <http://www.example.com/TIDO#>
-PREFIX di01: <http://www.example.com/TIDO_di01#>
-PREFIX di02: <http://www.example.com/TIDO_di02#>
+PREFIX tido: <https://w3id.org/tido#>
+PREFIX di01: <https://w3id.org/tido/di01#>
+PREFIX di02: <https://w3id.org/tido/di02#>
 
 Select ?question ?h_value
 Where {
-    Bind(di01:rq_2 as ?rq)
-    	?rq rdf:value ?question .
-       	?hypothesis tido:answers ?rq ; # challenge: TIDO cannot represent which hypothesis is considered to be true
-    		rdf:value ?h_value .
+	?rq rdf:value ?question .
+	?hypothesis tido:answers ?rq ;
+		rdf:value ?h_value .
+	?rq a tido:RiskInquiry . #Note: in the current version of tido, this class in not yet implemented.
 }

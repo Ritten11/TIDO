@@ -1,4 +1,4 @@
-# [Did you] consider alternative explanations [?]
+# Are the options other than X that would answer research question RQ ?
 
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -8,8 +8,8 @@ PREFIX di02: <https://w3id.org/tido/di02#>
 
 Ask 
 Where {
-    Bind (di01:h_1 as ?explanation_1)
-    ?explanation_1 tido:answers ?rq .
+    Bind (di01:h_1 as ?x)
+    ?x tido:answers ?rq .
     ?other_explanation tido:answers ?rq .
     Filter (?explanation_1 = ?other_explanation) 
 } 

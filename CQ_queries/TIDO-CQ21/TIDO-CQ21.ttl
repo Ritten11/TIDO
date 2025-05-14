@@ -14,5 +14,5 @@ Where {
     ?resolution prov:wasInformedBy* ?prevStep .
     ?poi tido:wasRecalledBy ?prevStep ;    
     	rdf:value ?i_value ;
-    	prov:wasDerivedFrom/prov:wasAttributedTo ?source .    
+    	(prov:wasDerivedFrom|prov:hadPrimarySource)/prov:wasAttributedTo ?source .    
 }
