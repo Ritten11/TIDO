@@ -15,7 +15,21 @@
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "tido" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                          owl:versionInfo "1.0.0" ;
-                         <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+                         <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> ;
+                         <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-2146-4803>, <https://orcid.org/0000-0002-3282-1597>,<https://orcid.org/0000-0002-1091-8486>;
+                         <http://purl.org/dc/terms/creator> <https://orcid.org/0009-0008-7843-6513>;
+                         <http://purl.org/dc/terms/publisher> <https://kai.cs.vu.nl> .
+
+<https://orcid.org/0000-0002-2146-4803> a foaf:Person ;
+                         foaf:name "Lise Stork"@en .
+<https://orcid.org/0000-0002-3282-1597> a foaf:Person ;
+                         foaf:name "Stefan Schlobach"@en .
+<https://orcid.org/0000-0002-1091-8486> a foaf:Person ;
+                         foaf:name "Fabio Massacci"@en .
+<https://orcid.org/0009-0008-7843-6513> a foaf:Person ;
+                         foaf:name "Ritten Roothaert"@en .
+<https://kai.cs.vu.nl> a foaf:Organization ;
+                         foaf:name "knowledge in AI group"@en .
 
 #################################################################
 #    Annotation properties

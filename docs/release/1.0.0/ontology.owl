@@ -9,7 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="https://w3id.org/tido">
         <owl:versionIRI rdf:resource="https://w3id.org/tido/1.0.0"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-05-07</terms:created>
@@ -20,21 +21,21 @@
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/tido#"/>
         <owl:versionInfo>1.0.0</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
-        <dc:contributor>
+        <terms:contributor>
         <foaf:Person rdf:about="https://orcid.org/0000-0002-2146-4803"/>
-        </dc:contributor>
-        <dc:contributor>
+        </terms:contributor>
+        <terms:contributor>
         <foaf:Person rdf:about="https://orcid.org/0000-0002-3282-1597"/>
-        </dc:contributor>
-        <dc:contributor>
+        </terms:contributor>
+        <terms:contributor>
         <foaf:Person rdf:about="https://orcid.org/0000-0002-1091-8486"/>
-        </dc:contributor>
-        <dc:creator>
+        </terms:contributor>
+        <terms:creator>
         <foaf:Person rdf:about="https://orcid.org/0009-0008-7843-6513"/>
-        </dc:creator>
-        <dc:publisher>
+        </terms:creator>
+        <terms:publisher>
         <foaf:Organization rdf:about="https://kai.cs.vu.nl"/>
-        </dc:publisher>
+        </terms:publisher>
     </owl:Ontology>
     
 
