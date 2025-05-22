@@ -14,9 +14,11 @@ The directory is divided into the following sections:
         - The a translation of the audio segment, indicated with `rdf:value` and labeled with the `@en` language tag
         - The case to which the case belongs, indicated with the `tido:contribesTo` relation
 - `docs` folder: The files used to render the website
+- `audio_files` folder: Folder used to locally store the audio files. It is left empty on purpose as the audio files can be downloaded from [this website](https://www.podcastluisteren.nl/pod/De-Dienst) (todo: include instructions on how to do so)
 - `transcribe_and_translate.ipynb`: The notebook used to derive the transcriptions and translations from the audio file. This was node using the Whisper "medium" model (todo: insert citation). Additionally, individual speakers were identified using the "pyannote/speaker-diarization-3.1" model (todo: insert citation). When running the notebook, you will be prompted to provide names for each identified speaker. Also, if the intervals from the Whisper and Pyannote model don't match, you will be asked to provide the names of alle the speakers from that interval.
 - `transcriptions` folder: The transcriptions and translations produced by the `transcribe_and_translate.ipynb` notebook. These are provided into two formats:
     - `text` folder: Plain text format, divided by 'speaker intervals'. These speaker intervals are intervals with a single continuous speaker. 
     - `dataframes` folder: the same content as the .txt files, but now in .csv format. 
 - `TIDO_ORSD.xlsx`: A local copy of the Ontology Requirement Specification Document (ORSD) used for the development of TIDO (todo: insert citation).
-- `parse_ontology.ipynb`: Notebook used to add the class and relation descriptions from `TIDO_ORSD.xlsx` to the `TIDO.ttl` file. Additionally, it is used the  
+- `parse_ontology.ipynb`: Notebook used to add the class and relation descriptions from `TIDO_ORSD.xlsx` to the `TIDO.ttl` file. Additionally, it is used to merge the dataframes from the `transcriptions/dataframea/` folder with the KGs in the  `DIs/original/` folder. The output is stored in the `DIs/extended/` folder. 
+- 
