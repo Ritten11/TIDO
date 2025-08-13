@@ -67,7 +67,7 @@ h1 {
 }
 
 h3 {
-    margin-top: 3px;
+    margin-top: 10px;
     padding-bottom: 5px;
     border-bottom: 1px solid var(--border);
 }
@@ -132,4 +132,70 @@ dt {
 .literal {
     color:var(--literal);
     font-style:italic;
+}
+
+pre.example {
+    white-space: pre-wrap; /* Wrap long lines (for pre) */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+    overflow-x: auto;
+    /*padding-left: 6em;        /* Indent all lines */
+    /*text-indent: -6em;        /* Pull back first line */
+}
+
+pre.example::before,
+div.example::before {
+    content: "Example";
+    display: block;
+    width: 150px;
+    background: var(--bg-status-box);
+    color: #fff;
+    font-family: initial;
+    padding: 3px;
+    font-weight: bold;
+    margin: -1em 0 1em -1em;
+    z-index: 2;
+}
+
+pre.example-continued::before,
+div.example-continued::before {
+    content: "Example - continued";
+    width: 200px;
+}
+
+div.example {
+    background-color: var(--owl-bg);
+    border:1px dashed #2F6FAB;
+    color:var(--text-color);
+    line-height:1.1em;
+    padding:1em;
+    margin-left: 2em;
+    margin-top: 1em;
+
+    display: inline-block;
+    font-family: monospace;
+    unicode-bidi: isolate;
+    white-space: pre;
+    margin-block: 1em 1em;
+    /* margin-inline: 0px; */
+
+    /* Remove width constraints so it fits content */
+    /* width: 80%; */
+    max-width: 1000px;
+    box-sizing: border-box;
+    text-align: left;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Wrap long lines (for pre) */
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+div.example img {
+  margin: 0 ;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: -2em;
+  margin-bottom: -2em;
 }

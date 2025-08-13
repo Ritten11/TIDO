@@ -1,3 +1,243 @@
 <h2 id="desc" class="list">The Threat Intelligence Decision Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span>
+The TIDO ontology can be used to describe the decision processes within the threat intelligence domain. 
+As an example, we take a closer look at the beginning of the first episode of the 'de Dienst' podcast [<a href="#DienstPodcast2021">17</a>], where Liesbeth Rasker takes the role of an analyst at the Dutch General Intelligence and Security Service (AIVD) and is tasked with investigating a potential threat to the Dutch national security.
+In agreement with the creators of the podcast, we have published the transcript and english translation of the podcast in the `transcriptions` directory on <a href="https://github.com/Ritten11/TIDO">our github page</a>. 
+<!-- Additionally, the podcast can be listened to for free on various platforms, such as <a href="https://open.spotify.com/show/6wZZ2ojf2XxwgfYT649wpO?si=2786fea2446446bc">Spotify</a>, <a href="https://podcasts.apple.com/us/podcast/de-dienst/id1548268945">Apple Podcasts</a> or <a href="https://www.podcastluisteren.nl/pod/De-Dienst">podcastluisteren.nl</a>. -->
+</span>
 
-<span class="markdown">The TIDO ontology can be used to describe the decision processes within the threat intelligence domain</span>
+<h3>Step 1</h3>
+<span> 
+The example starts with an orientation step (STEP 1), akin to the first phase of group decision making identified by Bales [<a href="#bales1951phases">6</a>]. 
+This step is about retrieving potentially relevant information for further analysis. 
+In TIDO, this is modelled using the <code>tido:wasRecalledBy</code> relationship, where instances from the <code>tido:PieceOfInformation</code> class are recalled by a <code>tido:Orientation</code> step.   
+In the current example, analyst Liesbeth recalls four pieces of information of the <code>tido:Evidence</code> class, which is modelled to be a subclass of <code>tido:PieceOfInformation</code>.
+Amongst these pieces of information, there is a the testimony from a concerned citizen, who noticed that a student in one of his classes was asking about substances that could be used to make a bomb (<code>tido:e_4</code>). 
+</span>
+
+<div id="tido-example-ttl-step1">
+  <p>
+    <a href="#tido-example-ttl-step1">Example 1.1</a>:
+  </p>
+  <button id="toggle-tido-example-step1" onclick="toggleExample('tido-example-step1-turtle', 'tido-example-step1-image', 'toggle-tido-example-step1')">Show graph</button>
+  <div id="tido-example-step1-turtle">
+    <pre class="example">
+@prefix xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix prov: &lt;http://www.w3.org/ns/prov#&gt; .
+@prefix tido: &lt;http://w3id.org/tido&gt; .
+@prefix :     &lt;http://example.org#&gt; .
+
+# Initialisation of the case investigation
+:case_1
+   a tido:Case.
+
+# STEP 1
+:orientation_1
+   a tido:Orientation;
+   tido:contributesTo  :case_1.
+
+:e_1
+   a tido:Evidence;
+   tido:wasRecalledBy :orientation_1;
+   rdf:value          "A report was received by the CISS front-office"@en.
+
+:e_2
+   a tido:Evidence;
+   tido:wasRecalledBy :orientation_1;
+   rdf:value          "The report was made by a concerned citizen"@en.
+
+:e_3
+   a tido:Evidence;
+   tido:wasRecalledBy :orientation_1;
+   rdf:value          "The concerned citizen teaches chemical engineering"@en.
+
+:e_4
+   a tido:Evidence;
+   tido:wasRecalledBy :orientation_1;
+   rdf:value          "During a practical, the concerned citizen noticed that one of his students was asking many questions about substances that could be used to create an explosive"@en.
+    </pre>
+  </div>
+  <div id="tido-example-step1-image" style="display:none; text-align: center;">
+    <div class="example">
+      <img src="./resources/images/example_step1.svg" alt="An illustration of the assertions in Example 1.1">  
+    </div>
+  </div>
+</div>
+
+<h3>Step 2</h3> 
+<span>
+STEP 2 is the first of three <code>tido:Evaluation</code> steps.
+Here, the <code>tido:Evaluation</code> step is inspired by Bales' second phase of group decision making, where the facts of the situation and the proposed course of action are to being judged.
+Similar to the instances of the <code>tido:Evidence</code> class that were recalled during the <code>:orientation_1</code> step, all instances of <code>tido:RQ</code> that are generated during the <code>evaluation_1</code> step are linked to <code>:case_1</code> through the <code>prov:wasMemberOf</code> relation.
+In this step, Liesbeth determines what is to be investigated, and makes this concrete by formalizing a research question <code>:rq_1</code>. 
+</span>
+
+<div id="tido-example-ttl-step2">
+  <p>
+    <a href="#tido-example-ttl-step2">Example 1.2</a>:
+  </p>
+  <button id="toggle-tido-example-step2" onclick="toggleExample('tido-example-step2-turtle', 'tido-example-step2-image', 'toggle-tido-example-step2')">Show graph</button>
+  <div id="tido-example-step2-turtle">
+  <pre class="example example-continued">
+# STEP 2
+:evaluation_1
+    a tido:Evaluation;
+    tido:contributesTo :case_1;
+    prov:wasInformedBy :orientation_1.
+
+:rq_1
+    a tido:RQ;
+    prov:wasGeneratedBy :evaluation_1;
+    rdf:value           "should we be concerned?"@en.
+  </pre>
+  </div>
+  <div id="tido-example-step2-image" style="display:none; text-align: center;">
+    <div class="example example-continued">
+      <img src="./resources/images/example_step2.svg" alt="An illustration of the assertions in Example 1.2">  
+    </div>
+  </div>
+</div>
+
+
+<h3>Step 3</h3> 
+<span>
+In STEP 3 of the given example, referred to as <code>:evaluation_2</code>, Liesbeth drafts a hypothesis to answer the earlier derived research question <code>rq_1</code>, which is indicated using the <code>tido:answers</code>code> relationship. 
+Not only does Liesbeth generate <code>:h_1</code>, she also links three of the earlier identified potentially relevant pieces of information to this hypothesis using the <code>tido:support</code> relationship. 
+</span>
+
+<div id="tido-example-ttl-step3">
+  <p>
+    <a href="#tido-example-ttl-step3">Example 1.3</a>:
+  </p>
+  <button id="toggle-tido-example-step3" onclick="toggleExample('tido-example-step3-turtle', 'tido-example-step3-image', 'toggle-tido-example-step3')">Show graph</button>
+  <div id="tido-example-step3-turtle">
+  <pre class="example example-continued">
+# STEP 3
+:evaluation_2
+    a tido:Evaluation;
+    tido:contributesTo :case_1;
+    prov:wasInformedBy :evaluation_1.
+
+:h_1
+    a tido:Hypothesis;
+    prov:wasGeneratedBy :evaluation_2;
+    tido:answers        :rq_1;
+    rdf:value           "There is not sufficient reason to be concerned"@en.
+
+:h_2
+    a tido:Hypothesis;
+    prov:wasGeneratedBy :evaluation_2;
+    tido:answers        :rq_1;
+    rdf:value           "This situation could eventually lead to a cause of concern."@en.
+
+:h_3
+    a tido:Hypothesis;
+    prov:wasGeneratedBy :evaluation_2;
+    tido:answers        :rq_1;
+    rdf:value           "There is a direct cause of concern"@en.
+
+:e_2 tido:supports :h_2.
+:e_3 tido:supports :h_2.
+:e_4 tido:supports :h_2, :h_3.
+  </pre>
+  </div>
+  <div id="tido-example-step3-image" style="display:none; text-align: center;">
+    <div class="example example-continued">
+      <img src="./resources/images/example_step3.svg" alt="An illustration of the assertions in Example 1.3">  
+    </div>
+  </div>
+</div>
+
+<h3>Step 4</h3>
+<span> 
+STEP 4 captures the process of identifying potential options for actions (i.e. <code>:o_1</code>), along several considerations (i.e. <code>:c_1</code> and <code>:c_2</code>) associated with these options.  
+In reality, multiple options will be identified and each will have a different, but potentially overlapping, set of considerations.
+As the <code>tido:Consideration</code> class is a subclass of <code>tido:PieceOfInformation</code>, the instances <code>:c_1</code> and <code>:c_2</code> can be used to either support, using <code>tido:support</code>, or dispute, using <code>tido:dispute</code>, the earlier derived hypothesis <code>:h_1</code>. 
+In the current example, Liesbeth identifies the option to continue with the investigation, along with two additional considerations: one that supports hypothesis <code>:h_1</code> and one that disputes it. 
+</span>
+
+<div id="tido-example-ttl-step4">
+  <p>
+    <a href="#tido-example-ttl-step4">Example 1.4</a>:
+  </p>
+  <button id="toggle-tido-example-step4" onclick="toggleExample('tido-example-step4-turtle', 'tido-example-step4-image', 'toggle-tido-example-step4')">Show graph</button>
+  <div id="tido-example-step4-turtle">
+  <pre class="example example-continued">
+# STEP 4
+:evaluation_3 
+    a tido:Evaluation;
+    tido:contributesTo :case_1;
+    prov:wasInformedBy :evaluation_2.
+
+:c_1
+    a tido:Consideration;
+    prov:wasGeneratedBy :evaluation_3;
+    tido:supports       :h_2;
+    rdf:value           "It is weird that someone is orienting himself to build a bomb"@en.
+
+:c_2
+    a tido:Consideration;
+    prov:wasGeneratedBy :evaluation_3;
+    tido:supports       :h_3;
+    rdf:value           "If you are following a degree in chemical engineering, you might just be interested in those kind of things"@en.
+
+:o_1
+    a tido:Option;
+    prov:wasGeneratedBy   :evaluation_3;
+    tido:hasConsideration :c_1, :c_2;
+    tido:assumes          :h_2;
+    rdf:value             "Continue with investigation"@en.
+
+:o_2
+    a tido:Option;
+    prov:wasGeneratedBy   :evaluation_3;
+    tido:hasConsideration :c_1, :c_2;
+    tido:assumes          :h_3;
+    rdf:value             "Wait until more reports come in"@en.
+  </pre>
+  </div>
+  <div id="tido-example-step4-image" style="display:none; text-align: center;">
+    <div class="example example-continued">
+      <img src="./resources/images/example_step4.svg" alt="An illustration of the assertions in Example 1.4">  
+    </div>
+  </div>
+</div>
+
+<h3>Step 5</h3> 
+<span>
+In the last step, STEP 5, a <code>tido:Resolution</code> step is depicted which is analogous to Bales' third and final 'control' phase.
+The <code>TIDO</code> ontology makes no assumptions on the order of the steps within the processes, and therefore, the processes could in theory continue with another <code>tido:Orientation</code>, <code>tido:Evaluation</code> or <code>tido:Resolution</code> step.
+However, in this example the decision process is concluded with Liesbeth selecting the option to continue with the investigation, indicated by the <code>tido:wasSelectedBy</code> relation.
+</span>
+
+<div id="tido-example-ttl-step5">
+  <p>
+    <a href="#tido-example-ttl-step5">Example 1.5</a>:
+  </p>
+  <button id="toggle-tido-example-step5" onclick="toggleExample('tido-example-step5-turtle', 'tido-example-step5-image', 'toggle-tido-example-step5')">Show graph</button>
+  <div id="tido-example-step5-turtle">
+  <pre class="example example-continued">
+# STEP 5
+:resolution_1
+    a tido:Resolution;
+    tido:contributesTo :case_1;
+    prov:wasInformedBy :evaluation_3.
+
+:o_1 tido:wasSelectedBy :resolution_1.
+  </pre>
+  </div>
+  <div id="tido-example-step5-image" style="display:none; text-align: center;">
+    <div class="example example-continued">
+      <img src="./resources/images/example_step5.svg" alt="An illustration of the assertions in Example 1.5">  
+    </div>
+  </div>
+</div>
+
+<!-- <div id="tido-example" style="display: flex; flex-direction: column; align-items: center;">
+  <figure style="margin: 0; text-align: center;">
+    <img src="./resources/images/example.svg" alt="An example of the usage of the TIDO ontology" width="80%">
+    <figcaption style="text-align: center;">
+      <a href="#tido-example">Figure 1</a>: An example of a threat intelligence decision process, obtained from the first episode of the `de Dienst`-podcast [<a href="#DienstPodcast2021">17</a>] and annotated using the TIDO vocabulary
+    </figcaption>
+  </figure>
+</div> -->

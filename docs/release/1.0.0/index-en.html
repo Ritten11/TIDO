@@ -30,40 +30,78 @@ function loadHash() {
 }
 	loadTOC();
 }
-function loadTOC(){
-	//process toc dynamically
-	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
-	  jQuery(".list").each(function(){
-		if(jQuery(this).is('h2')){
-			if(j>0){
-				t+='</ul>';
-				j=0;
+function loadTOC() {
+	// Automatically generate Table of Contents based on .list elements (h2/h3)
+	let toc = '<h2>Table of contents</h2><ul>';
+	let section = 1, subsection = 0, openSub = false;
+
+	const $list = jQuery(".list");
+	console.log("Number of .list elements:", $list.length);
+
+	$list.each(function () {
+		const $el = jQuery(this);
+		const tag = $el.prop("tagName").toLowerCase();
+		const id = $el.attr("id");
+		// Get heading text without .backlink or other spans
+		const text = $el.clone().children("span").remove().end().text().trim();
+
+		if (tag === "h2") {
+			if (openSub) {
+				toc += "</ul>";
+				openSub = false;
 			}
-			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-			i++;
-		}
-		if(jQuery(this).is('h3')){
-			if(j==0){
-				t+='<ul>';
+			toc += `<li>${section}. <a href="#${id}">${text}</a></li>`;
+			section++;
+			subsection = 0;
+		} else if (tag === "h3") {
+			if (!openSub) {
+				toc += "<ul>";
+				openSub = true;
 			}
-			j++;
-			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			subsection++;
+			toc += `<li>${section - 1}.${subsection}. <a href="#${id}">${text}</a></li>`;
 		}
-	  });
-	  t+='</ul>';
-	  $("#toc").html(t); 
+	});
+
+	if (openSub) toc += "</ul>";
+	toc += "</ul>";
+	$("#toc").html(toc);
 }
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#nstable").load("sections/ns-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+	  // Track when all loads are complete. Adjust integer if more sections are added.
+	  // This is to ensure that the TOC is only generated after all sections are loaded.
+	  let loadsRemaining = 7;
+	  function sectionLoaded() {
+		loadsRemaining--;
+		if (loadsRemaining === 0) {
+		  loadHash(); // This will call loadTOC()
+		}
+	  }
+	  $("#abstract").load("sections/abstract-en.html", sectionLoaded); 
+	  $("#introduction").load("sections/introduction-en.html", sectionLoaded); 
+	  $("#nstable").load("sections/ns-en.html", sectionLoaded); 
+	  $("#overview").load("sections/overview-en.html", sectionLoaded); 
+	  $("#description").load("sections/description-en.html", sectionLoaded); 
+	  $("#references").load("sections/references-en.html", sectionLoaded); 
+	  $("#crossref").load("sections/crossref-en.html", sectionLoaded); 
     });
+	
+	function toggleExample(showId, hideId, btnId) {
+  const showDiv = document.getElementById(showId);
+  const hideDiv = document.getElementById(hideId);
+  const btn = document.getElementById(btnId);
+  if (showDiv.style.display === 'none') {
+    showDiv.style.display = '';
+    hideDiv.style.display = 'none';
+    btn.textContent = 'Show graph';
+  } else {
+    showDiv.style.display = 'none';
+    hideDiv.style.display = '';
+    btn.textContent = 'Show turtle';
+  }
+}
     </script> 
   </head> 
 
