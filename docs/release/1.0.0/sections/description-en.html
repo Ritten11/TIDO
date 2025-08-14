@@ -1,8 +1,12 @@
 <h2 id="desc" class="list">The Threat Intelligence Decision Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span>
 The TIDO ontology can be used to describe the decision processes within the threat intelligence domain. 
-As an example, we take a closer look at the beginning of the first episode of the 'de Dienst' podcast [<a href="#DienstPodcast2021">17</a>], where Liesbeth Rasker takes the role of an analyst at the Dutch General Intelligence and Security Service (AIVD) and is tasked with investigating a potential threat to the Dutch national security.
+As an example, we take a closer look at the beginning of the first episode of the 'de Dienst' podcast [<a href="#DienstPodcast2021">17</a>], which describes how an analyst at the Dutch General Intelligence and Security Service (AIVD) and is tasked with investigating a potential threat to the Dutch national security.
 In agreement with the creators of the podcast, we have published the transcript and english translation of the podcast in the `transcriptions` directory on <a href="https://github.com/Ritten11/TIDO">our github page</a>. 
+
+For each step in the example, a <code>.ttl</code> representation is provided of how the steps taken by an analyst can be expressed using the <code>TIDO</code> ontology. 
+Here, each <code>.ttl</code> example should be considered an extension of the previous one. 
+Additionally, an image is provided that illustrates the assertions made in the <code>.ttl</code> example in a graph-like representation.
 <!-- Additionally, the podcast can be listened to for free on various platforms, such as <a href="https://open.spotify.com/show/6wZZ2ojf2XxwgfYT649wpO?si=2786fea2446446bc">Spotify</a>, <a href="https://podcasts.apple.com/us/podcast/de-dienst/id1548268945">Apple Podcasts</a> or <a href="https://www.podcastluisteren.nl/pod/De-Dienst">podcastluisteren.nl</a>. -->
 </span>
 
@@ -11,7 +15,7 @@ In agreement with the creators of the podcast, we have published the transcript 
 The example starts with an orientation step (STEP 1), akin to the first phase of group decision making identified by Bales [<a href="#bales1951phases">6</a>]. 
 This step is about retrieving potentially relevant information for further analysis. 
 In TIDO, this is modelled using the <code>tido:wasRecalledBy</code> relationship, where instances from the <code>tido:PieceOfInformation</code> class are recalled by a <code>tido:Orientation</code> step.   
-In the current example, analyst Liesbeth recalls four pieces of information of the <code>tido:Evidence</code> class, which is modelled to be a subclass of <code>tido:PieceOfInformation</code>.
+In the current example, an analyst recalls four pieces of information of the <code>tido:Evidence</code> class, which is modelled to be a subclass of <code>tido:PieceOfInformation</code>.
 Amongst these pieces of information, there is a the testimony from a concerned citizen, who noticed that a student in one of his classes was asking about substances that could be used to make a bomb (<code>tido:e_4</code>). 
 </span>
 
@@ -66,10 +70,8 @@ Amongst these pieces of information, there is a the testimony from a concerned c
 
 <h3>Step 2</h3> 
 <span>
-STEP 2 is the first of three <code>tido:Evaluation</code> steps.
+Afterwards, in STEP 2, the analyst drafts a research question <code>:rq_1</code> in a <code>tido:Evaluation</code> step.
 Here, the <code>tido:Evaluation</code> step is inspired by Bales' second phase of group decision making, where the facts of the situation and the proposed course of action are to being judged.
-Similar to the instances of the <code>tido:Evidence</code> class that were recalled during the <code>:orientation_1</code> step, all instances of <code>tido:RQ</code> that are generated during the <code>evaluation_1</code> step are linked to <code>:case_1</code> through the <code>prov:wasMemberOf</code> relation.
-In this step, Liesbeth determines what is to be investigated, and makes this concrete by formalizing a research question <code>:rq_1</code>. 
 </span>
 
 <div id="tido-example-ttl-step2">
@@ -101,8 +103,9 @@ In this step, Liesbeth determines what is to be investigated, and makes this con
 
 <h3>Step 3</h3> 
 <span>
-In STEP 3 of the given example, referred to as <code>:evaluation_2</code>, Liesbeth drafts a hypothesis to answer the earlier derived research question <code>rq_1</code>, which is indicated using the <code>tido:answers</code>code> relationship. 
-Not only does Liesbeth generate <code>:h_1</code>, she also links three of the earlier identified potentially relevant pieces of information to this hypothesis using the <code>tido:support</code> relationship. 
+In STEP 3 of the given example, referred to as <code>:evaluation_2</code>, the analyst drafts three hypotheses that could answer the earlier derived research question <code>rq_1</code>, which is indicated using the <code>tido:answers</code> relationship. 
+Not only does the analyst generate <code>:h_1</code>, <code>:h_2</code> and <code>:h_3</code>, the analyst also links three of the earlier identified potentially relevant pieces of information to these hypotheses using the <code>tido:support</code> relationship. 
+
 </span>
 
 <div id="tido-example-ttl-step3">
@@ -150,10 +153,11 @@ Not only does Liesbeth generate <code>:h_1</code>, she also links three of the e
 
 <h3>Step 4</h3>
 <span> 
-STEP 4 captures the process of identifying potential options for actions (i.e. <code>:o_1</code>), along several considerations (i.e. <code>:c_1</code> and <code>:c_2</code>) associated with these options.  
-In reality, multiple options will be identified and each will have a different, but potentially overlapping, set of considerations.
-As the <code>tido:Consideration</code> class is a subclass of <code>tido:PieceOfInformation</code>, the instances <code>:c_1</code> and <code>:c_2</code> can be used to either support, using <code>tido:support</code>, or dispute, using <code>tido:dispute</code>, the earlier derived hypothesis <code>:h_1</code>. 
-In the current example, Liesbeth identifies the option to continue with the investigation, along with two additional considerations: one that supports hypothesis <code>:h_1</code> and one that disputes it. 
+STEP 4 captures the process of identifying potential options for actions (i.e. <code>:o_1</code> and <code>:o_2</code>), along several considerations (i.e. <code>:c_1</code> and <code>:c_2</code>) associated with these options.  
+Multiple options can be identified and each may have a different set of considerations.
+As the <code>tido:Consideration</code> class is a subclass of <code>tido:PieceOfInformation</code>, the instances <code>:c_1</code> and <code>:c_2</code> can be used to either support, using <code>tido:support</code>, or dispute, using <code>tido:dispute</code>, the earlier derived hypotheses <code>:h_1</code>, <code>:h_2</code> and <code>:h_3</code>. 
+In the current example, the analyst identifies the options to continue with the investigation or to wait until more information comes in.
+Additionally two additional considerations are expressed: one that supports hypothesis <code>:h_1</code> and one that supports <code>:h_2</code>. 
 </span>
 
 <div id="tido-example-ttl-step4">
@@ -207,7 +211,7 @@ In the current example, Liesbeth identifies the option to continue with the inve
 <span>
 In the last step, STEP 5, a <code>tido:Resolution</code> step is depicted which is analogous to Bales' third and final 'control' phase.
 The <code>TIDO</code> ontology makes no assumptions on the order of the steps within the processes, and therefore, the processes could in theory continue with another <code>tido:Orientation</code>, <code>tido:Evaluation</code> or <code>tido:Resolution</code> step.
-However, in this example the decision process is concluded with Liesbeth selecting the option to continue with the investigation, indicated by the <code>tido:wasSelectedBy</code> relation.
+However, in this example the decision process is concluded with the analyst selecting the option to continue with the investigation, indicated by the <code>tido:wasSelectedBy</code> relation.
 </span>
 
 <div id="tido-example-ttl-step5">
