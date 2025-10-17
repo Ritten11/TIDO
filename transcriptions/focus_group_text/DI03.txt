@@ -1,0 +1,34 @@
+Decision instance: DI03
+
+---------- RECALL ----------
+Bart((1,)):  Er is een rapport waarin is vastgesteld dat Sander van der Land... Die wordt omschreven als een jonge bekeerling. Al in 2014 is gezien bij een bijeenkomst met een radicale prediker. Dit maakt weer aantekeningen heel goed. Verder, het adres is gevonden waarop Sander is ingeschreven. En op dat adres zijn veel meer mensen ingeschreven. Hij is student, heeft een huisgenote. En verder blijkt uit onze systemen, dat is ook wel een interessant stukje wat ik hier heb... Dat een van zijn huisgenoten met de naam Linda de Bruijn bij ons bekend is. Zij is namelijk ooit als referent opgetreden voor een collega.
+Bart((1,)):  Een referent is op momenten dat jij bij ons solliciteert... En er gaat een veiligheidsonderzoek naar jou verricht worden. Dan kan jij een aantal mensen in jouw omgeving opgeven als referent.
+Bart((1,)):  Het kan ook zijn dat er een veiligheidsonderzoek naar een functie elders in de overheid... Wat ook een vertrouwensfunctie is, dat daar een onderzoek naar gedaan is. Dat zij voor ons heeft opgetreden als referent.
+Liesbeth((1,)):  Die radicale prediker wordt zo langer in de gaten gehouden en ook zijn contacten weer.
+Liesbeth((1,)):  In 2014.
+Liesbeth((1,)):  Oké, we hebben dus Sander, een student chemical engineering... Die tijdens een practicum dusdanig veel vragen stelde over explosieve stoffen. Dat zijn docenten de AIVD belden. Dat hoeft nog niet meteen veel te betekenen. Iemand doet zo'n studie natuurlijk niet voor niets en kan ook gewoon geïnteresseerd zijn. Maar aan de andere kant, zo'n docent belt de geheime dienst natuurlijk ook niet voor niets.
+Liesbeth((1,)):  Dat hij ooit een keer op de een of andere manier is verbonden aan een radicale prediker... en dat hij beschreven is als een jonge bekeerling.
+Bart((1,)):  Mensen zijn wat onzeker over hun religie en proberen het zo goed mogelijk te doen.
+Liesbeth((1,)):  Dan komen ze net af en toe wat in een fase terecht...
+Bart((1,)):  waarin ze net even wat harder vasthangen aan de religie. Maar dat kan ook meer orthodox zijn of niet per se radicaal te zijn.
+
+---------- ANALYSIS ----------
+Liesbeth((2,)):  Zoals ik in de vorige aflevering heb geleerd begint een zaak met de lichtse middelen. En in ons geval is dat een check in de eigen systemen en een OSINT-onderzoek. Oftewel Open Source Intelligence. Wat heeft dat opgeleverd over Sander?
+Liesbeth((2,)):  Wat is een referent?
+Liesbeth((2,)):  Dus blijkbaar werkt er hier iemand die haar kent?
+Liesbeth((2,)):  En dit is wat we hebben.
+Bart((2,)):  Wat laat jij hier het af?
+Liesbeth((2,)):  Ik denk vooral het feit dat hij als jonge parkeerling bekend staat... Dat dat toch wel meer vraagtekens oproept.
+Bart((2,)):  En al een keer gezien is tijdens een bijeenkomst met een radicale prediker. Ja, en dat wordt natuurlijk niet voor niks opgeschreven.
+Bart((2,)):  Ja. En wanneer was dat?
+Bart((2,)):  Dat is al een tijdje geleden. Maar als we even op een rijtje zitten, wat hebben we nu?
+Bart((2,)):  En in de nieuwe informatie, wat komt daarbij?
+Bart((2,)):  Oké. Hoe zorgwekkend is dit?
+Liesbeth((2,)):  Ik denk dat dit heel zorgwekkend kan zijn. Als er nu alleen naar voren was gekomen dat hij naar de moskee ging... en met meerdere mensen dat ingeschreven op hetzelfde adres, dan zou ik zeggen ja, nou...
+Bart((2,)):  Hebben we niet zoveel. Hebben we niet zoveel.
+Liesbeth((2,)):  Maar zodra er bekende radicale predikers in het verhaal komen... die dus waarschijnlijk al meer zijn onderzocht, want zo kennen jullie hem.
+Bart((2,)):  De meeste bekeerlingen hoeven niet radicaal te zijn. Wat je in de praktijk wel vaak ziet is dat de bekeerlingen net even dan iets meer... een zwart-wit benadering hebben van hun nieuwe ideologie. Dat ze soms net even wat strenger in de leer zijn.
+Liesbeth((2,)):  Ja, dat zie je toch wel.
+Liesbeth((2,)):  En ze zijn misschien ook vatbaarder?
+Bart((2,)):  Ze kunnen vatbaarder zijn, want ze zijn wat onzekerder.
+Bart((2,)):  Als we dit nu even bij elkaar hebben, dan zeggen we... nou, dit is in ieder geval iets waarvan we zeggen... we hebben de beslissing genomen om een onderzoek te starten. Er zijn een aantal zaken uit voortgekomen waarvan we zeggen... hij is dus bekender. Er zijn een aantal zaken over hem bekend waarvan we zouden kunnen zeggen... het kan toch wel interessant zijn. Dus we gaan door met het onderzoek.

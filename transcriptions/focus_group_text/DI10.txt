@@ -1,0 +1,8 @@
+Decision instance: DI10
+
+---------- RECALL ----------
+Liesbeth((1, 2)):  Terwijl Inge zich bezighoudt met bellende journalisten... ga ik terug naar Sander en overleg ik met Bart... wat er verder moet gebeuren. Want het belangrijkste lijkt me dat we blijven weten waar hij is... en vooral of hij naar Nederland komt. Dus dat lijkt me dat je dat dan met Europese diensten... maar ook met de Marsechaussee in de gaten houdt... of hij terug naar Nederland komt. En als hij in beweging komt in Libië, als hij dat kamp uitgaat... dat we hem volgen.
+Mixed((1,)):  Dat we weten waar hij heen gaat. Het is nu wel zo natuurlijk dat de buitenwereld geallerteerd is.
+
+---------- ANALYSIS ----------
+Liesbeth((1, 2)):  Terwijl Inge zich bezighoudt met bellende journalisten... ga ik terug naar Sander en overleg ik met Bart... wat er verder moet gebeuren. Want het belangrijkste lijkt me dat we blijven weten waar hij is... en vooral of hij naar Nederland komt. Dus dat lijkt me dat je dat dan met Europese diensten... maar ook met de Marsechaussee in de gaten houdt... of hij terug naar Nederland komt. En als hij in beweging komt in Libië, als hij dat kamp uitgaat... dat we hem volgen.

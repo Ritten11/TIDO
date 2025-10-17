@@ -1,5 +1,4 @@
 # custom gitignore directory
-transcriptions/
 translations/
 
 # Byte-compiled / optimized / DLL files
