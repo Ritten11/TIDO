@@ -20,9 +20,9 @@ Github repository related to the usage of the Threat Intelligence Decision Ontol
         - The end time of the step, indicated with a `prov:endedAtTime` relation
         - The transcript of the audio segment, indicated with `rdf:value` and labelled with the `@nl` language tag
         - The a translation of the audio segment, indicated with `rdf:value` and labelled with the `@en` language tag
-        - The case to which the case belongs, indicated with the `tido:contribesTo` relation
+        - The case to which the activity belongs, indicated with the `tido:contribesTo` relation
 - `CQ_queries`: The competency questions used to evaluate the TIDO ontology, along with the answer returned when ran over the extended decision instances 1 and 2 given in the `DIs` folder. 
-- `docs` folder: The files used to render the website
+- `docs` folder: The files used to render the website behind the (w3id.org/tido)[w3id.org/tido] URL
 
 <!-- ## Running Instructions
 
